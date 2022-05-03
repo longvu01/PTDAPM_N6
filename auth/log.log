@@ -1,0 +1,8 @@
+24.04.2022 02:23:14 sql=[select * from mvc_user where username='admin'] 
+24.04.2022 02:25:24 sql=[select * from mvc_user where username='admin'] 
+24.04.2022 02:25:55 sql=[select * from mvc_user where username='admin'] 
+27.04.2022 02:23:05 sql=[select * from mvc_user where username='admin'] 
+27.04.2022 02:23:30 sql=[select * from mvc_user where username='longvu01'] 
+27.04.2022 02:39:08 sql=[select * from mvc_user where username='admin'] 
+27.04.2022 03:00:32 sql=[select * from mvc_user where username='admin'] 
+03.05.2022 02:19:13 sql=[select * from mvc_user where username='admin'] 
