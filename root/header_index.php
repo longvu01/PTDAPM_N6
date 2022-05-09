@@ -88,11 +88,11 @@
                     <i class="me-1 fas fa-map-marker-alt"></i>
                     TÌM CỬA HÀNG GẦN NHẤT
                 </div>
-                <div class="info__show--primary">
+                <!-- <div class="info__show--primary">
                     <div class="row">
                         <div class="col info-col">
                             <h2 class="info__location">
-                                <span>1</span> hacom - hai bà trưng
+                                <span>1</span> MANGOES - hai bà trưng
                             </h2>
                             <h3 class="fw-bold">
                                 <i class="fas fa-map-marker-alt"></i>
@@ -125,7 +125,7 @@
                         </div>
                         <div class="col info-col">
                             <h2 class="info__location">
-                                <span>2</span> hacom - đống đa
+                                <span>2</span> MANGOES - đống đa
                             </h2>
                             <h3 class="fw-bold">
                                 <i class="fas fa-map-marker-alt"></i>
@@ -158,7 +158,7 @@
                         </div>
                         <div class="col info-col">
                             <h2 class="info__location">
-                                <span>3</span> hacom - hải phòng
+                                <span>3</span> MANGOES - hải phòng
                             </h2>
                             <h3 class="fw-bold">
                                 <i class="fas fa-map-marker-alt"></i>
@@ -191,7 +191,7 @@
                         </div>
                         <div class="col info-col">
                             <h2 class="info__location">
-                                <span>4</span> hacom - cầu giấy
+                                <span>4</span> MANGOES - cầu giấy
                             </h2>
                             <h3 class="fw-bold">
                                 <i class="fas fa-map-marker-alt"></i>
@@ -226,7 +226,7 @@
                     <div class="row">
                         <div class="col info-col">
                             <h2 class="info__location">
-                                <span>5</span> hacom - hà đông
+                                <span>5</span> MANGOES - hà đông
                             </h2>
                             <h3 class="fw-bold">
                                 <i class="fas fa-map-marker-alt"></i>
@@ -259,7 +259,7 @@
                         </div>
                         <div class="col info-col">
                             <h2 class="info__location">
-                                <span>6</span> hacom - tp. hồ chí minh
+                                <span>6</span> MANGOES - tp. hồ chí minh
                             </h2>
                             <h3 class="fw-bold">
                                 <i class="fas fa-map-marker-alt"></i>
@@ -292,7 +292,7 @@
                         </div>
                         <div class="col info-col">
                             <h2 class="info__location">
-                                <span>7</span> hacom - long biên
+                                <span>7</span> MANGOES - long biên
                             </h2>
                             <h3 class="fw-bold">
                                 <i class="fas fa-map-marker-alt"></i>
@@ -325,7 +325,7 @@
                         </div>
                         <div class="col info-col">
                             <h2 class="info__location">
-                                <span>8</span> hacom - từ sơn
+                                <span>8</span> MANGOES - từ sơn
                             </h2>
                             <h3 class="fw-bold">
                                 <i class="fas fa-map-marker-alt"></i>
@@ -360,7 +360,7 @@
                     <div class="row">
                         <div class="col-sm-3 info-col">
                             <h2 class="info__location">
-                                <span>9</span> hacom - hoàn kiếm
+                                <span>9</span> MANGOES - hoàn kiếm
                             </h2>
                             <h3 class="fw-bold">
                                 <i class="fas fa-map-marker-alt"></i>
@@ -393,7 +393,7 @@
                         </div>
                         <div class="col-sm-3 info-col">
                             <h2 class="info__location">
-                                <span>10</span> hacom - bắc từ liêm
+                                <span>10</span> MANGOES - bắc từ liêm
                             </h2>
                             <h3 class="fw-bold">
                                 <i class="fas fa-map-marker-alt"></i>
@@ -473,14 +473,14 @@
                         </div>
 
                     </div>
-                </div>
+                </div> -->
             </div>
             <div class="header__top-item">
                 <div class="header__info header__info--call">
                     <i class="me-1 fas fa-phone"></i>
                     Khách Cá Nhân
                 </div>
-                <div class="info__show--secondary">
+                <!-- <div class="info__show--secondary">
                     <div class="row mt-5 text-center">
                         <div class="col-sm-4">
                             <a href="#" class="support__about support__about--active">hỗ trợ tại hà nội/toàn quốc</a>
@@ -702,14 +702,14 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
             <div class="header__top-item">
                 <div class="header__info header__info--call">
                     <i class="me-1 fas fa-phone"></i>
                     Khách Doanh Nghiệp
                 </div>
-                <div class="info__show--secondary">
+                <!-- <div class="info__show--secondary">
                     <div class="row text-center mt-5">
                         <div class="col-sm-4 m-auto">
                             <a href="#" class="support__about support__about--active">Khách hàng doanh nghiệp</a>
@@ -809,14 +809,14 @@
                             </p>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
             <div class="header__top-item">
                 <div class="header__info header__info--call">
                     <i class="me-1 fas fa-phone"></i>
                     Bán hàng - TP HCM
                 </div>
-                <div class="info__show--secondary">
+                <!-- <div class="info__show--secondary">
                     <div class="row text-center mt-5">
                         <div class="col-sm-4 m-auto">
                             <a href="#" class="support__about support__about--active">hỗ trợ tại tp.hồ chí minh</a>
@@ -907,14 +907,14 @@
 
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
             <div class="header__top-item">
                 <div class="header__info header__info--call">
                     <i class="me-1 fas fa-phone"></i>
                     Bán hàng - Showroom
                 </div>
-                <div class="info__show--primary">
+                <!-- <div class="info__show--primary">
                     <div class="row">
                         <div class="col info-col">
                             <h2 class="info__location">
@@ -1085,7 +1085,7 @@
                     <div class="row">
                         <div class="col info-col">
                             <h2 class="info__location">
-                                <span>5</span> hacom - hà đông
+                                <span>5</span> MANGOES - hà đông
                             </h2>
                             <h3 class="fw-bold">
                                 <i class="fas fa-map-marker-alt"></i>
@@ -1126,7 +1126,7 @@
                         </div>
                         <div class="col info-col">
                             <h2 class="info__location">
-                                <span>6</span> hacom - tp. hồ chí minh
+                                <span>6</span> MANGOES - tp. hồ chí minh
                             </h2>
                             <h3 class="fw-bold">
                                 <i class="fas fa-map-marker-alt"></i>
@@ -1167,7 +1167,7 @@
                         </div>
                         <div class="col info-col">
                             <h2 class="info__location">
-                                <span>7</span> hacom - long biên
+                                <span>7</span> MANGOES - long biên
                             </h2>
                             <h3 class="fw-bold">
                                 <i class="fas fa-map-marker-alt"></i>
@@ -1208,7 +1208,7 @@
                         </div>
                         <div class="col info-col">
                             <h2 class="info__location">
-                                <span>8</span> hacom - từ sơn
+                                <span>8</span> MANGOES - từ sơn
                             </h2>
                             <h3 class="fw-bold">
                                 <i class="fas fa-map-marker-alt"></i>
@@ -1243,7 +1243,7 @@
                     <div class="row">
                         <div class="col-sm-3 info-col">
                             <h2 class="info__location">
-                                <span>9</span> hacom - hoàn kiếm
+                                <span>9</span> MANGOES - hoàn kiếm
                             </h2>
                             <h3 class="fw-bold">
                                 <i class="fas fa-map-marker-alt"></i>
@@ -1293,7 +1293,7 @@
                         </div>
                         <div class="col-sm-3 info-col">
                             <h2 class="info__location">
-                                <span>10</span> hacom - bắc từ liêm
+                                <span>10</span> MANGOES - bắc từ liêm
                             </h2>
                             <h3 class="fw-bold">
                                 <i class="fas fa-map-marker-alt"></i>
@@ -1306,7 +1306,7 @@
                             </span>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
             <a href="#" class="header__top-item">
                 <a href="#" class="header__info">
@@ -1544,11 +1544,11 @@
                                 </ul>
                             </div>
                             <div class="col">
-                                <h2 class="policy__title">thông tin hacom</h2>
+                                <h2 class="policy__title">thông tin MANGOES</h2>
                                 <ul class="policy__list">
                                     <li class="policy__item"><a href="#">
                                             <i class="fas fa-check"></i>
-                                            Giới thiệu HACOM
+                                            Giới thiệu MANGOES
                                         </a></li>
                                     <li class="policy__item"><a href="#">
                                             <i class="fas fa-check"></i>

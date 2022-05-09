@@ -41,7 +41,7 @@ jQuery(document).ready(function ($) {
       return false;
     } else {
       $.ajax({
-        url: 'submit_rating.php',
+        url: '../process/submit_rating.php',
         method: 'POST',
         data: {
           rating_data: rating_data,
@@ -66,7 +66,7 @@ jQuery(document).ready(function ($) {
   function load_rating_data() {
     var current_index = $('#current_index').val();
     $.ajax({
-      url: 'submit_rating.php',
+      url: '../process/submit_rating.php',
       method: 'POST',
       data: { action: 'load data', current_index: current_index },
       dataType: 'JSON',
