@@ -1,6 +1,7 @@
 <?php
 session_start();
 require_once("../libs/lib_db.php");
+$user_id = $_SESSION['user'] ? $_SESSION['user']['id'] : null;
 //get input -> ko co, vi la trang chu
 $id = isset($_REQUEST["id"]) ? $_REQUEST["id"] * 1 : 0;
 //$q = isset($_REQUEST["q"]) ? trim($_REQUEST["q"]) : "";
@@ -36,7 +37,7 @@ if (isset($_SESSION['account'])) {
 }
 
 /* select user_review */
-$sql = "SELECT * FROM review_table WHERE cid =" . $id;
+$sql = "SELECT * FROM review_table WHERE pid =" . $id;
 $user_reviews = select_list($sql);
 // print_r ($user_reviews);exit();
 ?>
@@ -263,11 +264,11 @@ $user_reviews = select_list($sql);
                                 <i class="fas fa-star star-light submit_star mr-1" id="submit_star_5" data-rating="5"></i>
                             </h4>
                             <div class="form-group mb-3">
-                                <input type="text" name="user_name" id="user_name" class="form-control fs-3" placeholder="Họ tên" />
+                                <input type="hidden" name="user_id" id="user_id" value="<?php echo $user_id ?>" />
                             </div>
                             <div class="form-group">
                                 <textarea name="user_review" id="user_review" class="form-control fs-3" placeholder="Nhập đánh giá sản phẩm (tối thiểu 80 ký tự)"></textarea>
-                                <input type="hidden" id="current_index" value="<?php echo $id ?>">
+                                <input type="hidden" id="product_id" value="<?php echo $id ?>">
                             </div>
                             <div class="form-group text-center mt-4">
                                 <button type="button" class="btn btn-primary fs-3" id="save_review">Gửi đánh giá</button>
@@ -287,7 +288,7 @@ $user_reviews = select_list($sql);
                         <?php foreach ($resultOther as $item) { ?>
                             <div class="product">
                                 <div class="aspect-ratio">
-                                    <a href="./chi-tiet.php?id=<?php echo $item["id"] ?>" class="product__img">
+                                    <a href="./detail.php?id=<?php echo $item["id"] ?>" class="product__img">
                                         <img src=" <?php $img = explode(',', $item['img']);
                                                     echo $img[0]; ?> " alt="">
                                     </a>

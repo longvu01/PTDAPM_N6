@@ -33,21 +33,24 @@ jQuery(document).ready(function ($) {
   });
   /* ----- */
   $('#save_review').click(function () {
-    var user_name = $('#user_name').val();
+    var user_id = $('#user_id').val();
     var user_review = $('#user_review').val();
-    var current_index = $('#current_index').val();
-    if (user_name == '' || user_review == '') {
-      alert('Bạn chưa nhập đủ các trường');
+    var product_id = $('#product_id').val();
+    if (!user_id) {
+      alert('Bạn chưa đăng nhập');
+      return false;
+    } else if (user_review.trim() === '') {
+      alert('Bạn chưa nhập đánh giá');
       return false;
     } else {
       $.ajax({
         url: '../process/submit_rating.php',
         method: 'POST',
         data: {
-          rating_data: rating_data,
-          user_name: user_name,
-          user_review: user_review,
-          current_index: current_index,
+          rating_data,
+          user_id,
+          user_review,
+          product_id,
         },
         success: function (data) {
           $('#review_modal').modal('hide');
@@ -64,11 +67,11 @@ jQuery(document).ready(function ($) {
   load_rating_data();
   /*  */
   function load_rating_data() {
-    var current_index = $('#current_index').val();
+    var product_id = $('#product_id').val();
     $.ajax({
       url: '../process/submit_rating.php',
       method: 'POST',
-      data: { action: 'load data', current_index: current_index },
+      data: { action: 'load data', product_id: product_id },
       dataType: 'JSON',
       success: function (data) {
         $('#average_rating').text(data.average_rating);

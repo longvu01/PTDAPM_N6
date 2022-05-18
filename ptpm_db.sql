@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Dec 13, 2021 at 01:43 PM
+-- Generation Time: May 18, 2022 at 10:51 AM
 -- Server version: 5.7.31
 -- PHP Version: 7.3.21
 
@@ -26,26 +26,7 @@ USE `ptpm_db`;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `contact`
---
--- Creation: Nov 09, 2021 at 05:35 AM
--- Last update: Nov 09, 2021 at 05:35 AM
---
-
-DROP TABLE IF EXISTS `contact`;
-CREATE TABLE IF NOT EXISTS `contact` (
-  `id` int(11) DEFAULT NULL,
-  `contact` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `gender` varchar(10) COLLATE utf8mb4_unicode_ci NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `grab_category`
---
--- Creation: Nov 06, 2021 at 11:40 AM
--- Last update: Nov 08, 2021 at 08:52 AM
 --
 
 DROP TABLE IF EXISTS `grab_category`;
@@ -87,9 +68,6 @@ INSERT INTO `grab_category` (`id`, `name`, `icon_name`, `more`, `body`) VALUES
 --
 -- Table structure for table `grab_content`
 --
--- Creation: Nov 06, 2021 at 02:27 PM
--- Last update: Nov 09, 2021 at 05:53 AM
---
 
 DROP TABLE IF EXISTS `grab_content`;
 CREATE TABLE IF NOT EXISTS `grab_content` (
@@ -111,7 +89,8 @@ CREATE TABLE IF NOT EXISTS `grab_content` (
   `insurance` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
   `gift` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `description` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`id`),
+  KEY `cid` (`cid`)
 ) ENGINE=MyISAM AUTO_INCREMENT=83 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
@@ -204,112 +183,31 @@ INSERT INTO `grab_content` (`id`, `cid`, `title`, `product_code`, `rate_qnt`, `c
 -- --------------------------------------------------------
 
 --
--- Table structure for table `mvc_user`
---
--- Creation: Nov 07, 2021 at 02:30 AM
--- Last update: Nov 09, 2021 at 03:02 AM
---
-
-DROP TABLE IF EXISTS `mvc_user`;
-CREATE TABLE IF NOT EXISTS `mvc_user` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `role` int(11) NOT NULL DEFAULT '0',
-  `username` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `password` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `phone` varchar(15) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `email` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '@gmail.com',
-  `gender` tinyint(1) NOT NULL DEFAULT '1',
-  `address` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'Hà Nội',
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `mvc_user`
---
-
-INSERT INTO `mvc_user` (`id`, `role`, `username`, `password`, `phone`, `email`, `gender`, `address`) VALUES
-(1, 1, 'admin', 'admin', '', 'admin@gmail.com', 1, ''),
-(15, 0, '123', '123', '0904688908', '@gmail.com', 0, 'TP HCM'),
-(14, 0, 'nam123', 'projectcnw123', '0904688908', '@gmail.com', 1, 'Hà Nội'),
-(13, 0, 'longvu01', 'projectcnw123', '123', '@gmail.com', 1, 'Hà Nội');
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `review_table`
---
--- Creation: Nov 06, 2021 at 01:06 PM
--- Last update: Nov 09, 2021 at 05:00 AM
 --
 
 DROP TABLE IF EXISTS `review_table`;
 CREATE TABLE IF NOT EXISTS `review_table` (
   `review_id` int(11) NOT NULL AUTO_INCREMENT,
-  `cid` int(11) NOT NULL,
-  `user_name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `pid` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
   `user_rating` int(11) NOT NULL,
   `user_review` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `datetime` int(11) NOT NULL,
   PRIMARY KEY (`review_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `review_table`
 --
 
-INSERT INTO `review_table` (`review_id`, `cid`, `user_name`, `user_rating`, `user_review`, `datetime`) VALUES
-(6, 14, 'admin', 5, 'ok', 1636337999),
-(2, 2, '123', 4, '123123123', 1636204138),
-(3, 3, 'Long VÅ©', 4, 'Ã¡dfasdfasdfasdfasdfasdf', 1636281926),
-(4, 3, '123', 4, 'Ã¡dfasdfasdfasdfasdfasdfÃ¡dfasdfasdfasdfasdfasdf', 1636281938),
-(5, 4, 'Gia Nam', 5, 'wow', 1636335411),
-(9, 21, 'huy', 4, 'adad', 1636431372),
-(10, 49, 'duong', 4, 'ok', 1636434032);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `showrooms`
---
--- Creation: Nov 06, 2021 at 11:44 AM
--- Last update: Nov 08, 2021 at 01:19 PM
---
-
-DROP TABLE IF EXISTS `showrooms`;
-CREATE TABLE IF NOT EXISTS `showrooms` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'HACOM - ',
-  `location` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'Số 129+131 Lê Thanh Nghị - Hai Bà Trưng - Hà Nội',
-  `contacts` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'Tel: 1900 1903 (máy lẻ 25398) - (0243) 6285551',
-  `insurance` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'Bảo hành: 1900 1903 (máy lẻ 25393)',
-  `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'Email: kinhdoanh.haibatrung@hanoicomputer.com',
-  `open_time` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'Thời gian mở cửa: Từ 8h-20h hàng ngày',
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `showrooms`
---
-
-INSERT INTO `showrooms` (`id`, `name`, `location`, `contacts`, `insurance`, `email`, `open_time`) VALUES
-(1, 'HACOM - HAI BÀ TRƯNG', 'Số 129+131 Lê Thanh Nghị - Hai Bà Trưng - Hà Nội', 'Tel: 1900 1903 (máy lẻ 25398) - (0243) 6285551', 'Bảo hành: 1900 1903 (máy lẻ 25393)', 'Email: kinhdoanh.haibatrung@hanoicomputer.com', 'Thời gian mở cửa: Từ 8h-20h hàng ngày'),
-(2, 'HACOM - ĐỐNG ĐA', 'Số 43 Thái Hà - Đống Đa - Hà Nội', 'Tel: 1900 1903 (máy lẻ 25398) - (0243) 6285551', 'Bảo hành: 1900 1903 (máy lẻ 25393)', 'Email: kinhdoanh.dongda@hanoicomputer.com', 'Thời gian mở cửa: Từ 8h-20h hàng ngày'),
-(3, 'HACOM - HẢI PHÒNG\r\n', '406 Tô Hiệu - Lê Chân - Hải Phòng', 'Tel: 1900 1903 (máy lẻ 25398) - (0243) 6285551', 'Bảo hành: 1900 1903 (máy lẻ 25393)', 'Email: kinhdoanh.haiphong@hanoicomputer.com', 'Thời gian mở cửa: Từ 8h-20h hàng ngày'),
-(4, 'HACOM - CẦU GIẤY', 'Số 77 + 79 Nguyễn Văn Huyên - Cầu Giấy - Hà Nội', 'Tel: 1900 1903 (máy lẻ 25398) - (0243) 6285551', 'Bảo hành: 1900 1903 (máy lẻ 25393)', 'Email: kinhdoanh.caugiay@hanoicomputer.com', 'Thời gian mở cửa: Từ 8h-20h hàng ngày'),
-(5, 'HACOM - HÀ ĐÔNG', 'Số 511+513 Quang Trung - Hà Đông - Hà Nội', 'Tel: 1900 1903 (máy lẻ 25398) - (0243) 6285551', 'Bảo hành: 1900 1903 (máy lẻ 25393)', 'Email: kinhdoanh.hadong@hanoicomputer.com', 'Thời gian mở cửa: Từ 8h-20h hàng ngày'),
-(6, 'HACOM - TP. HỒ CHÍ MINH', 'Số 520 Cách Mạng Tháng Tám - Quận 3 - TP. Hồ Chí Minh', 'Tel: 1900 1903 (máy lẻ 25398) - (0243) 6285551', 'Bảo hành: 1900 1903 (máy lẻ 25393)', 'Email: kinhdoanh.hcm@hanoicomputer.com', 'Thời gian mở cửa: Từ 8h-20h hàng ngày'),
-(7, 'HACOM - LONG BIÊN', 'Số 398 Nguyễn Văn Cừ - Long Biên - Hà Nội', 'Tel: 1900 1903 (máy lẻ 25398) - (0243) 6285551', 'Bảo hành: 1900 1903 (máy lẻ 25393)', 'Email: kinhdoanh.longbien@hanoicomputer.com', 'Thời gian mở cửa: Từ 8h-20h hàng ngày'),
-(8, 'HACOM - TỪ SƠN', 'Số 299 Minh Khai - Từ Sơn - Bắc Ninh', 'Tel: 1900 1903 (máy lẻ 25398) - (0243) 6285551', 'Bảo hành: 1900 1903 (máy lẻ 25393)', 'Email: kinhdoanh.tuson@hanoicomputer.com', 'Thời gian mở cửa: Từ 8h-20h hàng ngày'),
-(9, 'HACOM - HOÀN KIẾM', 'Số 129+131 Lê Thanh Nghị - Hai Bà Trưng - Hà Nội', 'Tel: 1900 1903 (máy lẻ 25398) - (0243) 6285551', 'Bảo hành: 1900 1903 (máy lẻ 25393)', 'Email: kinhdoanh.haibatrung@hanoicomputer.com', 'Thời gian mở cửa: Từ 8h-20h hàng ngày'),
-(10, 'HACOM - BẮC TỪ LIÊM', 'Số 59 + 61 Thợ Nhuộm - Hoàn Kiếm - Hà Nội', 'Tel: 1900 1903 (máy lẻ 25398) - (0243) 6285551', 'Bảo hành: 1900 1903 (máy lẻ 25393)', 'Email: kinhdoanh.hoankiem@hanoicomputer.com', 'Thời gian mở cửa: Từ 8h-20h hàng ngày');
+INSERT INTO `review_table` (`review_id`, `pid`, `user_id`, `user_rating`, `user_review`, `datetime`) VALUES
+(12, 7, 13, 5, 'a', 1652870278);
 
 -- --------------------------------------------------------
 
 --
 -- Table structure for table `sub_cate`
---
--- Creation: Nov 06, 2021 at 12:50 PM
--- Last update: Nov 08, 2021 at 12:44 AM
 --
 
 DROP TABLE IF EXISTS `sub_cate`;
@@ -369,37 +267,55 @@ INSERT INTO `sub_cate` (`id`, `cid`, `name`, `content`) VALUES
 --
 -- Table structure for table `user_order`
 --
--- Creation: Nov 08, 2021 at 08:00 AM
--- Last update: Dec 11, 2021 at 02:21 PM
---
 
 DROP TABLE IF EXISTS `user_order`;
 CREATE TABLE IF NOT EXISTS `user_order` (
   `order_id` int(11) NOT NULL AUTO_INCREMENT,
-  `buyer_id` int(11) NOT NULL,
-  `product_code` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `qnt` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `product_id` int(11) NOT NULL,
+  `qty` int(11) NOT NULL,
   `price` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL,
   `pay_mode` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `create at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `create_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`order_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=39 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `user_order`
 --
 
-INSERT INTO `user_order` (`order_id`, `buyer_id`, `product_code`, `qnt`, `price`, `pay_mode`, `create at`) VALUES
-(29, 14, 'LTDL226', 1, '20799000', 'COD', '2021-11-08 15:00:38'),
-(30, 14, 'RAKT307', 2, '1199000', 'COD', '2021-11-08 15:00:38'),
-(31, 14, 'PINL027', 3, '1000000', 'online', '2021-11-08 15:00:38'),
-(32, 14, 'FANC664', 4, '272000', 'online', '2021-11-08 15:00:38'),
-(33, 1, 'BOCH133', 3, '759000', 'COD', '2021-11-08 20:32:35'),
-(34, 1, 'RAKT266', 2, '1179000', 'COD', '2021-11-08 20:32:35'),
-(35, 15, 'LTDL273', 2, '20489000', 'online', '2021-11-08 21:36:49'),
-(36, 15, 'LTDL225', 1, '15289000', 'online', '2021-11-08 21:36:49'),
-(37, 1, 'PCGM405', 2, '15099000', 'COD', '2021-11-09 12:25:00'),
-(38, 1, 'BOCH133', 2, '759000', 'COD', '2021-12-11 21:21:43');
+INSERT INTO `user_order` (`order_id`, `user_id`, `product_id`, `qty`, `price`, `pay_mode`, `create_at`) VALUES
+(1, 15, 5, 1, '20489000', 'COD', '2022-05-17 22:17:44'),
+(2, 13, 3, 1, '15289000', 'online', '2022-05-18 17:46:37');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user_table`
+--
+
+DROP TABLE IF EXISTS `user_table`;
+CREATE TABLE IF NOT EXISTS `user_table` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `role` int(11) NOT NULL DEFAULT '0',
+  `username` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `password` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `phone` varchar(15) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '@gmail.com',
+  `gender` tinyint(1) NOT NULL DEFAULT '1',
+  `address` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'Hà Nội',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `user_table`
+--
+
+INSERT INTO `user_table` (`id`, `role`, `username`, `password`, `phone`, `email`, `gender`, `address`) VALUES
+(1, 1, 'admin', 'admin', '', 'admin@gmail.com', 1, ''),
+(15, 0, 'tung98', 'tung98', '012345678', 'tung@gmail.com', 0, 'TP HCM'),
+(14, 0, 'tu01', 'tu01', '012854892', 'tu@gmail.com', 1, 'Hà Nội'),
+(13, 0, 'longvu01', 'longvu01', '085690124', 'vu@gmail.com', 1, 'Hà Nội');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

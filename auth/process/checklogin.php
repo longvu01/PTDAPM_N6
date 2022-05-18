@@ -17,7 +17,7 @@ function checkLoggedUser()
 {
 	$user = getLoggedUser();
 	if (!$user) {
-		echo "You need to <a href=\"../auth/login.php\">Login</a> first";
+		header('Location: /PTDAPM_N6/auth/login.php');
 		exit();
 	}
 	return $user;

@@ -2,20 +2,20 @@
 
 $connect = new PDO("mysql:host=localhost;dbname=ptpm_db", "root", "");
 
-if(isset($_POST["rating_data"])){
+if (isset($_POST["rating_data"])) {
 
 	$data = array(
-		':user_name'	=> $_POST["user_name"],
+		':user_id'	=> $_POST["user_id"],
 		':user_rating' => $_POST["rating_data"],
 		':user_review' => $_POST["user_review"],
-		':current_index'	=> $_POST["current_index"],
+		':product_id'	=> $_POST["product_id"],
 		':datetime' => time()
 	);
 
 	$sql = "
 	INSERT INTO review_table 
-	(cid,user_name, user_rating, user_review, datetime) 
-	VALUES (:current_index, :user_name, :user_rating, :user_review, :datetime)
+	(pid,user_id, user_rating, user_review, datetime) 
+	VALUES (:product_id, :user_id, :user_rating, :user_review, :datetime)
 	";
 
 	$statement = $connect->prepare($sql);
@@ -25,7 +25,7 @@ if(isset($_POST["rating_data"])){
 	echo "Bạn đã đánh giá thành công!";
 }
 
-if(isset($_POST["action"])){
+if (isset($_POST["action"])) {
 
 	$average_rating = 0;
 	$total_review = 0;
@@ -37,44 +37,47 @@ if(isset($_POST["action"])){
 	$total_user_rating = 0;
 	$review_content = array();
 
-	$current_index = $_POST['current_index'];
+	$product_id = $_POST['product_id'];
 
-	$sql = "SELECT * FROM review_table WHERE cid = " .$current_index ." ORDER BY review_id DESC";
+	$sql = "SELECT * FROM review_table
+join user_table
+on review_table.user_id = user_table.id
+WHERE review_table.pid = $product_id
+ORDER BY review_table.review_id DESC";
 
 	$result = $connect->query($sql, PDO::FETCH_ASSOC);
 
-	foreach($result as $row){
+	foreach ($result as $row) {
 		$review_content[] = array(
-			'user_name'	 =>	$row["user_name"],
+			'user_name'	 =>	$row["username"],
 			'user_review' => $row["user_review"],
 			'rating' =>	$row["user_rating"],
 			'datetime' => date('l, F d y h:i:s', $row["datetime"])
 		);
 
-		if($row["user_rating"] == '5'){
+		if ($row["user_rating"] == '5') {
 			$five_star_review++;
 		}
 
-		if($row["user_rating"] == '4'){
+		if ($row["user_rating"] == '4') {
 			$four_star_review++;
 		}
 
-		if($row["user_rating"] == '3'){
+		if ($row["user_rating"] == '3') {
 			$three_star_review++;
 		}
 
-		if($row["user_rating"] == '2'){
+		if ($row["user_rating"] == '2') {
 			$two_star_review++;
 		}
 
-		if($row["user_rating"] == '1'){
+		if ($row["user_rating"] == '1') {
 			$one_star_review++;
 		}
 
 		$total_review++;
 
 		$total_user_rating += $row["user_rating"];
-
 	}
 
 	$average_rating = $total_user_rating / $total_review;
@@ -91,5 +94,4 @@ if(isset($_POST["action"])){
 	);
 
 	echo json_encode($output);
-
 }

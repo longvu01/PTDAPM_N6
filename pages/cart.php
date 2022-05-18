@@ -70,7 +70,6 @@ $resultLast = select_one($sql);
                                                                                                     echo $img[0]; ?>" alt=""></a>
                                         <div class="cart__product-more">
                                             <a href="./chi-tiet.php?id=<?php echo $key ?>" class="cart__product-name"><?php echo $val['title'] ?></a>
-                                            <p class="cart__product-code">Mã SP: <?php echo $val['product_code'] ?></p>
                                         </div>
                                     </div>
                                     <!--  -->
@@ -81,7 +80,7 @@ $resultLast = select_one($sql);
                                     <!--  -->
                                     <form action="../process/cart/cart_update.php" method="post" class="cart__product-qnt">
                                         <button id="decBtn">-</button>
-                                        <input type="number" class="form-control d-inline iquantity" min="1" max="10" value="<?php echo $val['qnt'] ?>" name="change_qnt">
+                                        <input type="number" class="form-control d-inline iquantity" min="1" max="10" value="<?php echo $val['qty'] ?>" name="change_qnt">
                                         <input type="hidden" name="title" value="<?php echo $val['title'] ?>">
                                         <button id="incBtn">+</button>
                                     </form>
@@ -90,7 +89,7 @@ $resultLast = select_one($sql);
                                         <span class="itotal"></sp>
                                             <?php
                                             $productPrice = (float)$val['price'];
-                                            $product_total_price = $productPrice * $val['qnt'];
+                                            $product_total_price = $productPrice * $val['qty'];
                                             $_SESSION['sum_price'] += $product_total_price;
                                             echo number_format($product_total_price, 0, '.', '.');
                                             ?> đ

@@ -65,22 +65,22 @@ if (isset($_SESSION['account'])) {
         </div>
 
         <form id="form-payment" class="payment__products" action="../process/cart/payment_exec.php" method="post">
-            <input type="hidden" name="buyer_id" value="<?php echo $user['id'] ?>">
+            <input type="hidden" name="user_id" value="<?php echo $user['id'] ?>">
             <?php if (isset($_SESSION['cart'])) { ?>
                 <?php foreach ($_SESSION['cart'] as $key => $val) { ?>
                     <div class="cart__product mb-3">
                         <div class="cart__product-info">
-                            <a href="./chi-tiet.php?id=<?php echo $key ?>"><img src="<?php $img = explode(',', $val['img']);
-                                                                                        echo $img[0]; ?>" alt=""></a>
+                            <a href="./detail.php?id=<?php echo $key ?>"><img src="<?php $img = explode(',', $val['img']);
+                                                                                    echo $img[0]; ?>" alt=""></a>
                             <div class="cart__product-more">
-                                <a href="./chi-tiet.php?id=<?php echo $key ?>" class="cart__product-name"><?php echo $val['title'] ?></a>
-                                <p class="cart__product-code">Mã SP: <?php echo $val['product_code'] ?></p>
-                                <input type="hidden" name="product_code" value="<?php echo $val['product_code'] ?>">
+                                <a href="./detail.php?id=<?php echo $key ?>" class="cart__product-name"><?php echo $val['title'] ?></a>
+                                <p class="cart__product-code">Mã SP: <?php echo $val['product_id'] ?></p>
+                                <input type="hidden" name="product_id" value="<?php echo $val['product_id'] ?>">
                             </div>
                         </div>
                         <div>
-                            x<?php echo $val['qnt'] ?>
-                            <input type="hidden" name="qnt" value="<?php echo $val['qnt'] ?>">
+                            x<?php echo $val['qty'] ?>
+                            <input type="hidden" name="qty" value="<?php echo $val['qty'] ?>">
                         </div>
                         <div class="cart__product-price">
                             <?php echo number_format($val['price'], 0, '.', '.') ?> đ
@@ -110,9 +110,7 @@ if (isset($_SESSION['account'])) {
 
     <!--  -->
     <script src="../assets/js/all.js"></script>
-    <script src="../assets/js/ajax/ajax_fetch_showroom.js"></script>
     <script src="../assets/js/mail.js"></script>
-
 
 </body>
 
