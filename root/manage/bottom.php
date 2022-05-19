@@ -1,20 +1,6 @@
-    <section class="form">
-        <h2 class="form__title">ĐĂNG KÝ NHẬN EMAIL THÔNG BÁO KHUYẾN MẠI HOẶC ĐỂ ĐƯỢC TƯ VẤN MIỄN PHÍ</h2>
-        <form class="input-group mb-3 form__group" action="../process/mail.php" method="POST" id="form-contact">
-            <input id="mail-contact" type="text" name="contact" class="form-control form__input" placeholder="Nhập email hoặc số điện thoại của bạn">
-            <select id="mail-gender" name="gender">
-                <option value="male">Male</option>
-                <option value="female">Female</option>
-            </select>
-            <button class="btn btn-outline-secondary form__btn" name="submit" type="submit" id="mail-submit">Gửi</button>
-        </form>
-        <h3 class="text-red fs-4 form-message"></h3>
-    </section>
-
     <!-- SUB BTN -->
     <button id="btn_scroll-top" class="hide"><i class="fas fa-arrow-up"></i></button>
-    <div class="spin-btn"></div>
-    <?php if ($user && $user['role'] == 1) { ?>
+    <?php if (isset($user) && $user['role'] == 1) { ?>
         <div class="exec__btn">
             <i class="fas fa-ellipsis-h"></i>
             <div class="exec__list">

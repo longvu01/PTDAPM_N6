@@ -12,3 +12,9 @@
 27.04.2022 03:09:07 sql=[SELECT * FROM grab_content ORDER BY id DESC LIMIT 1] 
 03.05.2022 02:36:07 <!-- sql=[update grab_content set img=n'../../../uploads/ID zoom 06022022.PNG-20220503-023607.png',cid=n'1',title=n'1',product_code=n'1',product_info=n'',start_price=n'1',price=n'1',sale=n'1',insurance=n'1',gift=n'',description=n''  where id=84] --> 
 03.05.2022 02:36:07 sql=[SELECT * FROM grab_content ORDER BY id DESC LIMIT 1] 
+19.05.2022 01:27:53 <!-- sql=[insert into products 
+	(cid,img,title,product_code,product_info,start_price,price,sale,insurance,gift,description)
+	values 
+	('1','../../../uploads/zalo_last_screenshot-20220519-012753.png','test','abcd123','tttt','100.000.000đ','12.123.123','(Tiết kiệm: 99%)','72 Tháng','','')] --> 
+19.05.2022 01:27:53 sql=[select * from categories] 
+19.05.2022 01:27:53 sql=[SELECT * FROM products ORDER BY id DESC LIMIT 1] 

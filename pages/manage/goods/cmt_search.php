@@ -14,7 +14,7 @@ if (!isset($_REQUEST["q"])) {
 $cond = "";
 $searchfields = array("", "");
 // print_r($_SESSION);
-$sql = "select * from review_table where cid = {$q}";
+$sql = "select * from user_reviews where cid = {$q}";
 // echo $sql;exit();
 //thuc thi cau lenh sql
 $result = select_list($sql);

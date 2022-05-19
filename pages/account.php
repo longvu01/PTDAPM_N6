@@ -4,9 +4,9 @@ require_once("../libs/lib_db.php");
 require_once("../auth/process/checklogin.php");
 $user = checkLoggedUser();
 
-$sql = 'SELECT * FROM grab_content ORDER BY id DESC LIMIT 1';
+$sql = 'SELECT * FROM products ORDER BY id DESC LIMIT 1';
 $resultLast = select_one($sql);
-$sql = "select * from grab_category";
+$sql = "select * from categories";
 $result_parents = select_list($sql);
 $user = "";
 if (isset($_SESSION['account'])) {
@@ -16,18 +16,18 @@ if (isset($_SESSION['account'])) {
 
 $data = array();
 $id = isset($_REQUEST["id"]) ? $_REQUEST["id"] * 1 : 0;
-$username = isset($_REQUEST["username"]) ? $_REQUEST["username"] : "";
+$user_name = isset($_REQUEST["user_name"]) ? $_REQUEST["user_name"] : "";
 $phone = isset($_REQUEST["phone"]) ? $_REQUEST["phone"] : "";
 $email = isset($_REQUEST["email"]) ? $_REQUEST["email"] : "";
 $gender = isset($_REQUEST["gender"]) ? $_REQUEST["gender"] * 1 : 0;
 $address = isset($_REQUEST["address"]) ? $_REQUEST["address"] : "";
 
-$data["username"] = $username;
+$data["user_name"] = $user_name;
 $data["phone"] = $phone;
 $data["email"] = $email;
 $data["gender"] = $gender;
 $data["address"] = $address;
-$tbl = "mvc_user";
+$tbl = "accounts";
 $cond = "id={$id}";
 $sql = data_to_sql_update($tbl, $data, $cond);
 $ret = exec_update($sql);
@@ -48,7 +48,7 @@ if ($id) {
     <?php require_once('../root/header.php') ?>
 
     <div class="account__top">
-        <h2>Xin chào <span class="text-danger"><?php echo $user['username'] ?></span>! Bạn đã đăng nhập thành công</h2>
+        <h2>Xin chào <span class="text-danger"><?php echo $user['user_name'] ?></span>! Bạn đã đăng nhập thành công</h2>
     </div>
 
     <?php if ($user['role'] == 1) { ?>
@@ -67,7 +67,7 @@ if ($id) {
 
             <div class="form-group">
                 <p>Họ tên</p>
-                <input name="username" value="<?php echo $user["username"] ?>" placeholder="Tên tài khoản" required />
+                <input name="user_name" value="<?php echo $user["user_name"] ?>" placeholder="Tên tài khoản" required />
             </div>
 
             <div class="form-group">

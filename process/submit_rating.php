@@ -13,7 +13,7 @@ if (isset($_POST["rating_data"])) {
 	);
 
 	$sql = "
-	INSERT INTO review_table 
+	INSERT INTO user_reviews 
 	(pid,user_id, user_rating, user_review, datetime) 
 	VALUES (:product_id, :user_id, :user_rating, :user_review, :datetime)
 	";
@@ -39,17 +39,17 @@ if (isset($_POST["action"])) {
 
 	$product_id = $_POST['product_id'];
 
-	$sql = "SELECT * FROM review_table
-join user_table
-on review_table.user_id = user_table.id
-WHERE review_table.pid = $product_id
-ORDER BY review_table.review_id DESC";
+	$sql = "SELECT * FROM user_reviews
+join accounts
+on user_reviews.user_id = accounts.id
+WHERE user_reviews.pid = $product_id
+ORDER BY user_reviews.review_id DESC";
 
 	$result = $connect->query($sql, PDO::FETCH_ASSOC);
 
 	foreach ($result as $row) {
 		$review_content[] = array(
-			'user_name'	 =>	$row["username"],
+			'user_name'	 =>	$row["user_name"],
 			'user_review' => $row["user_review"],
 			'rating' =>	$row["user_rating"],
 			'datetime' => date('l, F d y h:i:s', $row["datetime"])

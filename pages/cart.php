@@ -10,7 +10,7 @@ if (isset($_SESSION['cart'])) {
 }
 
 /* --------------------------------------------- */
-$sql = "select * from grab_category";
+$sql = "select * from categories";
 $result_parents = select_list($sql);
 $user = "";
 if (isset($_SESSION['account'])) {
@@ -24,7 +24,7 @@ if (isset($user['role'])) {
     }
 }
 
-$sql = 'SELECT * FROM grab_content ORDER BY id DESC LIMIT 1';
+$sql = 'SELECT * FROM products ORDER BY id DESC LIMIT 1';
 $resultLast = select_one($sql);
 ?>
 <!-- Start HTML -->

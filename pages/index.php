@@ -2,10 +2,10 @@
 session_start();
 require_once("../libs/lib_db.php");
 
-$sql = 'SELECT * FROM grab_category';
+$sql = 'SELECT * FROM categories';
 $categories = select_list($sql);
 $result_parents = select_list($sql);
-$sql = 'SELECT * FROM grab_content ORDER BY id DESC LIMIT 1';
+$sql = 'SELECT * FROM products ORDER BY id DESC LIMIT 1';
 $resultLast = select_one($sql);
 $user = "";
 if (isset($_SESSION['account'])) {
@@ -697,15 +697,15 @@ if (isset($_SESSION['account'])) {
                 <div class="products__top">
                     <a href="./category.php?id=<?php echo $category['id'] ?>" class="products__title"><?php echo $category['name'] ?></a>
                     <ul class="products__list">
-                        <?php foreach (explode(',', $category['more']) as $more) { ?>
-                            <li class="products__item"><a href="tim-kiem.php?q=<?php echo $more ?>"><?php echo $more ?></a></li>
+                        <?php foreach (explode(',', $category['sub_categories']) as $sub_categories) { ?>
+                            <li class="products__item"><a href="tim-kiem.php?q=<?php echo $sub_categories ?>"><?php echo $sub_categories ?></a></li>
                         <?php } ?>
                     </ul>
                     <a href="./category.php?id=<?php echo $category['id'] ?>" class="products__seeall">Xem tất cả</a>
                 </div>
 
                 <?php
-                $sql = "select * from grab_content where cid={$category['id']}";
+                $sql = "select * from products where cid={$category['id']}";
                 $resultOther = select_list($sql);
                 ?>
 

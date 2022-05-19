@@ -8,10 +8,10 @@
             <div class="offcanvas-header">
                 <h5 class="offcanvas-title service__canvas-top" id="offcanvasExampleLabel-header">
                     <i class="fas fa-user service__canvas-icon"></i>
-                    <?php if ($user) { ?>
+                    <?php if (isset($user)) { ?>
                         <div>
                             <p class="fs-3">Xin chào</p>
-                            <a href="account.php" class="fs-2"><?php echo $user['username'] ?></a fs-3>
+                            <a href="account.php" class="fs-2"><?php echo $user['user_name'] ?></a fs-3>
                         </div>
                     <?php } else { ?>
                         <a href="../auth/signup.php">Đăng ký</a>/
@@ -1376,10 +1376,10 @@
                         </li>
                         <li class="user-action-item d-flex align-items-center fs-5 fw-light">
                             <i class="fas fa-user"></i>
-                            <?php if ($user) { ?>
+                            <?php if (isset($user)) { ?>
                                 <div>
                                     <p class="mb-3">Xin chào</p>
-                                    <a href="account.php"><?php echo $user['username'] ?></a fs-3>
+                                    <a href="account.php"><?php echo $user['user_name'] ?></a fs-3>
                                 </div>
                                 <ul class="sub__info--login">
                                     <li class="sub__info--login-item">

@@ -8,7 +8,7 @@ $p = isset($_REQUEST["p"]) ? $_REQUEST["p"] * 1 : 0;
 if ($p < 1) $p = 1;
 
 //2.1. Thông tin chi tiết của chuyên mục
-$sql = "select * from grab_category where id = {$id}";
+$sql = "select * from categories where id = {$id}";
 //2.2. Thực thi sql
 $result = select_one($sql);
 // print_r($result);exit();
@@ -18,12 +18,12 @@ $sub_cate_id = $result['id'];
 $nop = 12;
 $offset = $nop * ($p - 1);
 $cond = "where cid = {$id}";
-$sql = "select * from grab_content {$cond}  limit {$nop} offset {$offset} ";
+$sql = "select * from products {$cond}  limit {$nop} offset {$offset} ";
 // echo $sql;exit();
 //2.2. Thực thi sql
 $datas = select_list($sql);
 //print_r($datas);exit();
-$sqlcount = "select count(*) as c from grab_content {$cond}";
+$sqlcount = "select count(*) as c from products {$cond}";
 //2.2. Thực thi sql
 $count = select_one($sqlcount);
 $total = $count['c'];
@@ -33,13 +33,13 @@ $total = $count['c'];
 $num = ceil($total / $nop);
 
 /* subcate */
-$sql = "select * from sub_cate where cid = {$sub_cate_id}";
-$sub_cate = select_list($sql);
-// print_r($sub_cate);exit();
+$sql = "select * from filters_categories where cid = {$sub_cate_id}";
+$filters_categories = select_list($sql);
+// print_r($filters_categories);exit();
 
-$sql = "select * from grab_category";
+$sql = "select * from categories";
 $result_parents = select_list($sql);
-$sql = 'SELECT * FROM grab_content ORDER BY id DESC LIMIT 1';
+$sql = 'SELECT * FROM products ORDER BY id DESC LIMIT 1';
 $resultLast = select_one($sql);
 $user = "";
 if (isset($_SESSION['account'])) {
@@ -121,7 +121,7 @@ if (isset($_SESSION['account'])) {
                     <h3 class="filter-text">LỌC SẢN PHẨM</h3>
 
                     <div class="accordion accordion--category" id="accordionExample">
-                        <?php foreach ($sub_cate as $item) { ?>
+                        <?php foreach ($filters_categories as $item) { ?>
 
                             <div class="accordion-item">
                                 <h2 class="accordion-header" id="heading<?php echo ($item['id']); ?>">
@@ -455,7 +455,7 @@ if (isset($_SESSION['account'])) {
                     </div>
 
                     <div class="category__more">
-                        <?php echo $result["body"] ?>
+                        <?php echo $result["content"] ?>
                     </div>
 
                 </div>

@@ -6,3 +6,7 @@
 17.05.2022 03:17:00 sql=[select * from grab_content where id=5] 
 18.05.2022 10:46:29 sql=[select * from grab_content where id=3] 
 18.05.2022 10:48:12 sql=[select * from grab_content where id=3] 
+19.05.2022 12:45:16 sql=[select * from grab_content where id=17] 
+19.05.2022 12:45:16 Khong the select duoc,ERROR=[Table 'ptpm_db.grab_content' doesn't exist] 
+19.05.2022 12:45:16 COUNT=[0] 
+19.05.2022 12:46:50 sql=[select * from products where id=17] 

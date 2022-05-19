@@ -20,37 +20,37 @@ if ($q) {
     $cond .= " or product_info like '%{$q}%'";
     $cond .= " or description like '%{$q}%'";
 }
-$sql = " select * from grab_content {$cond} ";
+$sql = " select * from products {$cond} ";
 // print_r($sql);exit();
 $result_search = select_one($sql);
 // print_r($result_search);exit();
-$sqlcount = "select count(*) as c from grab_content {$cond}";
+$sqlcount = "select count(*) as c from products {$cond}";
 $count = select_one($sqlcount);
 $total = $count['c'];
 $nop = 12;
 $offset = $nop * ($p - 1);
 $num = ceil($total / $nop);
 
-// $sql = "select * from sub_cate where content like '%{$q}%'";
-// $sub_cate = select_list($sql);
-// print_r($sub_cate);exit();
-// if(!($sub_cate)) {
-// $sql = "select distinct * from sub_cate";
-$sql = "select * from sub_cate where name in (SELECT DISTINCT name from sub_cate)";
+// $sql = "select * from filters_categories where content like '%{$q}%'";
+// $filters_categories = select_list($sql);
+// print_r($filters_categories);exit();
+// if(!($filters_categories)) {
+// $sql = "select distinct * from filters_categories";
+$sql = "select * from filters_categories where name in (SELECT DISTINCT name from filters_categories)";
 // }
 // echo $sql;
-$sub_cate = select_list($sql);
-// print_r($sub_cate);exit();
+$filters_categories = select_list($sql);
+// print_r($filters_categories);exit();
 
-$sql = "select * from grab_content {$cond} limit {$nop} offset {$offset}";
+$sql = "select * from products {$cond} limit {$nop} offset {$offset}";
 // print_r($sql);exit();
 $datas = select_list($sql);
 // print_r($datas);exit();
 
-$sql = "select * from grab_category";
+$sql = "select * from categories";
 $result_parents = select_list($sql);
 
-$sql = 'SELECT * FROM grab_content ORDER BY id DESC LIMIT 1';
+$sql = 'SELECT * FROM products ORDER BY id DESC LIMIT 1';
 $resultLast = select_one($sql);
 $user = "";
 if (isset($_SESSION['account'])) {
@@ -123,7 +123,7 @@ $flagDM = 1;
                     <h3 class="filter-text">LỌC SẢN PHẨM</h3>
 
                     <div class="accordion accordion--category" id="accordionExample">
-                        <?php foreach ($sub_cate as $item) { ?>
+                        <?php foreach ($filters_categories as $item) { ?>
 
                             <div class="accordion-item">
                                 <h2 class="accordion-header" id="heading<?php echo ($item['id']); ?>">
@@ -432,7 +432,8 @@ $flagDM = 1;
                         <nav aria-label="Page navigation">
                             <ul class="pagination">
                                 <?php for ($i = 1; $i <= $num; $i++) { ?>
-                                    <li class="page-item"><a class="page-link" href="tim-kiem.php?q=<?php echo $q ?>&p=<?php echo $i ?>"><?php echo $i ?></a></li>
+                                    <li class="page-item"><a class="page-link <?php if ($i == $p) echo "active" ?>
+                                    " href="search.php?q=<?php echo $q ?>&p=<?php echo $i ?>"><?php echo $i ?></a></li>
                                 <?php } ?>
                             </ul>
                         </nav>

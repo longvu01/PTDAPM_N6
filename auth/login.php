@@ -8,22 +8,22 @@ if ($user) {
 	exit();
 }
 //1. get input
-$username = isset($_REQUEST["username"]) ? $_REQUEST["username"] : "";
+$user_name = isset($_REQUEST["user_name"]) ? $_REQUEST["user_name"] : "";
 $password = isset($_REQUEST["password"]) ? $_REQUEST["password"] : "";
-// print_r($username);exit();
+// print_r($user_name);exit();
 // print_r($user);
 
 // print_r($_SESSION);exit();
 $error = '';
 $checkLogin = 1;
 $user = 0;
-if (isset($_REQUEST["username"])) {
-	unset($_SESSION['username']);
+if (isset($_REQUEST["user_name"])) {
+	unset($_SESSION['user_name']);
 	//da nhap thong tin
 	//2. Kiem tra
 	//2.1.1 tao sql
-	$sql = "select * from mvc_user";
-	$sql .= " where username='{$username}'";
+	$sql = "select * from accounts";
+	$sql .= " where user_name='{$user_name}'";
 	// echo "sql=[$sql]"; exit();
 	//2.1.2 Thuc thi sql
 	$user = select_one($sql);
@@ -32,11 +32,11 @@ if (isset($_REQUEST["username"])) {
 	if (!$user) {
 		//thuc hien co user o day
 		$checkLogin = 0;
-		$error = 'Không tồn tại username';
+		$error = 'Không tồn tại user_name';
 	} else {
 		//kiem tra pass
-		// if (md5($password) != $user['password']){
-		if (($password) != $user['password']) {
+		if (md5($password) != $user['password']) {
+			// if (($password) != $user['password']) {
 			$checkLogin = 0;
 			$error = 'Password không đúng';
 		}
@@ -47,7 +47,7 @@ if (isset($_REQUEST["username"])) {
 		setLoggedUser($user);
 		$_SESSION['user'] = $user;
 		// print_r($_SESSION['user']);exit();
-		echo "Ban da login thanh cong,username=[$username],password=[$password]";
+		echo "Ban da login thanh cong,user_name=[$user_name],password=[$password]";
 		// exit();
 		//chuyen den trang account
 		header("Location: ../pages/account.php");
@@ -69,9 +69,9 @@ if (isset($_REQUEST["username"])) {
 				<h1>Login</h1>
 
 				<div class="form_group">
-					<label for="">Username</label>
+					<label for="">User_name</label>
 					<br>
-					<input type="text" name="username" value="<?php echo $username ?>" placeholder="Enter user name">
+					<input type="text" name="user_name" value="<?php echo $user_name ?>" placeholder="Enter user name">
 				</div>
 				<div class="form_group">
 					<label for="">Password</label>
@@ -110,7 +110,7 @@ if (isset($_REQUEST["username"])) {
 	</div>
 	<?php
 	// if(isset($_POST['login'])) {
-	// 	$_SESSION['username'] = $_POST['username'];
+	// 	$_SESSION['user_name'] = $_POST['user_name'];
 	// 	$_SESSION['password'] = $_POST['password'];
 	// 	header('location: account.php');
 	// }

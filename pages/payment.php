@@ -6,9 +6,9 @@ $user = checkLoggedUser();
 
 $sum_price = isset($_REQUEST["sum_price"]) ? $_REQUEST["sum_price"] : "";
 
-$sql = 'SELECT * FROM grab_content ORDER BY id DESC LIMIT 1';
+$sql = 'SELECT * FROM products ORDER BY id DESC LIMIT 1';
 $resultLast = select_one($sql);
-$sql = "select * from grab_category";
+$sql = "select * from categories";
 $result_parents = select_list($sql);
 $user = "";
 if (isset($_SESSION['account'])) {
@@ -30,7 +30,7 @@ if (isset($_SESSION['account'])) {
 
             <div class="form-group">
                 <p>Họ tên</p>
-                <input name="username" value="<?php echo $user["username"] ?>" placeholder="Tên tài khoản" required />
+                <input name="user_name" value="<?php echo $user["user_name"] ?>" placeholder="Tên tài khoản" required />
             </div>
 
             <div class="form-group">

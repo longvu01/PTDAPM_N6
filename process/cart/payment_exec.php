@@ -7,7 +7,7 @@ $user_id = isset($_REQUEST["user_id"]) ? $_REQUEST["user_id"] : "";
 $pay_mode = isset($_REQUEST["pay_mode"]) ? $_REQUEST["pay_mode"] : "";
 
 $order_id = mysqli_insert_id($conn);
-$sql = "insert into user_order (order_id, user_id, product_id, qty, price, pay_mode)
+$sql = "insert into user_orders (order_id, user_id, product_id, qty, price, pay_mode)
 	values 
 	(?,?,?,?,?,?)";
 $stmt = mysqli_prepare($conn, $sql);

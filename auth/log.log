@@ -11,3 +11,24 @@
 17.05.2022 03:12:58 sql=[select * from mvc_user where username='123'] 
 17.05.2022 03:16:49 sql=[select * from mvc_user where username='123'] 
 18.05.2022 10:32:08 sql=[select * from mvc_user where username='longvu01'] 
+19.05.2022 12:25:37 sql=[select * from accounts where user_name='tung98'] 
+19.05.2022 12:55:24 sql=[select * from accounts where user_name = 'truong01'] 
+19.05.2022 12:55:24 <!-- sql=[INSERT INTO accounts (user_name, password, phone) VALUES ('truong01', 'truong01', '092372347')] --> 
+19.05.2022 12:56:36 sql=[select * from accounts where user_name='truong01'] 
+19.05.2022 12:56:45 sql=[select * from accounts where user_name='truong01'] 
+19.05.2022 01:08:16 sql=[select * from accounts where user_name='longvu01'] 
+19.05.2022 01:08:23 sql=[select * from accounts where user_name='longvu01'] 
+19.05.2022 01:11:49 sql=[select * from accounts where user_name='longvu01'] 
+19.05.2022 01:11:55 sql=[select * from accounts where user_name='longvu01'] 
+19.05.2022 01:13:54 sql=[select * from accounts where user_name = 'tung98'] 
+19.05.2022 01:13:54 <!-- sql=[INSERT INTO accounts (user_name, password, phone) VALUES ('tung98', 'fd7496d5a7e24afd0af96f0f639110db', '923402934')] --> 
+19.05.2022 01:14:07 sql=[select * from accounts where user_name='tung98'] 
+19.05.2022 01:22:31 sql=[select * from accounts where user_name = 'longvu01'] 
+19.05.2022 01:22:31 <!-- sql=[INSERT INTO accounts (user_name, password, phone) VALUES ('longvu01', '1af35108104a604a0dda8ceac9d52d35', '01923042834')] --> 
+19.05.2022 01:22:37 sql=[select * from accounts where user_name='longvu01'] 
+19.05.2022 01:22:41 sql=[select * from accounts where user_name='longvu01'] 
+19.05.2022 01:22:56 sql=[select * from accounts where user_name='admin'] 
+19.05.2022 01:23:01 sql=[select * from accounts where user_name='admin'] 
+19.05.2022 01:23:39 sql=[select * from accounts where user_name = 'admin'] 
+19.05.2022 01:23:39 <!-- sql=[INSERT INTO accounts (user_name, password, phone) VALUES ('admin', '21232f297a57a5a743894a0e4a801fc3', '0920422345')] --> 
+19.05.2022 01:23:53 sql=[select * from accounts where user_name='admin'] 
