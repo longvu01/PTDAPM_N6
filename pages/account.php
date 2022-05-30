@@ -8,7 +8,7 @@ $sql = 'SELECT * FROM products ORDER BY id DESC LIMIT 1';
 $resultLast = select_one($sql);
 $sql = "select * from categories";
 $result_parents = select_list($sql);
-$user = "";
+$user = null;
 if (isset($_SESSION['account'])) {
     $user = $_SESSION['account'];
 }

@@ -12,16 +12,9 @@ if (isset($_SESSION['cart'])) {
 /* --------------------------------------------- */
 $sql = "select * from categories";
 $result_parents = select_list($sql);
-$user = "";
+$user = null;
 if (isset($_SESSION['account'])) {
     $user = $_SESSION['account'];
-}
-
-if (isset($user['role'])) {
-    if ($user['role'] == 1) {
-        echo '<script>alert("❌Bạn không thể thực hiện chức năng với tài khoản này!")</script>';
-        echo "<script>window.location = 'index.php'</script>";
-    }
 }
 
 $sql = 'SELECT * FROM products ORDER BY id DESC LIMIT 1';

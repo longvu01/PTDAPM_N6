@@ -145,3 +145,6 @@
 19.05.2022 01:28:28 sql=[select * from categories] 
 19.05.2022 01:28:28 sql=[select * from categories] 
 19.05.2022 01:28:28 sql=[SELECT * FROM products ORDER BY id DESC LIMIT 1] 
+30.05.2022 03:19:51 sql=[select * from categories] 
+30.05.2022 03:19:51 sql=[select * from categories] 
+30.05.2022 03:19:51 sql=[SELECT * FROM products ORDER BY id DESC LIMIT 1] 

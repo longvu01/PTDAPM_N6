@@ -1,7 +1,10 @@
 <?php
 session_start();
 require_once("../libs/lib_db.php");
-$user_id = $_SESSION['user'] ? $_SESSION['user']['id'] : null;
+$user_id = null;
+if (isset($_SESSION['user'])) {
+    $user_id = $_SESSION['user']['id'];
+}
 //get input -> ko co, vi la trang chu
 $id = isset($_REQUEST["id"]) ? $_REQUEST["id"] * 1 : 0;
 //$q = isset($_REQUEST["q"]) ? trim($_REQUEST["q"]) : "";
@@ -31,7 +34,7 @@ $result_parents = select_list($sql);
 // print_r($result_parents);exit();
 $sql = 'SELECT * FROM products ORDER BY id DESC LIMIT 1';
 $resultLast = select_one($sql);
-$user = "";
+$user = null;
 if (isset($_SESSION['account'])) {
     $user = $_SESSION['account'];
 }
