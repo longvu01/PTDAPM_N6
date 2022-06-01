@@ -35,8 +35,8 @@ if (isset($_REQUEST["username"])) {
 		$error = 'Không tồn tại username';
 	} else {
 		//kiem tra pass
-		// if (md5($password) != $user['password']){
-		if (($password) != $user['password']) {
+		if (md5($password) != $user['password']) {
+			// if (($password) != $user['password']) {
 			$checkLogin = 0;
 			$error = 'Password không đúng';
 		}

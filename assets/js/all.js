@@ -150,7 +150,7 @@ mess.addEventListener('keydown', (e) => {
       setTimeout(function () {
         chatContent.insertAdjacentHTML(
           'afterbegin',
-          `<p class = "reply">Cảm ơn anh, chị đã liên hệ tới HACOM. Thời gian hỗ trợ, tư vấn, trả lời từ 8h30-24h hàng ngày. Hãy gửi cho chúng tôi mọi câu hỏi của quý anh,chị. Trân trọng!</p>`
+          `<p class = "reply">Cảm ơn anh, chị đã liên hệ tới MANGOES. Thời gian hỗ trợ, tư vấn, trả lời từ 8h30-24h hàng ngày. Hãy gửi cho chúng tôi mọi câu hỏi của quý anh,chị. Trân trọng!</p>`
         );
         isReply = true;
       }, 1000);

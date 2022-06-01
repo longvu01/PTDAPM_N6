@@ -3,7 +3,7 @@ let chartSelect = document.querySelector('#chart__select');
 
 const callAjax = async function (days) {
   try {
-    const url = '../process/statistical/get_quantity_full.php';
+    const url = '../../../process/statistical/get_quantity_full.php';
     const data = await fetch(url, {
       method: 'POST',
       headers: {

@@ -21,8 +21,9 @@
                 <a href="./cmt_search.php" class="exec__item"><i class="fas fa-comment-slash"></i></a>
                 <a href="./" class="exec__item"><i class="fas fa-plus"></i></a>
                 <a href="./delete.php?id=<?php echo $resultLast['id'] ?>" class="exec__item"><i class="far fa-trash-alt"></i></a>
-                <a href="./update.php?id=<?php echo $resultLast['id'] ?>" class="exec__item"><i class="far fa-edit"></i></i></a>
+                <a href="./update.php?id=<?php echo $resultLast['id'] ?>" class="exec__item"><i class="far fa-edit"></i></a>
                 <a href="./search.php" class="exec__item"><i class="fas fa-search"></i></a>
+                <a href="./statistical.php" class="exec__item"><i class="fa-solid fa-chart-line"></i></a>
             </div>
         </div>
     <?php } else { ?>

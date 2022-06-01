@@ -65,7 +65,7 @@ if ($user['role'] == 0) {
 
 <!-- Start HTML -->
 <?php require_once('../../../root/manage/top.php') ?>
-<?php top('Trang chủ') ?>
+<?php top('Sửa thông tin sản phẩm') ?>
 </head>
 
 <body>
@@ -77,8 +77,8 @@ if ($user['role'] == 0) {
             <h1>Sửa thông tin</h1>
             <div class="exec__more">
                 <ul>
-                    <li><a href="add.php"><i class="fas fa-plus"></i></a></li>
-                    <li><a href="search.php"><i class="fas fa-search"></i></a></li>
+                    <li><a href="./"><i class="fas fa-plus"></i></a></li>
+                    <li><a href="./search.php"><i class="fas fa-search"></i></a></li>
                 </ul>
             </div>
         </div>
@@ -136,8 +136,8 @@ if ($user['role'] == 0) {
                 <button name="submit" type="submit" value="submit">Edit</button>
                 <div class="exec__more">
                     <ul>
-                        <li><a href="add.php"><i class="fas fa-plus"></i></a></li>
-                        <li><a href="search.php"><i class="fas fa-search"></i></a></li>
+                        <li><a href="./"><i class="fas fa-plus"></i></a></li>
+                        <li><a href="./search.php"><i class="fas fa-search"></i></a></li>
                     </ul>
                 </div>
             </div>
@@ -150,8 +150,6 @@ if ($user['role'] == 0) {
 
     <!--  -->
     <script src="../../../assets/js/all.js"></script>
-    <script src="../../../assets/js/ajax/ajax_fetch_showroom.js"></script>
-    <script src="../../../assets/js/mail.js"></script>
 </body>
 
 </html>

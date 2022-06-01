@@ -178,7 +178,7 @@ if (isset($_SESSION['account'])) {
                                 <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
                                         <ul class="accordion__list">
-                                            <li class="accordion__item"><a href="#">Máy Tính Chơi Game HACOM</a></li>
+                                            <li class="accordion__item"><a href="#">Máy Tính Chơi Game MANGOES</a></li>
                                             <li class="accordion__item"><a href="#">Máy Tính Live Stream, PC Stream, Youtuber</a></li>
                                             <li class="accordion__item"><a href="#">Máy Tính Chơi Game Asus</a></li>
                                             <li class="accordion__item"><a href="#">Máy Tính Chơi Game MSI</a></li>
@@ -197,8 +197,8 @@ if (isset($_SESSION['account'])) {
                                 <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
                                         <ul class="accordion__list">
-                                            <li class="accordion__item"><a href="#">PC Đồ Họa, Render HACOM</a></li>
-                                            <li class="accordion__item"><a href="#">Máy Chủ HACOM</a></li>
+                                            <li class="accordion__item"><a href="#">PC Đồ Họa, Render MANGOES</a></li>
+                                            <li class="accordion__item"><a href="#">Máy Chủ MANGOES</a></li>
                                             <li class="accordion__item"><a href="#">Máy Trạm Hãng</a></li>
                                         </ul>
                                     </div>

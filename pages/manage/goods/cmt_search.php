@@ -14,12 +14,10 @@ if (!isset($_REQUEST["q"])) {
 $cond = "";
 $searchfields = array("", "");
 // print_r($_SESSION);
-$sql = "select * from review_table where cid = {$q}";
-// echo $sql;exit();
-//thuc thi cau lenh sql
+$sql = "select * from review_table where pid = {$q}";
+// die($sql);
 $result = select_list($sql);
 // print_r($result);exit();
-
 
 $sql = "select * from categories";
 $result_parents = select_list($sql);
@@ -35,7 +33,7 @@ if ($user['role'] == 0) {
 
 <!-- Start HTML -->
 <?php require_once('../../../root/manage/top.php') ?>
-<?php top('Trang chủ') ?>
+<?php top('Tìm kiếm bình luận') ?>
 </head>
 
 <body>
@@ -52,22 +50,26 @@ if ($user['role'] == 0) {
     <table>
       <tr>
         <th>Review_id</th><!--  -->
-        <th>User name</th>
+        <th>User id</th>
         <th>User rating</th>
         <th>User review</th>
         <th>Date time</th>
         <th>Delete</th>
       </tr>
-      <?php foreach ($result as $item) { ?>
-        <tr>
-          <td><?php echo $item['review_id']; ?></td>
-          <td><?php echo $item['user_name']; ?></td>
-          <td><?php echo $item['user_rating']; ?></td>
-          <td><?php echo $item['user_review']; ?></td>
-          <td><?php echo date('l, F d y h:i:s', $item['datetime']) ?></td>
-          <td><a href="./process/cmt_del.php?id=<?php echo $item['review_id']; ?>"><i class="fas fa-comment-slash"></a></td>
-        </tr>
-      <?php } ?>
+      <?php
+      if (isset($result)) {
+        foreach ($result as $item) { ?>
+          <tr>
+            <td><?php echo $item['review_id']; ?></td>
+            <td><?php echo $item['user_id']; ?></td>
+            <td><?php echo $item['user_rating']; ?></td>
+            <td><?php echo $item['user_review']; ?></td>
+            <td><?php echo date('l, F d y h:i:s', $item['datetime']) ?></td>
+            <td><a href="./process/cmt_del.php?id=<?php echo $item['review_id']; ?>"><i class="fas fa-comment-slash"></a></td>
+          </tr>
+      <?php
+        }
+      } ?>
     </table>
   </div>
 
@@ -75,8 +77,6 @@ if ($user['role'] == 0) {
 
   <!--  -->
   <script src="../../../assets/js/all.js"></script>
-  <script src="../../../assets/js/ajax/ajax_fetch_showroom.js"></script>
-  <script src="../../../assets/js/mail.js"></script>
 </body>
 
 </html>

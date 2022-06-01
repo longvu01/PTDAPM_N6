@@ -26,7 +26,7 @@ if ($user['role'] == 0) {
 
 <!-- Start HTML -->
 <?php require_once('../../../root/manage/top.php') ?>
-<?php top('Trang chủ') ?>
+<?php top('Thêm sản phẩm') ?>
 </head>
 
 <body>
@@ -38,8 +38,7 @@ if ($user['role'] == 0) {
             <h1>Thêm thông tin</h1>
             <div class="exec__more">
                 <ul>
-                    <li><a href="add.php"><i class="fas fa-plus"></i></a></li>
-                    <li><a href="search.php"><i class="fas fa-search"></i></a></li>
+                    <li><a href="./search.php"><i class="fas fa-search"></i></a></li>
                 </ul>
             </div>
         </div>
@@ -88,8 +87,7 @@ if ($user['role'] == 0) {
                 <button type="submit" name="submit">ADD</button>
                 <div class="exec__more">
                     <ul>
-                        <li><a href="add.php"><i class="fas fa-plus"></i></a></li>
-                        <li><a href="search.php"><i class="fas fa-search"></i></a></li>
+                        <li><a href="./search.php"><i class="fas fa-search"></i></a></li>
                     </ul>
                 </div>
             </div>

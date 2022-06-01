@@ -18,7 +18,9 @@ if (isset($_POST['create'])) {
 		exit();
 	}
 
-	$sql = "INSERT INTO user_table (username, password, phone) VALUES ('$username', '$password', '$phone')";
+	$hashPassword = md5($password);
+
+	$sql = "INSERT INTO user_table (username, password, phone) VALUES ('$username', '$hashPassword', '$phone')";
 	$ret = exec_update($sql);
 	$location = "window.location = 'login.php'";
 	echo '<script>alert("Bạn đã đăng ký thành công!")</script>';

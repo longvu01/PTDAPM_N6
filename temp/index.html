@@ -10,7 +10,7 @@
     <script>
       'use strict';
 
-      const getRandomNumber = () => Math.ceil(Math.random() * 500) + 2000;
+      const getRandomNumber = () => Math.ceil(Math.random() * 500) + 500;
 
       const patchRandomQuantity = (view_qnt, id) => {
         const url = './patch.php';
@@ -20,7 +20,7 @@
             'Content-Type': 'application/json',
           },
           body: JSON.stringify({
-            view_qnt,
+            qty_sold,
             id,
           }),
         };
