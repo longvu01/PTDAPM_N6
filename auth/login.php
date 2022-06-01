@@ -22,7 +22,7 @@ if (isset($_REQUEST["username"])) {
 	//da nhap thong tin
 	//2. Kiem tra
 	//2.1.1 tao sql
-	$sql = "select * from mvc_user";
+	$sql = "select * from user_table";
 	$sql .= " where username='{$username}'";
 	// echo "sql=[$sql]"; exit();
 	//2.1.2 Thuc thi sql
@@ -58,7 +58,7 @@ if (isset($_REQUEST["username"])) {
 
 <!-- Start HTML -->
 <?php require_once('../root/top.php') ?>
-<?php top('Trang chủ') ?>
+<?php top('Đăng nhập') ?>
 </head>
 
 <body>
@@ -118,11 +118,6 @@ if (isset($_REQUEST["username"])) {
 	</div>
 	</div>
 
-
-	<!--  -->
-	<!-- <script src="js/slick.min.js"></script>
-	<script src="js/slick.js"></script>
-	<script src="js/slickslider.js"></script> -->
 	<script src="js/all.js"></script>
 </body>
 

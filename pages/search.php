@@ -20,12 +20,12 @@ if ($q) {
     $cond .= " or product_info like '%{$q}%'";
     $cond .= " or description like '%{$q}%'";
 }
-$sql = " select * from grab_content {$cond} ";
+$sql = " select * from products {$cond} ";
 // print_r($sql);exit();
 $result_search = select_one($sql);
 // print_r($result_search);exit();
-$sqlcount = "select count(*) as c from grab_content {$cond}";
-$count = select_one($sqlcount);
+$sqlCount = "select count(*) as c from products {$cond}";
+$count = select_one($sqlCount);
 $total = $count['c'];
 $nop = 12;
 $offset = $nop * ($p - 1);
@@ -42,15 +42,13 @@ $sql = "select * from sub_cate where name in (SELECT DISTINCT name from sub_cate
 $sub_cate = select_list($sql);
 // print_r($sub_cate);exit();
 
-$sql = "select * from grab_content {$cond} limit {$nop} offset {$offset}";
-// print_r($sql);exit();
-$datas = select_list($sql);
-// print_r($datas);exit();
+$sql = "select * from products {$cond} limit {$nop} offset {$offset}";
+$products = select_list($sql);
 
-$sql = "select * from grab_category";
+$sql = "select * from categories";
 $result_parents = select_list($sql);
 
-$sql = 'SELECT * FROM grab_content ORDER BY id DESC LIMIT 1';
+$sql = 'SELECT * FROM products ORDER BY id DESC LIMIT 1';
 $resultLast = select_one($sql);
 $user = "";
 if (isset($_SESSION['account'])) {
@@ -61,7 +59,7 @@ $flagDM = 1;
 
 <!-- Start HTML -->
 <?php require_once('../root/top.php') ?>
-<?php top('Trang chủ') ?>
+<?php top('Tìm kiếm') ?>
 </head>
 
 <body>
@@ -141,7 +139,7 @@ $flagDM = 1;
                                                     if ($flagDM > 2) break; ?>
                                                     <?php foreach (explode(',', $item['content']) as $content) { ?>
                                                         <li>
-                                                            <a href="tim-kiem.php?q=<?php echo $content ?>" class="category__content-link">
+                                                            <a href="search.php?q=<?php echo $content ?>" class="category__content-link">
                                                                 <i class="fas fa-caret-right"></i>
                                                                 <?php echo $content; ?>
                                                             </a>
@@ -361,7 +359,7 @@ $flagDM = 1;
                             <nav aria-label="Page navigation">
                                 <ul class="pagination">
                                     <?php for ($i = 1; $i <= $num; $i++) { ?>
-                                        <li class="page-item"><a class="page-link" href="tim-kiem.php?q=<?php echo $q ?>&p=<?php echo $i ?>"><?php echo $i ?></a></li>
+                                        <li class="page-item"><a class="page-link" href="search.php?q=<?php echo $q ?>&p=<?php echo $i ?>"><?php echo $i ?></a></li>
                                     <?php } ?>
                                 </ul>
                             </nav>
@@ -372,13 +370,13 @@ $flagDM = 1;
                         <svg viewBox="25 25 50 50" class="hide" id="loader">
                             <circle cx="50" cy="50" r="20"></circle>
                         </svg>
-                        <?php foreach ($datas as $data) { ?>
+                        <?php foreach ($products as $data) { ?>
                             <div class="product">
                                 <div class="aspect-ratio">
-                                    <a href="chi-tiet.php?id=<?php echo $data["id"] ?>" class="product__img"><img src="<?php $img = explode(',', $data['img']);
+                                    <a href="detail.php?id=<?php echo $data["id"] ?>" class="product__img"><img src="<?php $img = explode(',', $data['img']);
                                                                                                                         echo $img[0]; ?>" alt=""></a>
                                     <div class="product__item--info">
-                                        <a href="chi-tiet.php?id=<?php echo $data["id"] ?>" class="product__item--info-title"><?php echo $data["title"] ?></a>
+                                        <a href="detail.php?id=<?php echo $data["id"] ?>" class="product__item--info-title"><?php echo $data["title"] ?></a>
                                         <p class="product__item--info-text">- Giá bán:&emsp;&emsp;&emsp;<?php echo number_format($data['price'], 0, '.', '.') ?>đ [Đã bao gồm VAT]</p>
                                         <p class="product__item--info-text">- Giá thấp nhất:<span class="text-bold"><?php echo number_format($data['price'], 0, '.', '.') ?>đ</span></p>
                                         <p class="product__item--info-text">- Bảo hành:&emsp;&emsp;<?php echo $data["insurance"] ?></p>
@@ -404,7 +402,7 @@ $flagDM = 1;
                                     <div class="product__code"><span>mã: <?php echo $data["product_code"] ?></span></div>
                                 </div>
                                 <div class="product__info">
-                                    <a href="chi-tiet.php?id=<?php echo $data["id"] ?>" class="product__name"><?php echo $data["title"] ?></a>
+                                    <a href="detail.php?id=<?php echo $data["id"] ?>" class="product__name"><?php echo $data["title"] ?></a>
                                     <div class="product__info--main">
                                         <ul class="product__info-list">
                                             <?php foreach (explode(',', $data["product_info"]) as $info) { ?>
@@ -432,7 +430,7 @@ $flagDM = 1;
                         <nav aria-label="Page navigation">
                             <ul class="pagination">
                                 <?php for ($i = 1; $i <= $num; $i++) { ?>
-                                    <li class="page-item"><a class="page-link" href="tim-kiem.php?q=<?php echo $q ?>&p=<?php echo $i ?>"><?php echo $i ?></a></li>
+                                    <li class="page-item"><a class="page-link" href="search.php?q=<?php echo $q ?>&p=<?php echo $i ?>"><?php echo $i ?></a></li>
                                 <?php } ?>
                             </ul>
                         </nav>

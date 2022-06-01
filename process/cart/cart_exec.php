@@ -9,7 +9,7 @@ $id = isset($_GET['id']) ? $_GET['id'] : '';
 $location = "window.location = '../../pages/detail.php?id=$id'";
 // echo $location;exit();
 
-$sql = "select * from grab_content where id=" . $id;
+$sql = "select * from products where id=" . $id;
 $result = select_one($sql);
 // print_r($result);exit();
 //check status

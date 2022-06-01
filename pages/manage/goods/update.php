@@ -5,7 +5,7 @@ require_once("../../../libs/lib_db.php");
 $id = isset($_REQUEST["id"]) ? $_REQUEST["id"] : 0;
 if ($id <  1) return;
 //tao sql
-$sql = "select * from grab_content 
+$sql = "select * from products 
 	where id={$id}";
 //echo $sql;exit();
 //thuc thi cau lenh sql
@@ -14,7 +14,7 @@ $result = select_one($sql);
 if (!$result) return;
 //print_r($result);exit();
 
-$sql = "select * from grab_category";
+$sql = "select * from categories";
 //echo $sql;exit();
 //thuc thi cau lenh sql
 $cates = select_list($sql);
@@ -23,7 +23,7 @@ $cookie_name = "user";
 $cookie_value = $result['title'];
 setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1 day
 
-$sql = "select * from grab_category";
+$sql = "select * from categories";
 $result_parents = select_list($sql);
 
 $errors = array('img' => '', 'title' => '', 'product_code' => '', 'price' => '');
@@ -53,7 +53,7 @@ if (isset($_POST['submit'])) {
         $price = $_POST['price'];
     }
 }
-$sql = 'SELECT * FROM grab_content ORDER BY id DESC LIMIT 1';
+$sql = 'SELECT * FROM products ORDER BY id DESC LIMIT 1';
 $resultLast = select_one($sql);
 if (isset($_SESSION['account'])) {
     $user = $_SESSION['account'];

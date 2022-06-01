@@ -4,9 +4,9 @@ require_once("../libs/lib_db.php");
 require_once("../auth/process/checklogin.php");
 $user = checkLoggedUser();
 
-$sql = 'SELECT * FROM grab_content ORDER BY id DESC LIMIT 1';
+$sql = 'SELECT * FROM products ORDER BY id DESC LIMIT 1';
 $resultLast = select_one($sql);
-$sql = "select * from grab_category";
+$sql = "select * from categories";
 $result_parents = select_list($sql);
 $user = "";
 if (isset($_SESSION['account'])) {
@@ -27,7 +27,7 @@ $data["phone"] = $phone;
 $data["email"] = $email;
 $data["gender"] = $gender;
 $data["address"] = $address;
-$tbl = "mvc_user";
+$tbl = "user_table";
 $cond = "id={$id}";
 $sql = data_to_sql_update($tbl, $data, $cond);
 $ret = exec_update($sql);
@@ -41,7 +41,7 @@ if ($id) {
 
 <!-- Start HTML -->
 <?php require_once('../root/top.php') ?>
-<?php top('Trang chủ') ?>
+<?php top('Thông tin tài khoản') ?>
 </head>
 
 <body>

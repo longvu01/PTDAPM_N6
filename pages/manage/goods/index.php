@@ -4,7 +4,7 @@ require_once("../../../libs/lib_db.php");
 
 //get input
 //tao sql
-$sql = "select * from grab_category";
+$sql = "select * from categories";
 //echo $sql;exit();
 //thuc thi cau lenh sql
 $cates = select_list($sql);
@@ -12,9 +12,9 @@ $cates = select_list($sql);
 
 // $statuses = default_statuses();
 
-$sql = "select * from grab_category";
+$sql = "select * from categories";
 $result_parents = select_list($sql);
-$sql = 'SELECT * FROM grab_content ORDER BY id DESC LIMIT 1';
+$sql = 'SELECT * FROM products ORDER BY id DESC LIMIT 1';
 $resultLast = select_one($sql);
 if (isset($_SESSION['account'])) {
     $user = $_SESSION['account'];

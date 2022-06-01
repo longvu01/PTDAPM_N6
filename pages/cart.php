@@ -10,26 +10,19 @@ if (isset($_SESSION['cart'])) {
 }
 
 /* --------------------------------------------- */
-$sql = "select * from grab_category";
+$sql = "select * from categories";
 $result_parents = select_list($sql);
 $user = "";
 if (isset($_SESSION['account'])) {
     $user = $_SESSION['account'];
 }
 
-if (isset($user['role'])) {
-    if ($user['role'] == 1) {
-        echo '<script>alert("❌Bạn không thể thực hiện chức năng với tài khoản này!")</script>';
-        echo "<script>window.location = 'index.php'</script>";
-    }
-}
-
-$sql = 'SELECT * FROM grab_content ORDER BY id DESC LIMIT 1';
+$sql = 'SELECT * FROM products ORDER BY id DESC LIMIT 1';
 $resultLast = select_one($sql);
 ?>
 <!-- Start HTML -->
 <?php require_once('../root/top.php') ?>
-<?php top('Trang chủ') ?>
+<?php top('Giỏ hàng') ?>
 </head>
 
 <body>
@@ -66,10 +59,10 @@ $resultLast = select_one($sql);
                                 <div class="cart__product mb-3">
                                     <div class="cart__product-info">
                                         <input type="checkbox" name="" id="" checked>
-                                        <a href="./chi-tiet.php?id=<?php echo $key ?>"><img src="<?php $img = explode(',', $val['img']);
-                                                                                                    echo $img[0]; ?>" alt=""></a>
+                                        <a href="./detail.php?id=<?php echo $key ?>"><img src="<?php $img = explode(',', $val['img']);
+                                                                                                echo $img[0]; ?>" alt=""></a>
                                         <div class="cart__product-more">
-                                            <a href="./chi-tiet.php?id=<?php echo $key ?>" class="cart__product-name"><?php echo $val['title'] ?></a>
+                                            <a href="./detail.php?id=<?php echo $key ?>" class="cart__product-name"><?php echo $val['title'] ?></a>
                                         </div>
                                     </div>
                                     <!--  -->
@@ -78,12 +71,12 @@ $resultLast = select_one($sql);
                                         <input type="hidden" name="" class="iprice" value="<?php echo $val['price'] ?>">
                                     </div>
                                     <!--  -->
-                                    <form action="../process/cart/cart_update.php" method="post" class="cart__product-qnt">
+                                    <div action="../process/cart/cart_update.php" method="post" class="cart__product-qnt">
                                         <button id="decBtn">-</button>
                                         <input type="number" class="form-control d-inline iquantity" min="1" max="10" value="<?php echo $val['qty'] ?>" name="change_qnt">
-                                        <input type="hidden" name="title" value="<?php echo $val['title'] ?>">
+                                        <input type="hidden" class="ititle" name="title" value="<?php echo $val['title'] ?>">
                                         <button id="incBtn">+</button>
-                                    </form>
+                                    </div>
                                     <!--  -->
                                     <div class="cart__total-price">
                                         <span class="itotal"></sp>
@@ -142,7 +135,8 @@ $resultLast = select_one($sql);
 
 
     <!--  -->
-    <script src="../assets/js/cart.js"></script>
+    <!-- <script src="../assets/js/cart.js"></script> -->
+    <script type="module" defer src="../assets/js/cart.js"></script>
     <!--  -->
     <script src="../assets/js/all.js"></script>
     <script src="../assets/js/ajax_fetch_showroom.js"></script>

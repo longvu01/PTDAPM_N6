@@ -1,35 +1,34 @@
 <?php
 session_start();
 require_once("../libs/lib_db.php");
-$user_id = $_SESSION['user'] ? $_SESSION['user']['id'] : null;
-//get input -> ko co, vi la trang chu
+
+$user_id = isset($_SESSION['user']) ? $_SESSION['user']['id'] : null;
+
 $id = isset($_REQUEST["id"]) ? $_REQUEST["id"] * 1 : 0;
 //$q = isset($_REQUEST["q"]) ? trim($_REQUEST["q"]) : "";
 if ($id <  1) return;
-//tao sql
-//$sql = "select * from grab_content where id={$id}";
-$sql = "select * from grab_content where id=" . $id;
+//$sql = "select * from products where id={$id}";
+$sql = "select * from products where id=" . $id;
 // echo $sql;exit();
-//thuc thi cau lenh sql
 $result = select_one($sql);
 // print_r($result);exit();
 if (!$result) return;
 
-$sql = "select * from grab_content 
+$sql = "select * from products 
 	where cid={$result['cid']} and id !=" . $id;
 //echo $sql;exit();
 $resultOther = select_list($sql);
 // print_r($resultOther);exit();
 
 $cid = $result['cid'];
-$sql = "select * from grab_category where id=" . $cid;
+$sql = "select * from categories where id=" . $cid;
 $result_cate = select_one($sql);
 // print_r($result_parent);exit();
 
-$sql = "select * from grab_category";
+$sql = "select * from categories";
 $result_parents = select_list($sql);
 // print_r($result_parents);exit();
-$sql = 'SELECT * FROM grab_content ORDER BY id DESC LIMIT 1';
+$sql = 'SELECT * FROM products ORDER BY id DESC LIMIT 1';
 $resultLast = select_one($sql);
 $user = "";
 if (isset($_SESSION['account'])) {
@@ -44,7 +43,7 @@ $user_reviews = select_list($sql);
 
 <!-- Start HTML -->
 <?php require_once('../root/top.php') ?>
-<?php top('Trang chủ') ?>
+<?php top($result["title"]) ?>
 </head>
 
 <body>

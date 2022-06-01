@@ -19,7 +19,7 @@ $insurance = isset($_REQUEST["insurance"]) ? $_REQUEST["insurance"] : "";
 $gift = isset($_REQUEST["gift"]) ? $_REQUEST["gift"] : "";
 $description = isset($_REQUEST["description"]) ? $_REQUEST["description"] : "";
 //tao sql
-$sql = "insert into grab_content 
+$sql = "insert into products 
 	(cid,img,title,product_code,product_info,start_price,price,sale,insurance,gift,description)
 	values 
 	('$cid','$img','$title','$product_code','$product_info','$start_price','$price','$sale','$insurance','$gift','$description')";
@@ -27,11 +27,11 @@ $sql = "insert into grab_content
 $ret = exec_update($sql);
 // print_r($ret);exit();
 
-$sql = "select * from grab_category";
+$sql = "select * from categories";
 $result_parents = select_list($sql);
 $user = "";
 if (isset($_SESSION['account'])) {
 	$user = $_SESSION['account'];
 }
-$sql = 'SELECT * FROM grab_content ORDER BY id DESC LIMIT 1';
+$sql = 'SELECT * FROM products ORDER BY id DESC LIMIT 1';
 $resultLast = select_one($sql);

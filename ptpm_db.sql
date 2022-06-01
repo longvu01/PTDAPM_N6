@@ -3,8 +3,8 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: May 18, 2022 at 10:51 AM
--- Server version: 5.7.31
+-- Generation Time: Jun 01, 2022 at 03:42 AM
+-- Server version: 8.0.17
 -- PHP Version: 7.3.21
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -26,24 +26,24 @@ USE `ptpm_db`;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `grab_category`
+-- Table structure for table `categories`
 --
 
-DROP TABLE IF EXISTS `grab_category`;
-CREATE TABLE IF NOT EXISTS `grab_category` (
+DROP TABLE IF EXISTS `categories`;
+CREATE TABLE IF NOT EXISTS `categories` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `icon_name` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `more` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `body` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `name` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `icon_name` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `more` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `body` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=19 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `grab_category`
+-- Dumping data for table `categories`
 --
 
-INSERT INTO `grab_category` (`id`, `name`, `icon_name`, `more`, `body`) VALUES
+INSERT INTO `categories` (`id`, `name`, `icon_name`, `more`, `body`) VALUES
 (1, 'Laptop, Máy Tính Xách Tay', 'fas fa-laptop', 'Laptop Asus,Laptop Dell,Laptop HP,Laptop Lenovo,Laptop Acer,Laptop MSI', '<div class=\"category__more\">\r\n                        <h2 class=\"category__more-title\">NHỮNG ĐIỀU CẦN LƯU Ý KHI CHỌN MUA LAPTOP</h2>\r\n                        <p>Để có thể sở hữu được một sản phẩm chất lượng và ưng ý nhất thì bạn cần xem xét các yếu tố như sau khi mua laptop:</p>\r\n                        <p><span>Sản phẩm chính hãng: </span>Tốt nhất là bạn nên lựa chọn những laptop có thương hiệu nổi tiếng. Điều này phần nào đã chứng minh được chất lượng của laptop. Những thương hiệu được nhiều người ưa chuộng trong thời gian dài thì chắc chắn là sản phẩm có các ưu điểm nổi bật, mang đến nhiều giá trị tối ưu cho người dùng khi sử dụng sản phẩm. Khi đã chọn các thương hiệu nổi tiếng thì hàng chính hãng cũng là điều bạn nên đặc biệt quan tâm bởi vì hàng giả, hàng nhái hiện nay trên thị trường có rất nhiều.</p>\r\n                        <p><span>Cấu hình sản phẩm: </span>Đây là vấn đề mà bạn cần nghiên cứu trước, đặc biệt là đối với những người không có kiến thức chuyên môn trong lĩnh vực công nghệ. Nắm được một số đặc điểm cấu hình cơ bản của laptop không chỉ giúp bạn lựa chọn được laptop dễ dàng hơn mà bạn còn có thể biết được loại nào đáp ứng được các yêu cầu sử dụng của mình. Tùy vào mục đích để học tập, làm việc, chơi game hay giải trí đơn thuần mà sẽ có những dòng máy chuyên dụng mang đến cho bạn những trải nghiệm mượt mà hơn.</p>\r\n                        <p><span>Giá cả hợp lý: </span>Tất nhiên giá cả luôn là vấn đề khiến nhiều người đắn đo suy nghĩ mỗi khi muốn mua một thứ gì đó và đối với laptop cũng vậy. Tìm được các cửa hàng có mức giá phù hợp thì sẽ giúp bạn tiết kiệm được chi phí hơn. Do đó, bạn có thể tham khảo tình hình giá cả chung trước rồi so sánh giá ở một vài nơi thì chắc chắn sẽ chọn được chỗ bán sản phẩm mà bạn muốn mua với mức giá tốt nhất.</p>\r\n                        <h2 class=\"category__more-title\">NÊN MUA LAPTOP Ở ĐÂU ?</h2>\r\n                        <p>Trong cuộc sống hiện đại bây giờ, một chiếc laptop hay PC sẽ giúp ích cho chúng ta trong rất nhiều việc như học tập, giải trí, làm việc..Tuy nhiên trên thị trường lại có rất nhiều các thương hiệu laptop kèm theo rất nhiều kiểu dáng, cấu hình khiến bạn khó lựa chọn. Không chỉ vậy, ngay cả khi lựa chọn được mẫu ưng ý, việc mua laptop ở đâu uy tín cũng là câu hỏi mà nhiều bạn đang tự đặt ra !</p>\r\n                        <img src=\"https://www.hanoicomputer.vn/media/lib/hanoicomputer.jpg\" alt=\"\">\r\n                        <p>Hà Nội là một trong những thành phố lớn nhất cả nước, đi kèm với đó là sự phát triển vô cùng mạnh mẽ. Sự phát triển đó kéo theo vô vàn các thương hiệu, cửa hàng, siêu thị điện máy phân phối laptop. Trong đó, Hanoicomputer là một trong những doanh nghiệp hàng đầu tại Hà Nội về phân phối bán lẻ các sản phẩm công nghệ, linh kiện máy tính, laptop. Được thành lập từ 2001, với gần 20 năm phát triển và hoạt động trong lĩnh vực bán lẻ công nghệ, Hanoicomputer đã tạo dựng được danh tiếng của mình trên thị trường và trong lòng khách hàng ! Đây cũng chính là địa chỉ mà bạn có thể chọn cho mình một chiếc laptop ưng ý với cấu hình tốt với chi phí phù hợp nhất ! </p>\r\n                        <img src=\"https://www.hanoicomputer.vn/media/lib/08-04-2021/vsinhlaptophcm.jpg\" alt=\"\">\r\n                    </div>'),
 (2, 'Phụ Kiện Laptop, PC, Khác\r\n                        ', 'fas fa-share-alt', 'Dây Cáp Các Loại,Thiết bị chuyển đổi,Bộ chia tín hiệu,Linh Kiện Laptop,Phụ kiện khác,Phụ Kiện Laptop', ''),
 (3, 'PC Gaming, Streaming', 'fas fa-chalkboard-teacher', 'Máy Tính Chơi Game HACOM,Máy Tính Live Stream-PC Streamer-Youtuber,Máy Tính Chơi Game Asus,Máy Tính Chơi Game Lenovo,Máy Tính Chơi Game MSI,Máy Tính Chơi Game Gigabyte', '<div class=\"category__more\">\r\n<p>Là một game thủ hay đơn giản chỉ là một người thích chơi game PC thì ai cũng mong muốn sở hữu cho mình một bộ máy tính chơi game xịn sò. Nhưng với sự phát triển của công nghệ hiện nay, để sở hữu một bộ máy PC gaming khủng có khả năng cân hết mọi tựa game đồng nghĩa với việc bạn phải bỏ ra một chi phí không hề nhỏ. Vậy làm thế nào để lựa chọn một chiếc máy chơi game cấu hình tốt nhưng giá lại rẻ? Hãy để HANOICOMPUTER giúp bạn nhé !</p>\r\n<h2 class=\"category__more-title\">Lựa chọn máy tính chơi game theo tiêu chí nào ?</h2>\r\n<p>Trong một bộ máy tính nói chung hay PC gaming nói riêng, tất cả các linh kiện máy tính đều đóng vai trò quan trọng và không thể thiếu bất cứ linh kiện nào. Tuy nhiên,có một số yếu tố quyết định đến sức mạnh của một bộ máy tính chơi game bạn cũng cần lưu ý khi xây dựng cấu hình phù hợp với mình.</p>\r\n<img src=\"https://www.hanoicomputer.vn/media/lib/mytnhchigame.jpg\" alt=\"\">\r\n<h2 class=\"category__more-title\">Card đồ họa</h2>        \r\n<p>Tương tự như PC thiết kế đồ họa, với một cỗ máy chơi game, card đồ họa ( VGA) đóng vai trò quyết định của việc xử lý hình ảnh đồ họa của tựa game bạn chơi sau đó xuất ra màn hình. Đây là yếu tố ảnh hưởng nhiều nhất tới trải nghiệm chơi game của bạn. Để có thể chơi các tựa game online khủng hiện nay như PUBG, GTA V hay COD thì bạn cũng phải có một chiếc card đồ họa tương xứng phải không !</p>\r\n<p>Thông thường khi mua máy tính chơi game, mọi người chỉ chú ý tới GPU của VGA mà quên đi việc phải nâng cấp CPU lên sao cho tương xứng. Nếu chỉ chú ý tới việc lắp VGA quá khủng trong khi CPU lại quá cùi, không đáp ứng đủ sẽ gây ra hiện tượng nghẽn cổ chai. Điều đó là lời giải thích cho việc có những bộ máy chơi game khủng, vô cùng đắt tiền nhưng lại chậm như rùa. Trong quá trình chúng ta chơi game, CPU và VGA sẽ cùng hoạt động nhưng mỗi bộ phận sẽ đóng vai trò khác nhau. Nếu CPU đóng vai trò xử lý tất cả các lệnh mà chúng ta thao tác thì VGA sẽ đồng thời vẽ lên tất cả các thao tác đó. Chính vì vậy nếu hai bộ phận này cọc cạch so với nhau sẽ gây ra hiện tượng giật lag khi chơi game.</p>\r\n<img src=\"https://www.hanoicomputer.vn/media/lib/13-07-2021/card-do-hoa-3060-ti.jpg\" alt=\"\">\r\n                    </div>'),
@@ -66,43 +66,43 @@ INSERT INTO `grab_category` (`id`, `name`, `icon_name`, `more`, `body`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `grab_content`
+-- Table structure for table `products`
 --
 
-DROP TABLE IF EXISTS `grab_content`;
-CREATE TABLE IF NOT EXISTS `grab_content` (
+DROP TABLE IF EXISTS `products`;
+CREATE TABLE IF NOT EXISTS `products` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `cid` int(11) NOT NULL,
-  `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `product_code` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `title` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `product_code` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `rate_qnt` int(11) NOT NULL DEFAULT '0',
   `comment_qnt` int(11) NOT NULL DEFAULT '0',
   `view_qnt` int(11) NOT NULL DEFAULT '0',
-  `img` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `product_info` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `start_price` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `sale` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '(Tiết kiệm ₫)',
+  `img` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `product_info` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `start_price` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `sale` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '(Tiết kiệm ₫)',
   `price` int(20) NOT NULL,
-  `product_status` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'stocking',
-  `product_status-icon` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'fas fa-check',
-  `product_status-text` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'Còn hàng',
-  `insurance` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `gift` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `description` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `product_status` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'stocking',
+  `product_status-icon` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'fas fa-check',
+  `product_status-text` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'Còn hàng',
+  `insurance` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `gift` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `description` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   PRIMARY KEY (`id`),
   KEY `cid` (`cid`)
 ) ENGINE=MyISAM AUTO_INCREMENT=83 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `grab_content`
+-- Dumping data for table `products`
 --
 
-INSERT INTO `grab_content` (`id`, `cid`, `title`, `product_code`, `rate_qnt`, `comment_qnt`, `view_qnt`, `img`, `product_info`, `start_price`, `sale`, `price`, `product_status`, `product_status-icon`, `product_status-text`, `insurance`, `gift`, `description`) VALUES
+INSERT INTO `products` (`id`, `cid`, `title`, `product_code`, `rate_qnt`, `comment_qnt`, `view_qnt`, `img`, `product_info`, `start_price`, `sale`, `price`, `product_status`, `product_status-icon`, `product_status-text`, `insurance`, `gift`, `description`) VALUES
 (1, 1, 'Laptop Asus ZenBook UX325EA-KG363T (i5 1135G7/8GB RAM/512GB SSD/13.3 FHD/Win10/Cáp USB to LAN,USB C-Audio/Xám)', 'LTAU561', 0, 1, 13626, 'https://hanoicomputercdn.com/media/product/60424_laptop_asus_zenbook_ux325ea.png,https://hanoicomputercdn.com/media/product/60424_laptop_asus_zenbook_ux325ea_kg363t_xam_3.png,https://hanoicomputercdn.com/media/product/60424_laptop_asus_zenbook_ux325ea_kg363t_xam_2.png,https://hanoicomputercdn.com/media/product/60424_laptop_asus_zenbook_ux325ea_kg363t_xam_1.png', 'Siêu nhẹ chỉ 1,190g,Màn hình IPS 16 Inch WQXGA (2560 x 1600),DCI-P3 99%,Nền tảng Intel Evo với Bộ vi xử lý Intel Core thế hệ 11,Thời lượng pin lên đến 22 giờ (80Wh),Thunderbolt 4', '24.299.000₫', '(Tiết kiệm: 300.000₫)', 23999000, 'stocking', 'fas fa-check', 'Còn hàng', '24 Tháng', '<h4 class=\"product__detail-gifts-top\">Bộ quà tặng trị giá <span></span> 1.458.000đ</span>:</h4>\r\n                        <ul>\r\n                            <li>Chuột không dây Logitech trị giá <span>249.000đ</span> (MELO055)</li>\r\n                            <li>Tai nghe Gaming GoldTech LD80 trị giá <span>339.000đ</span> (TNGD005)</li>\r\n                            <li>Tặng phiếu vệ sinh bảo dưỡng Laptop, PC miễn phí trọn đời trị giá <span>999.000đ</span> (THEK417)\r\n                            </li>\r\n                            <li><span>MIỄN PHÍ GIAO HÀNG TOÀN QUỐC</span> (trừ ghế, bàn, màn chiếu) đến hết 31/12/2021. Chi tiết xem tại đây.</li>\r\n                        </ul>', '<h2>Đánh giá Laptop Asus ZenBook UX325EA-KG363T chính hãng, bảo hành dài, cấu hình tiêu chuẩn</h2>\r\n<br />'),
 (19, 2, 'Ram Laptop Kingston (KCP432SS8/8) 8GB (1x8GB) DDR4 3200Mhz', 'RAKT307', 0, 1, 112, 'https://hanoicomputercdn.com/media/product/61286_ram_laptop_kingston_kcp432ss8_8_8gb_1x8gb_ddr4_3200mhz.jpg', 'RAM Laptop phổ thông,\r\nDung lượng: 8GB (1 thanh),\r\nBus 3200 Mhz', '', '', 1199000, 'stocking', 'fas fa-check', 'Còn hàng', '', '<ul>\r\n<li><span>MIỄN PHÍ GIAO HÀNG TOÀN QUỐC</span> (trừ ghế, bàn, màn chiếu) đến hết 31/12/2021. Chi tiết xem tại đây.</li>\r\n</ul>', '<h2>Đánh giá Ram Laptop Kingston (KCP432SS8/8) 8GB (1x8GB) DDR4 3200Mhz chính hãng</h2>\r\n<br />'),
 (2, 1, 'Laptop Asus Gaming ROG Flow 13 GV301QC-K6029T (R9 5980HS/32GB RAM/1TB SSD/13.4 Touch /RTX3050 4GB+RTX 3080 16GB cắm ngoài/Win10/Bút/Túi/Đen)', 'LTAU602', 0, 0, 1711, 'https://hanoicomputercdn.com/media/product/60755_laptop_asus_gaming_rog_flow_13_gv301qc_k6029t_win10_but_tui_den.jpg,https://hanoicomputercdn.com/media/product/60755__laptop_asus_gaming_rog_flow_13_gv301_11.png', 'Siêu nhẹ chỉ 1,190g,Màn hình IPS 16 Inch WQXGA (2560 x 1600),DCI-P3 99%,Nền tảng Intel Evo với Bộ vi xử lý Intel Core thế hệ 11,Thời lượng pin lên đến 22 giờ (80Wh),Thunderbolt 4', '79.999.000₫', '(Tiết kiệm: 1.000.000₫)', 78999000, 'stocking', 'fas fa-check', 'Còn hàng', '24 Tháng (Pin 12 Tháng)', '\r\n                        <h4 class=\"product__detail-gifts-top\">Bộ quà tặng trị giá <span></span> 1.458.000đ</span>:</h4>\r\n                        <ul>\r\n                            <li>Chuột không dây Logitech trị giá <span>249.000đ</span> (MELO055)</li>\r\n                            <li>Tai nghe Gaming GoldTech LD80 trị giá <span>339.000đ</span> (TNGD005)</li>\r\n                            <li>Tặng phiếu vệ sinh bảo dưỡng Laptop, PC miễn phí trọn đời trị giá <span>999.000đ</span> (THEK417)\r\n                            </li>\r\n                            <li><span>MIỄN PHÍ GIAO HÀNG TOÀN QUỐC</span> (trừ ghế, bàn, màn chiếu) đến hết 31/12/2021. Chi tiết xem tại đây.</li>\r\n                        </ul>', '<h2>Đánh giá Laptop Asus ZenBook UX325EA-KG363T chính hãng, bảo hành dài, cấu hình tiêu chuẩn</h2>\r\n<br />'),
 (3, 1, 'Laptop Dell Latitude 3520 (70251603) (i3 1115G4 4GB RAM/256GB SSD/15.6 inch HD/Fedora/Đen) (2021)', 'LTDL225', 0, 4, 28963, 'https://hanoicomputercdn.com/media/product/59832_laptop_dell_latitude_3520_70251603_den_2021_6.png,https://hanoicomputercdn.com/media/product/59832_laptop_dell_latitude_3520_70251603_den_2021_5.png,https://hanoicomputercdn.com/media/product/59832_laptop_dell_latitude_3520_70251603_den_2021_4.png,https://hanoicomputercdn.com/media/product/59832_laptop_dell_latitude_3520_70251603_den_2021_3.png', 'CPU: Intel Core i3 1115G4,RAM: 4GB,Ổ cứng: 256GB SSD,Nền tảng Intel Evo với Bộ vi xử lý Intel Core thế hệ 11,Thời lượng pin lên đến 22 giờ (80Wh),Thunderbolt 4', '15.699.000₫', '(Tiết kiệm: 410.000₫)', 15289000, 'stocking', 'fas fa-check', 'Còn hàng', '12 Tháng – Bảo hành tận nơi', '<h4 class=\"product__detail-gifts-top\">Bộ quà tặng trị giá <span></span> 1.458.000đ</span>:</h4>\r\n<ul>\r\n<li>Chuột không dây Logitech trị giá <span>249.000đ</span> (MELO055)</li>\r\n<li>Tai nghe Gaming GoldTech LD80 trị giá <span>339.000đ</span> (TNGD005)</li>\r\n<li>Tặng phiếu vệ sinh bảo dưỡng Laptop, PC miễn phí trọn đời trị giá <span>999.000đ</span> (THEK417)\r\n</li>\r\n<li><span>MIỄN PHÍ GIAO HÀNG TOÀN QUỐC</span> (trừ ghế, bàn, màn chiếu) đến hết 31/12/2021. Chi tiết xem tại đây.</li>\r\n</ul>', '<h2>Đánh giá Laptop Dell Latitude 3520 (70251603) chính hãng, cấu hình cao, bảo hành dài</h2>\r\n<br />\r\n<h3>Sức mạnh tuyệt đối đến từ CPU Intel® thế hệ 11 Tiger Lake</h3>\r\n<p>Xuất hiện liên tục với các laptop siêu mỏng nhẹ với chứng chỉ Evo của Intel®, Tiger Lake 11 sử dụng tiến trình mới với SuperFin 10nm. Với nâng cấp này thì các máy thuộc dòng Dell Latitude nói chung và 3520 nói riêng sẽ mang lại tốc độ xung nhịp cao hơn, hiệu suất tăng 20% so với chính thế hệ tiền nhiệm (Ice Lake) cùng khả năng hỗ trợ đồ họa tăng gấp đôi so với Iris Xe.</p>\r\n<h3>Linh hoạt với hệ điều hành Window 10 Pro hoặc Fedora</h3>\r\n<p>Các laptop Latitude 3520 hầu hết được sử dụng hệ điều hành Fedora (môt bản phân phối miễn phí Linux với mã nguồn mở) và duy nhất dòng Intel Core i3-1135G7 sử dụng RAM 8GB, ổ 256GB PCIe NVMe Class 35 SSD sử dụng Windows 10 Pro 64 bit (người dùng không phải mất thêm tiền mua license). Cả hai hệ điều hành này đều đem đến trải nghiệm như nhau với độ mượt mà và khả năng hỗ trợ tốt cho người dùng.</p>'),
-(4, 1, 'Laptop Dell Latitude 3420 (L3420I5SSD) (i5 1135G7 8GB RAM/256GB SSD/14.0 inch HD/Fedora/Đen) (2021)', 'LTDL226', 0, 0, 22673, 'https://hanoicomputercdn.com/media/product/59833_laptop_dell_latitude_3420_l3420i5ssd_den_2021_6.png,https://hanoicomputercdn.com/media/product/59833_laptop_dell_latitude_3420_l3420i5ssd_den_2021_5.png,https://hanoicomputercdn.com/media/product/59833_laptop_dell_latitude_3420_l3420i5ssd_den_2021_4.png', 'CPU: Intel Core i5 1135G7,RAM: 8GB,Ổ cứng: 256GB SSD,VGA: Onboard,Màn hình: 14.0 inch HD,HĐH: Fedora,Màu: Đen', '20.999.000₫', '(Tiết kiệm 200.000₫)', 20799000, 'outstock', 'fas fa-phone-alt', 'Liên hệ', '12 Tháng – Bảo hành tận nơi', '<h4 class=\"product__detail-gifts-top\">Bộ quà tặng trị giá <span></span> 1.458.000đ</span>:</h4>\r\n<ul>\r\n<li>Chuột không dây Logitech trị giá <span>249.000đ</span> (MELO055)</li>\r\n<li>Tai nghe Gaming GoldTech LD80 trị giá <span>339.000đ</span> (TNGD005)</li>\r\n<li>Tặng phiếu vệ sinh bảo dưỡng Laptop, PC miễn phí trọn đời trị giá <span>999.000đ</span> (THEK417)\r\n</li>\r\n<li><span>MIỄN PHÍ GIAO HÀNG TOÀN QUỐC</span> (trừ ghế, bàn, màn chiếu) đến hết 31/12/2021. Chi tiết xem tại đây.</li>\r\n</ul>', '<h2>Đánh giá Laptop Dell Latitude 3420 (L3420I5SSD) chính hãng, cấu hình cao, bảo hành dài</h2>\r\n<br />\r\n<p>Laptop Dell Latitude 3420 được thiết kế với kiểu dáng đơn giản, cứng cáp, sản phẩm có trọng lượng tương đối nhẹ để bạn dễ dàng mang theo bên mình</p>\r\n<img src=\"https://hanoicomputercdn.com/media/product/59834_laptop_dell_latitude_3420_42lt342002_den_2021_6.png\">\r\n<p>Mẫu <a href=\"tim-kiem.php?q=dell\">laptop Dell core i5</a> này được trang bị bộ vi xử lý Intel Core i5-1135G7 2.40 GHz up to  4.20 GHz, 8MB, RAM 8GB mang đến cho doanh nghiệp hiệu suất, khả năng quản lý, các tính năng bảo mật tích hợp sẵn. Ổ cứng có dung lượng 1TB (option) để bạn lưu trữ được các dữ liệu cần thiết hoặc như SSD sẽ giúp khởi động máy nhanh chóng</p>'),
+(4, 1, 'Laptop Dell Latitude 3420 (L3420I5SSD) (i5 1135G7 8GB RAM/256GB SSD/14.0 inch HD/Fedora/Đen) (2021)', 'LTDL226', 0, 0, 22673, 'https://hanoicomputercdn.com/media/product/59833_laptop_dell_latitude_3420_l3420i5ssd_den_2021_6.png,https://hanoicomputercdn.com/media/product/59833_laptop_dell_latitude_3420_l3420i5ssd_den_2021_5.png,https://hanoicomputercdn.com/media/product/59833_laptop_dell_latitude_3420_l3420i5ssd_den_2021_4.png', 'CPU: Intel Core i5 1135G7,RAM: 8GB,Ổ cứng: 256GB SSD,VGA: Onboard,Màn hình: 14.0 inch HD,HĐH: Fedora,Màu: Đen', '20.999.000₫', '(Tiết kiệm 200.000₫)', 20799000, 'outstock', 'fas fa-phone-alt', 'Liên hệ', '12 Tháng – Bảo hành tận nơi', '<h4 class=\"product__detail-gifts-top\">Bộ quà tặng trị giá <span></span> 1.458.000đ</span>:</h4>\r\n<ul>\r\n<li>Chuột không dây Logitech trị giá <span>249.000đ</span> (MELO055)</li>\r\n<li>Tai nghe Gaming GoldTech LD80 trị giá <span>339.000đ</span> (TNGD005)</li>\r\n<li>Tặng phiếu vệ sinh bảo dưỡng Laptop, PC miễn phí trọn đời trị giá <span>999.000đ</span> (THEK417)\r\n</li>\r\n<li><span>MIỄN PHÍ GIAO HÀNG TOÀN QUỐC</span> (trừ ghế, bàn, màn chiếu) đến hết 31/12/2021. Chi tiết xem tại đây.</li>\r\n</ul>', '<h2>Đánh giá Laptop Dell Latitude 3420 (L3420I5SSD) chính hãng, cấu hình cao, bảo hành dài</h2>\r\n<br />\r\n<p>Laptop Dell Latitude 3420 được thiết kế với kiểu dáng đơn giản, cứng cáp, sản phẩm có trọng lượng tương đối nhẹ để bạn dễ dàng mang theo bên mình</p>\r\n<img src=\"https://hanoicomputercdn.com/media/product/59834_laptop_dell_latitude_3420_42lt342002_den_2021_6.png\">\r\n<p>Mẫu <a href=\"search.php?q=dell\">laptop Dell core i5</a> này được trang bị bộ vi xử lý Intel Core i5-1135G7 2.40 GHz up to  4.20 GHz, 8MB, RAM 8GB mang đến cho doanh nghiệp hiệu suất, khả năng quản lý, các tính năng bảo mật tích hợp sẵn. Ổ cứng có dung lượng 1TB (option) để bạn lưu trữ được các dữ liệu cần thiết hoặc như SSD sẽ giúp khởi động máy nhanh chóng</p>'),
 (23, 2, 'Bàn phím Microsoft Surface Pro (Đen)', 'KBLT013', 0, 0, 3837, 'https://hanoicomputercdn.com/media/product/53487_ban_phim_microsoft_surface_pro_den_fmn_00015.jpg', 'Thiết kế nhỏ gọn, chắc chắn,\r\nDễ dàng mang theo,\r\nMàu sắc: Đen,\r\nChống trầy xước,\r\nTích hợp nhiều phím tắt chuyên dụng cho Windows', '3.029.000₫', '(Tiết kiệm 200.000₫)', 2829000, 'stocking', 'fas fa-check', 'Còn hàng', '06 Tháng', '<ul>\r\n<li><span>MIỄN PHÍ GIAO HÀNG TOÀN QUỐC</span> (trừ ghế, bàn, màn chiếu) đến hết 31/12/2021. Chi tiết xem tại đây.</li>\r\n</ul>', '<h2>Đánh giá Bàn phím Microsoft Surface Pro (Đen) - Phụ kiện Surface chính hãng</h2>\r\n<br />'),
 (5, 1, 'Laptop Dell Inspiron N3511B (P112F001BBL) (i5 1135G7/4GB RAM/512GB SSD/15.6 inch FHD/Win10+Office/Đen)', 'LTDL273', 0, 0, 2089, 'https://hanoicomputercdn.com/media/product/61013_laptop_dell_inspiron_n3511a_5.jpg', 'CPU: Intel Core i5 1135G7,RAM: 4GB,Ổ cứng: 512GB SSD,VGA: Onboard,Màn hình: 15.6 inch FHD,HĐH: Win10 + office,Màu: Đen', '20.989.000₫', '(Tiết kiệm 500.000₫)', 20489000, 'stocking', 'fas fa-check', 'Còn hàng', '12 Tháng – Bảo hành tận nơi', '<h4 class=\"product__detail-gifts-top\">Bộ quà tặng trị giá <span></span> 1.458.000đ</span>:</h4>\r\n<ul>\r\n<li>Chuột không dây Logitech trị giá <span>249.000đ</span> (MELO055)</li>\r\n<li>Tai nghe Gaming GoldTech LD80 trị giá <span>339.000đ</span> (TNGD005)</li>\r\n<li>Tặng phiếu vệ sinh bảo dưỡng Laptop, PC miễn phí trọn đời trị giá <span>999.000đ</span> (THEK417)\r\n</li>\r\n<li><span>MIỄN PHÍ GIAO HÀNG TOÀN QUỐC</span> (trừ ghế, bàn, màn chiếu) đến hết 31/12/2021. Chi tiết xem tại đây.</li>\r\n</ul>', '<h2>Đánh giá Laptop Dell Inspiron N3511B (P112F001BBL) chính hãng, bảo hành dài</h2>\r\n<br />'),
 (6, 1, 'Laptop Dell Vostro 5510 (70253901) (i5 11300H/8GB RAM/512GB SSD/15.6 inch FHD /Win10+Office/Xám) (2021)', 'LTDL259', 0, 7, 7876, 'https://hanoicomputercdn.com/media/product/60797_laptop_dell_vostro_5510_70253901_xam_2021_5.jpg,https://hanoicomputercdn.com/media/product/60797_laptop_dell_vostro_5510_70253901_xam_2021_4.jpg', 'CPU: Intel Core i5 11300H,RAM: 8GB,Ổ cứng: 512GB SSD,VGA: Onboard,Màn hình: 15.6 inch FHD,Màu: Xám', '22.999.000₫', '(Tiết kiệm 500.000₫)', 22499000, 'stocking', 'fas fa-check', 'Còn hàng', '12 Tháng – Bảo hành tận nơi', '<h4 class=\"product__detail-gifts-top\">Bộ quà tặng trị giá <span></span> 1.458.000đ</span>:</h4>\r\n<ul>\r\n<li>Chuột không dây Logitech trị giá <span>249.000đ</span> (MELO055)</li>\r\n<li>Tai nghe Gaming GoldTech LD80 trị giá <span>339.000đ</span> (TNGD005)</li>\r\n<li>Tặng phiếu vệ sinh bảo dưỡng Laptop, PC miễn phí trọn đời trị giá <span>999.000đ</span> (THEK417)\r\n</li>\r\n<li><span>MIỄN PHÍ GIAO HÀNG TOÀN QUỐC</span> (trừ ghế, bàn, màn chiếu) đến hết 31/12/2021. Chi tiết xem tại đây.</li>\r\n</ul>', '<h2>Đánh giá Laptop Dell Vostro 5510 (70253901) (i5 11300H/8GB RAM/512GB SSD/14.0 inch FHD /Win10+Office/Xám) (2021)</h2>\r\n<br />'),
@@ -149,7 +149,7 @@ INSERT INTO `grab_content` (`id`, `cid`, `title`, `product_code`, `rate_qnt`, `c
 (49, 5, 'PC HACOM BUSINESS PRO HN03 (I5 11400/H510/16GB RAM/512GB SSD)', 'PCVP160', 0, 0, 348, 'https://hanoicomputercdn.com/media/product/60825_pc_hacom_business_2021.jpg', 'CPU : Intel Core i5-11400,\r\nMAIN : H510,\r\nRAM : 16Gb 3200Mhz,\r\nSSD : 512Gb,\r\nNguồn : 450W', '', '', 11999000, 'stocking', 'fas fa-check', 'Còn hàng', '12 Tháng – Bảo hành tận nơi', '<ul>\r\n<li><span>MIỄN PHÍ GIAO HÀNG TOÀN QUỐC</span> (trừ ghế, bàn, màn chiếu) đến hết 31/12/2021. Chi tiết xem tại đây.</li>\r\n</ul>', '<h2>Đánh giá PC HACOM Designer D047 chính hãng, cấu hình tiêu chuẩn</h2>\r\n<br />'),
 (50, 5, 'PC Asus All in One V241E (i3-1115G4/8GB RAM/512GB SSD/23.8 inch Full HD/WL+BT/K+M/Win 10) (V241EAK-BA173T)', 'PCAS188', 0, 0, 349, 'https://hanoicomputercdn.com/media/product/61017_60030_pc_asus_all_in_one_v241e_i5.png', '', '', '', 15699000, 'stocking', 'fas fa-check', 'Còn hàng', '12 Tháng – Bảo hành tận nơi', '<ul>\r\n<li><span>MIỄN PHÍ GIAO HÀNG TOÀN QUỐC</span> (trừ ghế, bàn, màn chiếu) đến hết 31/12/2021. Chi tiết xem tại đây.</li>\r\n</ul>', '<h2>Đánh giá PC Asus All in One V241E (i3-1115G4/8GB RAM/512GB SSD/23.8 inch Full HD/WL+BT/K+M/Win 10) (V241EAK-BA173T)</h2>\r\n<br />'),
 (51, 5, 'PC Lenovo V50s (i3-10100/4GB RAM/1TB HDD/DVDRW/WL+BT/K+M/No OS) (11HB004RVA)', 'PCLE229', 0, 0, 2109, 'https://hanoicomputercdn.com/media/product/55973_lenovo_v50s_001.png', 'CPU: Core i3-10100,\r\nRAM: 4GB,\r\nỔ cứng: 1TB HDD,\r\nỔ quang: có,\r\nWifi: có,\r\nBluetooth: có,\r\nHệ điều hành: không có', '', '', 8649000, 'stocking', 'fas fa-check', 'Còn hàng', '12 Tháng – Bảo hành tận nơi', '<ul>\r\n<li><span>MIỄN PHÍ GIAO HÀNG TOÀN QUỐC</span> (trừ ghế, bàn, màn chiếu) đến hết 31/12/2021. Chi tiết xem tại đây.</li>\r\n</ul>', '<h2>Đánh giá PC Lenovo V50s (i3-10100/4GB RAM/1TB HDD/DVDRW/WL+BT/K+M/No OS) (11HB004RVA)</h2>\r\n<br />');
-INSERT INTO `grab_content` (`id`, `cid`, `title`, `product_code`, `rate_qnt`, `comment_qnt`, `view_qnt`, `img`, `product_info`, `start_price`, `sale`, `price`, `product_status`, `product_status-icon`, `product_status-text`, `insurance`, `gift`, `description`) VALUES
+INSERT INTO `products` (`id`, `cid`, `title`, `product_code`, `rate_qnt`, `comment_qnt`, `view_qnt`, `img`, `product_info`, `start_price`, `sale`, `price`, `product_status`, `product_status-icon`, `product_status-text`, `insurance`, `gift`, `description`) VALUES
 (52, 5, 'PC HP Pavilion TP01-1135d (i3-10100/4GB RAM/512GB SSD/WL+BT/DVDRW/K+M/Win 10) (22X47AA)', 'PCHP609', 0, 0, 1810, 'https://hanoicomputercdn.com/media/product/57478_pavilion_590_tp01.jpg', 'CPU: Core i3-10100,\r\nRAM: 4GB,\r\nỔ cứng: 512GB SSD,\r\nHệ điều hành: Windows 10', '', '', 9899000, 'stocking', 'fas fa-check', 'Còn hàng', '24 Tháng', '<ul>\r\n<li><span>MIỄN PHÍ GIAO HÀNG TOÀN QUỐC</span> (trừ ghế, bàn, màn chiếu) đến hết 31/12/2021. Chi tiết xem tại đây.</li>\r\n</ul>', '<h2>Đánh giá PC HP Pavilion TP01-1135d (i3-10100/4GB RAM/512GB SSD/WL+BT/DVDRW/K+M/Win 10) (22X47AA)</h2>\r\n<br />'),
 (53, 5, 'PC Apple iMac M1 (8 Core CPU/8 Core GPU/8GB RAM/256GB SSD/24 inch 4.5K/Pink/Mac OS) (MGPM3SA/A)', 'PCAP032', 0, 0, 288, 'https://hanoicomputercdn.com/media/product/60139_imac_24_touch_id_pink_gallery_1.jpg', 'CPU: Apple M1,\r\nRAM: 8GB,\r\nSSD: 256GB,\r\nMàn hình: 24 inch,\r\nMàu sắc: Hồng,\r\nHệ điều hành: Mac OS', '', '', 39139000, 'outstock', 'fas fa-phone-alt', 'Liên hệ', '12 Tháng', '<ul>\r\n<li><span>MIỄN PHÍ GIAO HÀNG TOÀN QUỐC</span> (trừ ghế, bàn, màn chiếu) đến hết 31/12/2021. Chi tiết xem tại đây.</li>\r\n</ul>', '<h2>Đánh giá PC Apple iMac M1 (8 Core CPU/8 Core GPU/8GB RAM/256GB SSD/24 inch 4.5K/Pink/Mac OS) (MGPM3SA/A)</h2>\r\n<br />'),
 (54, 5, 'Mainboard MSI MEG Z590 GODLIKE', 'MBMS427', 0, 0, 10051, 'https://hanoicomputercdn.com/media/product/59053_mainboard_msi_meg_z590_godlike_1.jpg', 'Bo mạch chủ Z590 cao cấp nhất của MSI,\r\nChipset: Intel Z590,\r\nSocket: LGA 1200,\r\nKích thước: E-ATX,\r\nSố khe RAM: 4,\r\nTích hợp sẵn Wifi', '29.799.000₫', '(Tiết kiệm 6.800.000₫)', 22999000, 'stocking', 'fas fa-check', 'Còn hàng', '12 Tháng – Bảo hành tận nơi', '<ul>\r\n<li><span>MIỄN PHÍ GIAO HÀNG TOÀN QUỐC</span> (trừ ghế, bàn, màn chiếu) đến hết 31/12/2021. Chi tiết xem tại đây.</li>\r\n</ul>', '<h2>Đánh giá Mainboard MSI MEG Z590 GODLIKE chính hãng, gia tăng hiệu suất máy tính</h2>\r\n<br />'),
@@ -192,7 +192,7 @@ CREATE TABLE IF NOT EXISTS `review_table` (
   `pid` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
   `user_rating` int(11) NOT NULL,
-  `user_review` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `user_review` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `datetime` int(11) NOT NULL,
   PRIMARY KEY (`review_id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -214,8 +214,8 @@ DROP TABLE IF EXISTS `sub_cate`;
 CREATE TABLE IF NOT EXISTS `sub_cate` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `cid` int(11) NOT NULL,
-  `name` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `content` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `name` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `content` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=38 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -274,8 +274,8 @@ CREATE TABLE IF NOT EXISTS `user_order` (
   `user_id` int(11) NOT NULL,
   `product_id` int(11) NOT NULL,
   `qty` int(11) NOT NULL,
-  `price` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `pay_mode` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `price` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `pay_mode` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `create_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`order_id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -298,12 +298,12 @@ DROP TABLE IF EXISTS `user_table`;
 CREATE TABLE IF NOT EXISTS `user_table` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `role` int(11) NOT NULL DEFAULT '0',
-  `username` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `password` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `phone` varchar(15) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `email` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '@gmail.com',
+  `username` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `password` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `phone` varchar(15) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '@gmail.com',
   `gender` tinyint(1) NOT NULL DEFAULT '1',
-  `address` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'Hà Nội',
+  `address` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'Hà Nội',
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 

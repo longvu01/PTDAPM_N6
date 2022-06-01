@@ -1,36 +1,45 @@
 /* add background gradient */
-const $ = document.querySelector.bind(document);
-const $$ = document.querySelectorAll.bind(document);
-
-const titleInfos = $$('.showrooms__info .info__location');
+const titleInfos = document.querySelectorAll.bind(document)(
+  '.showrooms__info .info__location'
+);
 
 titleInfos.forEach((titleInfo) => {
   titleInfo.onclick = function () {
-    $('.info__location.info__location--active').classList.remove(
-      'info__location--active'
-    );
+    document.querySelector
+      .bind(document)('.info__location.info__location--active')
+      .classList.remove('info__location--active');
     // console.log(this);
     this.classList.add('info__location--active');
   };
 });
 /* add page-item active */
-const pages = $$('.page-item');
+const pages = document.querySelectorAll.bind(document)('.page-item');
 
 pages.forEach((page) => {
   page.onclick = function () {
-    $('.page-item.active').classList.remove('active');
+    document.querySelector
+      .bind(document)('.page-item.active')
+      .classList.remove('active');
     // console.log(this);
     this.classList.add('active');
   };
 });
 
 /* add cate-choice active */
-const cate_choices = $$('.category-box-choice');
+const cate_choices = document.querySelectorAll.bind(document)(
+  '.category-box-choice'
+);
 
 cate_choices.forEach((cate_choice) => {
   cate_choice.onclick = function () {
-    if ($('.category-box-choice.choice-active')) {
-      $('.category-box-choice.choice-active').classList.remove('choice-active');
+    if (
+      document.querySelector.bind(document)(
+        '.category-box-choice.choice-active'
+      )
+    ) {
+      document.querySelector
+        .bind(document)('.category-box-choice.choice-active')
+        .classList.remove('choice-active');
     }
     // console.log(this);
     this.classList.add('choice-active');
@@ -38,20 +47,23 @@ cate_choices.forEach((cate_choice) => {
 });
 
 /* scroll */
-const body = $('body');
-const wrapper = $('.wrapper');
-const header = $('.header');
-const headerTop = $('.header__top');
-const headerLogo = $('.header-logo');
-const u_a_i_first = $('.user-action-item--first');
-const selectionScroll = $('.selection-scroll');
-const uaList = $('.user-action-list');
-const sellLinks = $$('.sell__link');
-const selections = $$('.selection');
-const newsInfo = $$('.news__info');
-const buildPCs = $$('.build-pcs');
+const body = document.querySelector.bind(document)('body');
+const wrapper = document.querySelector.bind(document)('.wrapper');
+const header = document.querySelector.bind(document)('.header');
+const headerTop = document.querySelector.bind(document)('.header__top');
+const headerLogo = document.querySelector.bind(document)('.header-logo');
+const u_a_i_first = document.querySelector.bind(document)(
+  '.user-action-item--first'
+);
+const selectionScroll =
+  document.querySelector.bind(document)('.selection-scroll');
+const uaList = document.querySelector.bind(document)('.user-action-list');
+const sellLinks = document.querySelectorAll.bind(document)('.sell__link');
+const selections = document.querySelectorAll.bind(document)('.selection');
+const newsInfo = document.querySelectorAll.bind(document)('.news__info');
+const buildPCs = document.querySelectorAll.bind(document)('.build-pcs');
 
-const scrollToTopBtn = $('#btn_scroll-top');
+const scrollToTopBtn = document.querySelector.bind(document)('#btn_scroll-top');
 var rootElement = document.documentElement;
 scrollToTopBtn.onclick = function () {
   rootElement.scrollTo({
@@ -111,8 +123,8 @@ document.onscroll = function () {
   }
 };
 
-const mess = $('#mess');
-const chatContent = $('.chat__content');
+const mess = document.querySelector.bind(document)('#mess');
+const chatContent = document.querySelector.bind(document)('.chat__content');
 let isReply = false;
 mess.addEventListener('keydown', (e) => {
   if (e.key === 'Enter') {
@@ -126,9 +138,9 @@ mess.addEventListener('keydown', (e) => {
     // console.log(time);
     const html = `
                     <div class="mess__content">
-                        <span>Hôm nay ${time}</span>
+                        <span>Hôm nay document.querySelector.bind(document){time}</span>
                         <p>
-                            ${val}
+                            document.querySelector.bind(document){val}
                         </p>
                     </div>
                     `;
@@ -148,8 +160,8 @@ mess.addEventListener('keydown', (e) => {
   }
 });
 
-const chat = $('.chat');
-const btnChat = $('.exec__btn--chat');
+const chat = document.querySelector.bind(document)('.chat');
+const btnChat = document.querySelector.bind(document)('.exec__btn--chat');
 
 btnChat.addEventListener('click', (e) => {
   // console.log(e.target.classList);

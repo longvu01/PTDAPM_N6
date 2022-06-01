@@ -6,19 +6,23 @@ $user = checkLoggedUser();
 
 $sum_price = isset($_REQUEST["sum_price"]) ? $_REQUEST["sum_price"] : "";
 
-$sql = 'SELECT * FROM grab_content ORDER BY id DESC LIMIT 1';
+$sql = 'SELECT * FROM products ORDER BY id DESC LIMIT 1';
 $resultLast = select_one($sql);
-$sql = "select * from grab_category";
+$sql = "select * from categories";
 $result_parents = select_list($sql);
 $user = "";
 if (isset($_SESSION['account'])) {
     $user = $_SESSION['account'];
 }
+
+// print_r($_SESSION['cart']);
+// exit();
+
 ?>
 
 <!-- Start HTML -->
 <?php require_once('../root/top.php') ?>
-<?php top('Trang chủ') ?>
+<?php top('Thanh toán') ?>
 </head>
 
 <body>
@@ -91,7 +95,7 @@ if (isset($_SESSION['account'])) {
             <?php } ?>
             <div class="payment__total-price">
                 <span>Thành tiền: </span>
-                <span id="gtotal" class="text-red"><?php echo number_format($sum_price, 0, '.', '.') ?> đ</span>
+                <span id="c-last_total" class="text-red"><?php echo number_format($sum_price, 0, '.', '.') ?> đ</span>
                 <input type="hidden" name="sum_price" value="<?php echo $sum_price ?>">
             </div>
             <select name="pay_mode" class="fs-4 p-4 w-100 my-2" required>

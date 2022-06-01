@@ -2,54 +2,48 @@
 session_start();
 require_once("../libs/lib_db.php");
 //1. get input, id của bài viết
-// $id = isset($_REQUEST["id"]) ? $_REQUEST["id"] * 1 : 0;
 $id = isset($_REQUEST["id"]) ? (int)$_REQUEST["id"] : 0;
 $p = isset($_REQUEST["p"]) ? $_REQUEST["p"] * 1 : 0;
 if ($p < 1) $p = 1;
 
 //2.1. Thông tin chi tiết của chuyên mục
-$sql = "select * from grab_category where id = {$id}";
-//2.2. Thực thi sql
+$sql = "select * from categories where id = {$id}";
 $result = select_one($sql);
-// print_r($result);exit();
+
 $sub_cate_id = $result['id'];
 
-//2.1. Thông tin chi tiết của chuyên mục
 $nop = 12;
 $offset = $nop * ($p - 1);
 $cond = "where cid = {$id}";
-$sql = "select * from grab_content {$cond}  limit {$nop} offset {$offset} ";
-// echo $sql;exit();
+$sql = "select * from products {$cond} limit {$nop} offset {$offset} ";
+$products = select_list($sql);
+
+// Đếm số lượng các sản phẩm trong db
+$sqlCount = "select count(*) as c from products {$cond}";
 //2.2. Thực thi sql
-$datas = select_list($sql);
-//print_r($datas);exit();
-$sqlcount = "select count(*) as c from grab_content {$cond}";
-//2.2. Thực thi sql
-$count = select_one($sqlcount);
+$count = select_one($sqlCount);
 $total = $count['c'];
 // print_r($total);exit();
 // print_r($count);exit();
-//$nop = 10;
 $num = ceil($total / $nop);
 
 /* subcate */
 $sql = "select * from sub_cate where cid = {$sub_cate_id}";
 $sub_cate = select_list($sql);
-// print_r($sub_cate);exit();
 
-$sql = "select * from grab_category";
+$user = isset($_SESSION['account']) ? $_SESSION['account'] : null;
+
+$sql = "select * from categories";
 $result_parents = select_list($sql);
-$sql = 'SELECT * FROM grab_content ORDER BY id DESC LIMIT 1';
+
+$sql = 'SELECT * FROM products ORDER BY id DESC LIMIT 1';
 $resultLast = select_one($sql);
-$user = "";
-if (isset($_SESSION['account'])) {
-    $user = $_SESSION['account'];
-}
+
 ?>
 
 <!-- Start HTML -->
 <?php require_once('../root/top.php') ?>
-<?php top('Trang chủ') ?>
+<?php top($result["name"]) ?>
 </head>
 
 <body>
@@ -136,7 +130,7 @@ if (isset($_SESSION['account'])) {
                                                 case ('DANH MỤC'): ?>
                                                     <?php foreach (explode(',', $item['content']) as $content) { ?>
                                                         <li>
-                                                            <a href="tim-kiem.php?q=<?php echo $content ?>" class="category__content-link">
+                                                            <a href="search.php?q=<?php echo $content ?>" class="category__content-link">
                                                                 <i class="fas fa-caret-right"></i>
                                                                 <?php echo $content; ?>
                                                             </a>
@@ -387,7 +381,7 @@ if (isset($_SESSION['account'])) {
                         <svg viewBox="25 25 50 50" class="hide" id="loader">
                             <circle cx="50" cy="50" r="20"></circle>
                         </svg>
-                        <?php foreach ($datas as $data) { ?>
+                        <?php foreach ($products as $data) { ?>
                             <div class="product">
                                 <!--  -->
                                 <div class="aspect-ratio">
