@@ -1,2 +1,24 @@
-01.06.2022 12:15:40 <!-- sql=[update products set img=n'../../../uploads/no-image-20220601-121540.png',cid=n'16',title=n'tt',product_code=n'abcd1233',product_info=n'',start_price=n'',price=n'12.341.234',sale=n'',insurance=n'',gift=n'',description=n''  where id=84] --> 
-01.06.2022 12:15:40 sql=[SELECT * FROM products ORDER BY id DESC LIMIT 1] 
+01.06.2022 11:10:08 <!-- sql=[insert into grab_content 
+	(cid,img,title,product_code,product_info,start_price,price,sale,insurance,gift,description)
+	values 
+	('1','','testasdfv','abcd123','','','12341234','','','','')] --> 
+01.06.2022 11:10:42 <!-- sql=[insert into products 
+	(cid,img,title,product_code,product_info,start_price,price,sale,insurance,gift,description)
+	values 
+	('1','','testasdfv','abcd123','','','12341234','','','','')] --> 
+01.06.2022 11:11:54 <!-- sql=[insert into products 
+	(cid,img,title,product_code,product_info,start_price,price,sale,insurance,gift,description)
+	values 
+	('15','','ST1','ST123','','','123123','','','','')] --> 
+01.06.2022 11:13:15 <!-- sql=[insert into products 
+	(cid,img,title,product_code,product_info,start_price,price,sale,insurance,gift,description)
+	values 
+	('14','','VP1','VP1','','','123123','','','','')] --> 
+01.06.2022 11:13:18 <!-- sql=[insert into products 
+	(cid,img,title,product_code,product_info,start_price,price,sale,insurance,gift,description)
+	values 
+	('14','','VP1','VP1','','','123123','','','','')] --> 
+01.06.2022 11:17:35 <!-- sql=[insert into products 
+	(cid,img,title,product_code,product_info,start_price,price,sale,insurance,gift,description)
+	values 
+	('','1654125455.','','','','','','','','','')] --> 

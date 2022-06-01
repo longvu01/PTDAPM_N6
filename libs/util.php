@@ -14,7 +14,7 @@ function upload_file_by_name($name, $target_dir = "")
 		return "";
 	}
 	if (!$target_dir) {
-		$target_dir = "../../../uploads/";
+		$target_dir = "../uploads/";
 	}
 	//print("upload_file_by_name->target_dir=[{$target_dir}]");
 	$fdata = $_FILES[$name];

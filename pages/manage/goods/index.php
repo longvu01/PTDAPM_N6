@@ -27,6 +27,8 @@ if ($user['role'] == 0) {
 <!-- Start HTML -->
 <?php require_once('../../../root/manage/top.php') ?>
 <?php top('Thêm sản phẩm') ?>
+<script defer src="../../../assets/js/toast_msg.js"></script>
+<script type="module" defer src="./js/insert.js"></script>
 </head>
 
 <body>
@@ -45,44 +47,44 @@ if ($user['role'] == 0) {
             </div>
         </div>
         <br />
-        <form class="form" action="./process/process_insert.php" method="POST" enctype="multipart/form-data">
-            <label>Category <span class="text-red">*</span></label>
-            <select name="cid" required>
+        <form class="form" id="form-add" enctype="multipart/form-data" method="post" action="./process/process_insert.php">
+            <label>Chuyên mục <span class="text-red">*</span></label>
+            <select name="cid">
                 <option value="">Chọn chuyên mục</option>
                 <?php foreach ($cates as $item) { ?>
                     <option value="<?php echo $item["id"] ?>"><?php echo $item["name"] ?></option>
                 <?php } ?>
             </select>
 
-            <label>Image <span class="text-red">*</span></label>
-            <input name="img" type="file" value="" required />
+            <label>Hình ảnh <span class="text-red">*</span></label>
+            <input name="img" type="file" value="" />
             <img src="" width="200px" />
 
-            <label>Title <span class="text-red">*</span></label>
-            <input name="title" value="" placeholder="Title" required />
+            <label>Tên sản phẩm <span class="text-red">*</span></label>
+            <input name="title" value="" placeholder="Title" />
 
-            <label>Product Code <span class="text-red">*</span></label>
-            <input name="product_code" value="" placeholder="ABCD123" required />
+            <label>Mã SP: <span class="text-red">*</span></label>
+            <input name="product_code" value="" placeholder="ABCD123" />
 
-            <label>Product Info</label>
+            <label>Thông tin SP:</label>
             <textarea placeholder="Thông tin sản phẩm" name="product_info"></textarea>
 
-            <label>Start Price</label>
+            <label>Giá ban đầu</label>
             <input name="start_price" value="" placeholder="00.000.000đ" />
 
-            <label>Price <span class="text-red">*</span></label>
-            <input name="price" value="" placeholder="00.000.000" required />
+            <label>Giá hiện tại <span class="text-red">*</span></label>
+            <input name="price" value="" placeholder="00.000.000" />
 
-            <label>Sale</label>
+            <label>Phần trăm giảm giá</label>
             <input name="sale" value="" placeholder="(Tiết kiệm: x% )" />
 
-            <label>Insurance</label>
+            <label>Thời gian bảo hành</label>
             <input name="insurance" value="" placeholder="x Tháng" />
 
-            <label>Gifts</label>
+            <label>Quà khuyến mãi</label>
             <textarea placeholder="Quà khuyến mãi" name="gift"></textarea>
 
-            <label>Description</label>
+            <label>Mô tả sản phẩm</label>
             <textarea placeholder="Mô tả sản phẩm" name="description"></textarea>
 
             <div class="exec_bottom">
@@ -102,9 +104,6 @@ if ($user['role'] == 0) {
 
     <!--  -->
     <script src="../../../assets/js/all.js"></script>
-
-    <script src="../../../assets/js/toast_msg.js"></script>
-    <?php require_once('../../../root/show_toast.php'); ?>
 </body>
 
 </html>

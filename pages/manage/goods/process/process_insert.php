@@ -1,24 +1,21 @@
 <?php
 session_start();
 require_once("../../../../connect.php");
-require_once("../../../../libs/util.php");
 
-if (
-	empty($_POST['cid']) || empty($_FILES['img']) || empty($_POST['title'])
-	|| empty($_POST['product_code']) || empty($_POST['product_info']) || empty($_POST['price'])
-) {
-	$_SESSION['info_title'] = "Có lỗi!";
-	$_SESSION['info_message'] = "❌Cần điền đầy đủ thông tin!";
-	$_SESSION['info_type'] = "error";
+// if (
+// 	empty($_POST['cid']) || empty($_POST['title'])
+// 	|| empty($_POST['product_code']) || empty($_POST['product_info']) || empty($_POST['price'])
+// ) {
+// 	$_SESSION['info_title'] = "Có lỗi!";
+// 	$_SESSION['info_message'] = "❌Cần điền đầy đủ các trường bắt buộc!";
+// 	$_SESSION['info_type'] = "error";
 
-	header('Location: ../');
-	exit;
-}
+// 	header('Location: ../');
+// 	exit;
+// }
 // ----------------------------------------------------------------
 $cid = addslashes($_POST['cid']);
-
 $img_link = $_FILES['img'];
-
 $title = addslashes($_POST['title']);
 $product_code = addslashes($_POST['product_code']);
 $product_info = addslashes($_POST['product_info']);
@@ -57,11 +54,11 @@ $sql = "insert into products
 // die($sql);
 mysqli_query($conn, $sql);
 
-// Thông báo và điều hướng quay lại
 $_SESSION['info_title'] = "Thành công!";
 $_SESSION['info_message'] = "Bạn đã thêm sản phẩm mới thành công!";
 $_SESSION['info_type'] = "success";
 
-header('Location: ../../../');
+header('Location: ../');
+
 
 mysqli_close($conn);
