@@ -62,6 +62,7 @@ if (isset($_REQUEST["username"])) {
 </head>
 
 <body>
+	<div id="toast"></div>
 
 	<div class="login_form-bgc">
 		<form class="login__form" action="login.php" method="POST">
@@ -119,6 +120,7 @@ if (isset($_REQUEST["username"])) {
 	</div>
 
 	<script src="js/all.js"></script>
+	<?php require_once('../root/show_toast.php'); ?>
 </body>
 
 </html>

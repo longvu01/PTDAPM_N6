@@ -13,7 +13,6 @@
 
     <!-- SUB BTN -->
     <button id="btn_scroll-top" class="hide"><i class="fas fa-arrow-up"></i></button>
-    <div class="spin-btn"></div>
     <?php if ($user && $user['role'] == 1) { ?>
         <div class="exec__btn">
             <i class="fas fa-ellipsis-h"></i>

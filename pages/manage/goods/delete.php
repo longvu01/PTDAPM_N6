@@ -32,6 +32,7 @@ if ($user['role'] == 0) {
 </head>
 
 <body>
+    <div id="toast"></div>
     <?php require_once('../../../root/manage/header.php') ?>
 
     <!-- DELETE -->
@@ -105,8 +106,11 @@ if ($user['role'] == 0) {
     <?php require_once('../../../root/manage/bottom.php') ?>
 
     <script src="../../../assets/js/all.js"></script>
+    <script src="../../../assets/js/toast_msg.js"></script>
     <script src="../../../assets/js/ajax/ajax_fetch_showroom.js"></script>
     <script src="../../../assets/js/mail.js"></script>
+
+    <?php require_once('../../../root/show_toast.php'); ?>
 
 </body>
 

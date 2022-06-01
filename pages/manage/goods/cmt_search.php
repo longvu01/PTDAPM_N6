@@ -37,6 +37,7 @@ if ($user['role'] == 0) {
 </head>
 
 <body>
+  <div id="toast"></div>
   <?php require_once('../../../root/manage/header.php') ?>
 
   <!-- SEARCH -->
@@ -77,6 +78,8 @@ if ($user['role'] == 0) {
 
   <!--  -->
   <script src="../../../assets/js/all.js"></script>
+  <script src="../../../assets/js/toast_msg.js"></script>
+  <?php require_once('../../../root/show_toast.php'); ?>
 </body>
 
 </html>

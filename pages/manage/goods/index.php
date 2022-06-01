@@ -30,6 +30,8 @@ if ($user['role'] == 0) {
 </head>
 
 <body>
+    <div id="toast"></div>
+
     <?php require_once('../../../root/manage/header.php') ?>
 
     <!-- ADD -->
@@ -63,7 +65,7 @@ if ($user['role'] == 0) {
             <input name="product_code" value="" placeholder="ABCD123" required />
 
             <label>Product Info</label>
-            <textarea placeholder="Remember to enter the data inside the <li></li> tag pair" name="product_info"></textarea>
+            <textarea placeholder="Thông tin sản phẩm" name="product_info"></textarea>
 
             <label>Start Price</label>
             <input name="start_price" value="" placeholder="00.000.000đ" />
@@ -78,10 +80,10 @@ if ($user['role'] == 0) {
             <input name="insurance" value="" placeholder="x Tháng" />
 
             <label>Gifts</label>
-            <textarea placeholder="Remember to use HTML tag <>" name="gift"></textarea>
+            <textarea placeholder="Quà khuyến mãi" name="gift"></textarea>
 
             <label>Description</label>
-            <textarea placeholder="Remember to use h2 <hr> h3 and p tag <>" name="description"></textarea>
+            <textarea placeholder="Mô tả sản phẩm" name="description"></textarea>
 
             <div class="exec_bottom">
                 <button type="submit" name="submit">ADD</button>
@@ -100,9 +102,9 @@ if ($user['role'] == 0) {
 
     <!--  -->
     <script src="../../../assets/js/all.js"></script>
-    <script src="../../../assets/js/ajax/ajax_fetch_showroom.js"></script>
-    <script src="../../../assets/js/mail.js"></script>
 
+    <script src="../../../assets/js/toast_msg.js"></script>
+    <?php require_once('../../../root/show_toast.php'); ?>
 </body>
 
 </html>
