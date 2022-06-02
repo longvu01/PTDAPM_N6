@@ -73,7 +73,7 @@ if ($user['role'] == 0) {
             <input name="start_price" value="" placeholder="00.000.000đ" />
 
             <label>Giá hiện tại <span class="text-red">*</span></label>
-            <input name="price" value="" placeholder="00.000.000" />
+            <input name="price" value="" placeholder="Nhập giá tiền" />
 
             <label>Phần trăm giảm giá</label>
             <input name="sale" value="" placeholder="(Tiết kiệm: x% )" />

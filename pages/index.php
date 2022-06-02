@@ -68,7 +68,7 @@ if (isset($_SESSION['account'])) {
                         <div class="carousel-inner">
                             <div class="carousel-item active">
                                 <a href="#"></a>
-                                <img src="../assets/images/slider/21_Oct0468af6801f667e65b977404965133ce.png" class="d-block w-100" alt="">
+                                <img src="../assets/images/slider/123.jpg" class="d-block w-100" alt="">
                             </div>
                             <div class="carousel-item">
                                 <a href="#"></a>

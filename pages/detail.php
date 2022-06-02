@@ -132,40 +132,7 @@ $user_reviews = select_list($sql);
                     </div>
                 </div>
 
-                <div class="product__detail-right">
-                    <div class="card">
-                        <div class="card-header">
-                            SẢN PHẨM ĐANG CÓ SẴN TẠI
-                        </div>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item"><a href="#" class="text-red ">79 Nguyễn Văn Huyên - Cầu Giấy - Hà Nội</a></li>
-                        </ul>
-                    </div>
-                    <div class="card">
-                        <div class="card-header">
-                            YÊN TÂM MUA HÀNG
-                        </div>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item"><a href="#">Uy tín 20 năm xây dựng và phát triển</a></li>
-                            <li class="list-group-item"><a href="#">Sản phẩm chính hãng 100%</a></li>
-                            <li class="list-group-item"><a href="#">Trả góp lãi suất 0% toàn bộ giỏ hàng</a></li>
-                            <li class="list-group-item"><a href="#">Trả bảo hành tận nơi sử dụng</a></li>
-                            <li class="list-group-item"><a href="#">Bảo hành tận nơi cho doanh nghiệp</a></li>
-                            <li class="list-group-item"><a href="#">Ưu đãi riêng cho học sinh sinh viên</a></li>
-                            <li class="list-group-item"><a href="#">Vệ sinh miễn phí trọn đời PC, Laptop</a></li>
-                        </ul>
-                    </div>
-                    <div class="card">
-                        <div class="card-header">
-                            MIỄN PHÍ GIAO HÀNG
-                        </div>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item"><a href="#">Giao hàng siêu tốc trong 2h</a></li>
-                            <li class="list-group-item"><a href="#">Giao hàng miễn phí toàn quốc</a></li>
-                            <li class="list-group-item"><a href="#">Nhận hàng và thanh toán tại nhà (ship COD)</a></li>
-                        </ul>
-                    </div>
-                </div>
+                
             </div>
             <!--  -->
         </div>
