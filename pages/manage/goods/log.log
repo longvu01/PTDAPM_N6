@@ -839,3 +839,6 @@
 01.06.2022 11:27:56 sql=[select * from categories] 
 01.06.2022 11:27:56 sql=[SELECT * FROM products ORDER BY id DESC LIMIT 1] 
 >>>>>>> 108b24dffdd3ae31adf5f856b96e927ed23bcc72
+02.06.2022 01:34:40 sql=[select * from categories] 
+02.06.2022 01:34:40 sql=[select * from categories] 
+02.06.2022 01:34:40 sql=[SELECT * FROM products ORDER BY id DESC LIMIT 1] 
