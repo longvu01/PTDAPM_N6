@@ -1,7 +1,5 @@
 @media (max-width: 1399px) {
-    .header__top-item {
-        margin-right: 4px;
-    }
+    
     .header__info {
         font-size: 1rem;
     }
@@ -28,7 +26,6 @@
     .main__content-menu-left,
     .header__info:last-child,
     .header__info,
-    .header__top,
     .main__content--submenu-scroll,
     .accordion--category,
     .product__item--info {
