@@ -30,7 +30,7 @@ $description = addslashes($_POST['description']);
 $folder = '../../../uploads/';
 $file_extension = explode('.', $img_link['name'])[1];
 $file_name = time() . '.' . $file_extension;
-$file_path = '../uploads/' . $file_name;
+$file_path = $folder . $file_name;
 move_uploaded_file($img_link["tmp_name"], $file_path);
 
 // Kiểm tra tên sản phẩm đã tồn tại trong DB chưa

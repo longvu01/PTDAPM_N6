@@ -82,74 +82,16 @@
     </div>
     <div class="wrapper">
         <!-- HEADER__TOP -->
-        <div class="header__top">
-            <div class="header__top-item">
-                <div class="header__info">
-                    <i class="me-1 fas fa-map-marker-alt"></i>
-                    TÌM CỬA HÀNG GẦN NHẤT
-                </div>
-
-            </div>
-            <div class="header__top-item">
-                <div class="header__info header__info--call">
-                    <i class="me-1 fas fa-phone"></i>
-                    Khách Cá Nhân
-                </div>
-
-            </div>
-            <div class="header__top-item">
-                <div class="header__info header__info--call">
-                    <i class="me-1 fas fa-phone"></i>
-                    Khách Doanh Nghiệp
-                </div>
-
-            </div>
-            <div class="header__top-item">
-                <div class="header__info header__info--call">
-                    <i class="me-1 fas fa-phone"></i>
-                    Bán hàng - Showroom
-                </div>
-
-            </div>
-            <a href="#" class="header__top-item">
-                <a href="#" class="header__info">
-                    <i class="me-1 fas fa-shield-alt"></i>
-                    Tra cứu bảo hành
-                </a>
-            </a>
-            <a href="#" class="header__top-item">
-                <a href="#" class="header__info">
-                    <i class="me-1 fas fa-file-invoice-dollar"></i>
-                    In hóa đơn điện tử
-                </a>
-            </a>
-            <a href="#" class="header__top-item">
-                <a href="#" class="header__info">
-                    <i class="me-1 fas fa-bullhorn"></i>
-                    Tuyển dụng
-                </a>
-            </a>
-        </div>
 
         <!-- HEADER__MAIN -->
         <div class="header__main my-2">
             <div class="wrapper d-flex justify-content-between align-items-center">
                 <a href="./" class="header-logo">
-                    <img src="../assets/images/logos/logo-trang.png" alt="">
+                <img width = "100" height = "100" src="../assets/images/logos/logo.png" alt="">
                 </a>
 
                 <div class="header__main-content d-flex align-items-center">
-                    <ul class="build-pcs d-flex me-xl-5">
-                        <li class="build-pc me-3">
-                            <a href="#" class="btn btn-danger p-3"><i class="fas fa-wrench me-1"></i>
-                                Xây dựng cấu hình máy tính</a>
-                        </li>
-                        <li class="build-pc">
-                            <a href="#" class="btn btn-danger p-3"><i class="fas fa-temperature-low me-1"></i>
-                                Xây dựng tản nhiệt nước PC</a>
-
-                        </li>
-                    </ul>
+                    
 
                     <ul class="user-action-list d-flex">
                         <li class="user-action-item user-action-item--first d-flex align-items-center fs-5 fw-light pe-4">
@@ -249,12 +191,7 @@
 
         <!-- HEADER__BOTTOM -->
         <div class="header__bottom">
-            <div class="d-flex mb-3">
-                <a href="category.php?id=1" class="sell__link">Laptop</a>
-                <a href="category.php?id=6" class="sell__link">CPU</a>
-                <a href="category.php?id=3" class="sell__link">Máy Tính Chơi Game</a>
-                <a href="category.php?id=8" class="sell__link">Màn Hình Máy Tính</a>
-            </div>
+            
 
             <div class="header__bottom--content d-flex align-items-center justify-content-between">
                 <div class="selection selection-scroll me-2 d-block">
@@ -430,11 +367,7 @@
                     </div>
                     <button class="btn" type="submit"><i class="fas fa-search"></i></button>
                 </form>
-                <a href="#" class="news__info ms-3 me-2">
-                    <i class="fas fa-rss me-1"></i>
-                    Tin công nghệ</a>
-                <a href="#" class="news__info">
-                    <i class="fas fa-tags me-1"></i>Khuyến mại</a>
+                
             </div>
         </div>
     </div>

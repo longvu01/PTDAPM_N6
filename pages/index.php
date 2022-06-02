@@ -42,9 +42,9 @@ if (isset($_SESSION['account'])) {
 
             <!--main__content-right-->
             <div class="main__content-right">
-                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/AhkWegIvt1U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="main__content-right-1"></iframe>
+                <img width="100%" height="100%" src="../assets/images/banners/1.jpg"  class="main__content-right-1">
 
-                <a href="#" class="main__content--link main__content-right-2"><img src="../assets/images/banners/thaydoitenct.png" alt=""></a>
+                <a href="#" class="main__content--link main__content-right-2"><img src="../assets/images/banners/2.jpg" alt=""></a>
 
                 <a href="#" class="main__content--link main__content-right-3"><img src="../assets/images/banners/lamviectainha.png" alt=""></a>
 
@@ -57,15 +57,13 @@ if (isset($_SESSION['account'])) {
                         <div class="carousel-indicators">
                             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
-                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
-                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>
-                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="6" aria-label="Slide 7"></button>
-                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="7" aria-label="Slide 8"></button>
-                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="8" aria-label="Slide 9"></button>
-                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="9" aria-label="Slide 10"></button>
-                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="10" aria-label="Slide 11"></button>
+                            
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 4"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 5"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 6"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 7"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="6" aria-label="Slide 8"></button>
+                            
                         </div>
                         <div class="carousel-inner">
                             <div class="carousel-item active">
@@ -76,10 +74,7 @@ if (isset($_SESSION['account'])) {
                                 <a href="#"></a>
                                 <img src="../assets/images/slider/09_Sep30f9cb2011418ee4304d9939723c94fb.jpg" class="d-block w-100" alt="">
                             </div>
-                            <div class="carousel-item">
-                                <a href="#"></a>
-                                <img src="../assets/images/slider/16_Sepcc01c685f8d18a12de9426960a76cbd8.png" class="d-block w-100" alt="">
-                            </div>
+                            
                             <div class="carousel-item">
                                 <a href="#"></a>
                                 <img src="../assets/images/slider/17_Aug64b3660eb57428b518472ecbf1d89651.jpg" class="d-block w-100" alt="">
@@ -88,18 +83,7 @@ if (isset($_SESSION['account'])) {
                                 <a href="#"></a>
                                 <img src="../assets/images/slider/20_Jula0d037d74f1f932f062ec28ba166e18b.jpg" class="d-block w-100" alt="">
                             </div>
-                            <div class="carousel-item">
-                                <a href="#"></a>
-                                <img src="../assets/images/slider/21_Sepa0f67c51cb5b23015c7983183a9df4c9.png" class="d-block w-100" alt="">
-                            </div>
-                            <div class="carousel-item">
-                                <a href="#"></a>
-                                <img src="../assets/images/slider/23_Sep0bb263ab134125ab780683af11dddf9e.png" class="d-block w-100" alt="">
-                            </div>
-                            <div class="carousel-item">
-                                <a href="#"></a>
-                                <img src="../assets/images/slider/26_Julca8e600d08b85456c41a0a04c861ea9c.png" class="d-block w-100" alt="">
-                            </div>
+                            
                             <div class="carousel-item">
                                 <a href="#"></a>
                                 <img src="../assets/images/slider/29_Seped75375d994936c22bbe17181f9c0292.jpg" class="d-block w-100" alt="">
