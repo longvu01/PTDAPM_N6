@@ -35,9 +35,9 @@ $cond = "id={$id}";
 $sql = data_to_sql_update($tbl, $data, $cond);
 //echo "sql = [{$sql}]"; exit();
 $ret = exec_update($sql);
-$user = "";
-if (isset($_SESSION['account'])) {
-	$user = $_SESSION['account'];
-}
-$sql = 'SELECT * FROM products ORDER BY id DESC LIMIT 1';
-$resultLast = select_one($sql);
+
+$_SESSION['info_title'] = "Thành công!";
+$_SESSION['info_message'] = "Bạn đã sửa sản phẩm thành công!";
+$_SESSION['info_type'] = "success";
+
+header('Location: ../');

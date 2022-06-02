@@ -11,7 +11,7 @@
                     <?php if ($user) { ?>
                         <div>
                             <p class="fs-3">Xin chào</p>
-                            <a href="account.php" class="fs-2"><?php echo $user['username'] ?></a fs-3>
+                            <a href="../../account.php" class="fs-2"><?php echo $user['username'] ?></a fs-3>
                         </div>
                     <?php } else { ?>
                         <a href="../../../auth/signup.php">Đăng ký</a>/
@@ -175,11 +175,11 @@
                             <?php if ($user) { ?>
                                 <div>
                                     <p class="mb-3">Xin chào</p>
-                                    <a href="account.php"><?php echo $user['username'] ?></a fs-3>
+                                    <a href="../../account.php"><?php echo $user['username'] ?></a fs-3>
                                 </div>
                                 <ul class="sub__info--login">
                                     <li class="sub__info--login-item">
-                                        <a href="account.php" class="tau">Tài khoản của tôi</a>
+                                        <a href="../../account.php" class="tau">Tài khoản của tôi</a>
                                     </li>
                                     <li class="sub__info--login-item tau">
                                         <a href="cart" class="tau">Đơn hàng của tôi</a>
