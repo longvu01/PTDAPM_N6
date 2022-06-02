@@ -9,13 +9,9 @@
   left: 0;
 }
 
-.header__top {
-  display: flex;
-}
 
-.header__top-item {
-  margin-right: 16px;
-}
+
+
 
 .header__info {
   font-size: 1.1rem;
@@ -42,11 +38,6 @@
   100% {
     background-position: left;
   }
-}
-
-.header__top-item:hover .info__show--primary,
-.header__top-item:hover .info__show--secondary {
-  display: unset;
 }
 
 .header__bottom {
@@ -1860,6 +1851,12 @@ th {
   z-index: 99999;
   text-align: center;
 }
+<<<<<<< HEAD
+
+
+
+=======
+>>>>>>> 108b24dffdd3ae31adf5f856b96e927ed23bcc72
 .exec__btn {
   background-color: var(--orange-color);
   bottom: 130px;
