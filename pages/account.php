@@ -45,6 +45,7 @@ if ($id) {
 </head>
 
 <body>
+    <div id="toast"></div>
     <?php require_once('../root/header.php') ?>
 
     <div class="account__top">
@@ -110,12 +111,14 @@ if ($id) {
     <!--  -->
     <script src="../assets/js/ajax/ajax_add.js"></script>
     <script src="../assets/js/all.js"></script>
+    <script src="../assets/js/toast_msg.js"></script>
 
     <script src="../assets/js/ajax/ajax_fetch_showroom.js"></script>
 
     <script src="../assets/js/mail.js"></script>
 
 
+    <?php require_once('../root/show_toast.php'); ?>
 </body>
 
 </html>

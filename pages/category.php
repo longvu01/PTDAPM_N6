@@ -47,6 +47,7 @@ $resultLast = select_one($sql);
 </head>
 
 <body>
+    <div id="toast"></div>
     <?php require_once('../root/header.php') ?>
 
     <div class="wrapper">
@@ -367,7 +368,7 @@ $resultLast = select_one($sql);
                             <nav aria-label="Page navigation">
                                 <ul class="pagination">
                                     <?php for ($i = 1; $i <= $num; $i++) { ?>
-                                        <li class="page-item"><a class="page-link" href="chuyen-muc.php?id=<?php echo $id ?>
+                                        <li class="page-item"><a class="page-link" href="category.php?id=<?php echo $id ?>
                                     &p=<?php echo $i ?>"><?php echo $i ?>
 
                                             </a></li>
@@ -442,7 +443,7 @@ $resultLast = select_one($sql);
                         <nav aria-label="Page navigation">
                             <ul class="pagination">
                                 <?php for ($i = 1; $i <= $num; $i++) { ?>
-                                    <li class="page-item"><a class="page-link" href="chuyen-muc.php?id=<?php echo $id ?>&p=<?php echo $i ?>"><?php echo $i ?></a></li>
+                                    <li class="page-item"><a class="page-link" href="category.php?id=<?php echo $id ?>&p=<?php echo $i ?>"><?php echo $i ?></a></li>
                                 <?php } ?>
                             </ul>
                         </nav>
@@ -467,11 +468,13 @@ $resultLast = select_one($sql);
     <script src="../assets/js/slick-slider.js"></script>
     <!--  -->
     <script src="../assets/js/all.js"></script>
+    <script src="../assets/js/toast_msg.js"></script>
     <script src="../assets/js/ajax_fetch_showroom.js"></script>
     <script src="../assets/js/mail.js"></script>
     <!--  -->
     <script src="../assets/js/action.js"></script>
 
+    <?php require_once('../root/show_toast.php'); ?>
 </body>
 
 </html>

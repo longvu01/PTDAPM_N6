@@ -82,7 +82,49 @@
     </div>
     <div class="wrapper">
         <!-- HEADER__TOP -->
-        
+
+        <div class="header__top">
+            <div class="header__top-item">
+                <div class="header__info">
+                    <i class="me-1 fas fa-map-marker-alt"></i>
+                    TÌM CỬA HÀNG GẦN NHẤT
+                </div>
+
+            </div>
+            <div class="header__top-item">
+                <div class="header__info header__info--call">
+                    <i class="me-1 fas fa-phone"></i>
+                    Khách Cá Nhân
+                </div>
+
+            </div>
+            <div class="header__top-item">
+                <div class="header__info header__info--call">
+                    <i class="me-1 fas fa-phone"></i>
+                    Bán hàng - TP HCM
+                </div>
+
+            </div>
+            <a href="#" class="header__top-item">
+                <a href="#" class="header__info">
+                    <i class="me-1 fas fa-shield-alt"></i>
+                    Tra cứu bảo hành
+                </a>
+            </a>
+            <a href="#" class="header__top-item">
+                <a href="#" class="header__info">
+                    <i class="me-1 fas fa-file-invoice-dollar"></i>
+                    In hóa đơn điện tử
+                </a>
+            </a>
+            <a href="#" class="header__top-item">
+                <a href="#" class="header__info">
+                    <i class="me-1 fas fa-bullhorn"></i>
+                    Tuyển dụng
+                </a>
+            </a>
+        </div>
+>>>>>>> 108b24dffdd3ae31adf5f856b96e927ed23bcc72
 
         <!-- HEADER__MAIN -->
         <div class="header__main my-2">
@@ -202,7 +244,7 @@
                         <ul class="main__content-menu-left-scroll">
                             <?php foreach ($result_parents as $result_parent) { ?>
                                 <li class="main__content-item-left">
-                                    <a href="category.php?id=<?php echo $result_parent["id"] ?>">
+                                    <a href="../../category.php?id=<?php echo $result_parent["id"] ?>">
                                         <i class="<?php echo $result_parent['icon_name'] ?>"></i>
                                         <?php echo $result_parent['name'] ?>
                                     </a>

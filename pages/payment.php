@@ -26,6 +26,7 @@ if (isset($_SESSION['account'])) {
 </head>
 
 <body>
+    <div id="toast"></div>
     <?php require_once('../root/header.php') ?>
 
     <div class="payment wrapper">
@@ -114,8 +115,10 @@ if (isset($_SESSION['account'])) {
 
     <!--  -->
     <script src="../assets/js/all.js"></script>
+    <script src="../assets/js/toast_msg.js"></script>
     <script src="../assets/js/mail.js"></script>
 
+    <?php require_once('../root/show_toast.php'); ?>
 </body>
 
 </html>

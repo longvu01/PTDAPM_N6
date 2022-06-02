@@ -16,44 +16,42 @@ if (isset($_SESSION['account'])) {
 <!-- Start HTML -->
 <?php require_once('../../../root/manage/top.php') ?>
 <?php top('Thống kê số lượng') ?>
-<link rel='stylesheet' href='../../../process/statistical/css/chart_full.css'>
-<link rel='stylesheet' href='../../../process/statistical/css/chart_detail.css'>
+<link rel='stylesheet' href='../../../process/statistical/css/statistical.css'>
+<link rel='stylesheet' href='../../../process/statistical/css/statistical_full.css'>
+<link rel='stylesheet' href='../../../process/statistical/css/statistical_detail.css'>
 <!-- Chart full -->
-<script defer src="https://code.highcharts.com/highcharts.js"></script>
-<script defer src="https://code.highcharts.com/modules/series-label.js"></script>
-<script defer src="https://code.highcharts.com/modules/exporting.js"></script>
-<script defer src="https://code.highcharts.com/modules/export-data.js"></script>
-<script defer src="https://code.highcharts.com/modules/accessibility.js"></script>
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/series-label.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+<script src="https://code.highcharts.com/modules/accessibility.js"></script>
 <!-- Chart detail -->
 <script defer src="https://code.highcharts.com/modules/data.js"></script>
 <script defer src="https://code.highcharts.com/modules/drilldown.js"></script>
 <!--  -->
 <script defer src="../../../process/statistical/js/get_quantity_full.js"></script>
+<script defer src="../../../process/statistical/js/get_detail.js"></script>
 
 </head>
 
 <body>
   <div id="toast"></div>
+  <div id="toast"></div>
   <?php require_once('../../../root/manage/header.php') ?>
 
-  <div class="button-add">
+  <div class="wrapper">
+    <div class="title">
+      <h2>Thống kê số lượng</h2>
+    </div>
 
-  </div>
-
-  <div class="title">
-    <h2>Thống kê số lượng</h2>
-  </div>
-
-  <div class="table">
-    <div class="wrap">
+    <div class="chart-container">
       <!-- Chart Detail -->
-      <!-- <div class="chart-container">
-        <figure class="highcharts-figure">
-          <div id="container_detail"></div>
-        </figure> -->
-
       <figure class="highcharts-figure">
-        <!-- Chart Full -->
+        <div id="container_detail"></div>
+      </figure>
+
+      <!-- Chart Full -->
+      <figure class="highcharts-figure">
         <label for="" class="chart__label">
           Chọn số ngày thống kê:
           <select name="" id="chart__select">
@@ -62,15 +60,17 @@ if (isset($_SESSION['account'])) {
             <option value="60">60</option>
           </select>
         </label>
+
         <div id="container"></div>
       </figure>
     </div>
-
   </div>
 
   <?php require_once('../../../root/manage/bottom.php') ?>
   <script src="../../../assets/js/toast_msg.js"></script>
   <?php require_once('../../../root/show_toast.php') ?>
+  <?php require_once('../../../root/show_toast.php'); ?>
+
 </body>
 
 </html>

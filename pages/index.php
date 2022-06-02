@@ -19,6 +19,8 @@ if (isset($_SESSION['account'])) {
 </head>
 
 <body>
+    <div id="toast"></div>
+
     <?php require_once('../root/header_index.php') ?>
 
     <div class="wrapper">
@@ -743,8 +745,8 @@ if (isset($_SESSION['account'])) {
         <!--  -->
         <script src="../assets/js/slider-config/slick-slider.js"></script>
         <script src="../assets/js/all.js"></script>
-        <script src="../assets/js/ajax/ajax_fetch_showroom.js"></script>
-        <script src="../assets/js/mail.js"></script>
+        <script src="../assets/js/toast_msg.js"></script>
+        <?php require_once('../root/show_toast.php') ?>
 </body>
 
 </html>

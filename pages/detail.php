@@ -47,6 +47,7 @@ $user_reviews = select_list($sql);
 </head>
 
 <body>
+    <div id="toast"></div>
     <?php require_once('../root/header.php') ?>
 
     <!-- DETAIL -->
@@ -324,10 +325,12 @@ $user_reviews = select_list($sql);
             <!--  -->
             <script src="../assets/js/slider-config/slick-slider.js"></script>
             <script src="../assets/js/all.js"></script>
+            <script src="../assets/js/toast_msg.js"></script>
             <script src="../assets/js/ajax/ajax_fetch_showroom.js"></script>
             <script src="../assets/js/mail.js"></script>
             <script src="../assets/js/review.js"></script>
 
+            <?php require_once('../root/show_toast.php'); ?>
 </body>
 
 </html>

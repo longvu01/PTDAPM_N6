@@ -63,6 +63,7 @@ $flagDM = 1;
 </head>
 
 <body>
+    <div id="toast"></div>
     <?php require_once('../root/header.php') ?>
     <div class="wrapper">
         <div class="category">
@@ -450,10 +451,12 @@ $flagDM = 1;
     <!--  -->
     <script src="../assets/js/slider-config/slick-slider.js"></script>
     <script src="../assets/js/all.js"></script>
+    <script src="../assets/js/toast_msg.js"></script>
     <script src="../assets/js/ajax/ajax_fetch_showroom.js"></script>
     <script src="../assets/js/mail.js"></script>
     <script src="../assets/js/actions/action-search.js"></script>
 
+    <?php require_once('../root/show_toast.php'); ?>
 </body>
 
 </html>

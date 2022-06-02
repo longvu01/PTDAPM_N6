@@ -22,11 +22,7 @@ function Validator(formSelector) {
     number(value) {
       return Number.isFinite(+value) && +value > 0
         ? undefined
-<<<<<<< HEAD
-        : 'Trường này phải là số điện thoại';
-=======
         : 'Trường này phải là số hợp lệ';
->>>>>>> ed8fba90b6c04156dc187747ca9614b27ea49556
     },
     min(min) {
       return function (value) {

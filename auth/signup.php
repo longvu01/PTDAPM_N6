@@ -34,6 +34,7 @@ if (isset($_POST['create'])) {
 </head>
 
 <body>
+	<div id="toast"></div>
 
 	<div class="login_form-bgc">
 		<form class="login__form" action="signup.php" method="POST">
@@ -93,6 +94,7 @@ if (isset($_POST['create'])) {
 	</div>
 
 	<script src="js/all.js"></script>
+	<?php require_once('../root/show_toast.php'); ?>
 </body>
 
 </html>

@@ -23,42 +23,42 @@ if ($today < $max_date) {
 
 // Query
 $sql = "SELECT
-  ma,
-  ten_hang,
-  DATE_FORMAT(hang_hoa.create_at, '%e-%m') AS 'date',
-  SUM(so_luong_da_ban) AS 'tong_ban'
-FROM hang_hoa
-WHERE DATE(hang_hoa.create_at) >= CURDATE() - INTERVAL 7 DAY
-GROUP BY DATE_FORMAT(hang_hoa.create_at, '%e-%m'), ma, ten_hang
-ORDER BY so_luong_da_ban DESC LIMIT 10";
+  id,
+  title,
+  DATE_FORMAT(products.create_at, '%e-%m') AS 'date',
+  SUM(qty_sold) AS 'total_sold'
+FROM products
+WHERE DATE(products.create_at) >= CURDATE() - INTERVAL 7 DAY
+GROUP BY DATE_FORMAT(products.create_at, '%e-%m'), id, title
+ORDER BY qty_sold DESC LIMIT 10";
 // die($sql);
 $result = mysqli_query($conn, $sql);
 // Array 1
 $arr = [];
 foreach ($result as $each) {
-  $ma = $each['ma'];
-  if (empty($arr[$ma])) {
-    $arr[$ma] = [
-      'name' => $each['ten_hang'],
-      'y' => (int)$each['tong_ban'],
-      'drilldown' => (int)$each['ma'],
+  $id = $each['id'];
+  if (empty($arr[$id])) {
+    $arr[$id] = [
+      'name' => $each['title'],
+      'y' => (int)$each['total_sold'],
+      'drilldown' => (int)$each['id'],
     ];
   } else {
-    $arr[$ma]['y'] += $each['tong_ban'];
+    $arr[$id]['y'] += $each['total_sold'];
   }
 }
 // Array 2
 $arr2 = [];
-foreach ($arr as $ma => $each) {
-  $arr2[$ma] = [
+foreach ($arr as $id => $each) {
+  $arr2[$id] = [
     'name' => $each['name'],
-    'id' => $ma,
+    'id' => $id,
   ];
 
   if (isset($start_day_of_last_month)) {
     for ($i = $start_day_of_last_month; $i <= $max_day_of_last_month; ++$i) {
       $key = $i . '-' . $last_month;
-      $arr2[$ma]['data'][$key] = [
+      $arr2[$id]['data'][$key] = [
         $key,
         0
       ];
@@ -67,7 +67,7 @@ foreach ($arr as $ma => $each) {
 
   for ($i = $start_day_of_cur_month; $i <= $today; ++$i) {
     $key = $i . '-' . $cur_month;
-    $arr2[$ma]['data'][$key] = [
+    $arr2[$id]['data'][$key] = [
       $key,
       0
     ];
@@ -75,11 +75,11 @@ foreach ($arr as $ma => $each) {
 }
 
 foreach ($result as $each) {
-  $ma = $each['ma'];
+  $id = $each['id'];
   $key = $each['date'];
-  $arr2[$ma]['data'][$key] = [
+  $arr2[$id]['data'][$key] = [
     $key,
-    (int)$each['tong_ban']
+    (int)$each['total_sold']
   ];
 }
 

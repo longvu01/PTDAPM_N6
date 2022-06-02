@@ -15,6 +15,8 @@ function top($title)
       <link rel='stylesheet' href='../assets/css/slick.min.css'>
       <link rel='stylesheet' href='../assets/css/reset.css'>
       <link rel='stylesheet' href='../assets/css/base.css'>
+      <link rel='stylesheet' href='../assets/css/toast.css'>
+      <link rel='stylesheet' href='../assets/css/auth.css'>
       <link rel='stylesheet' href='../assets/css/style.css'>
       <link rel='stylesheet' href='../assets/css/responsive.css'>
       <!--  -->

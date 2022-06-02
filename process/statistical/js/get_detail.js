@@ -1,7 +1,7 @@
 'use strict';
 const callAjaxDetail = async function (days) {
   try {
-    const url = '../get_detail.php';
+    const url = '../../../process/statistical/get_detail.php';
     const data = await fetch(url, {
       method: 'POST',
       headers: {

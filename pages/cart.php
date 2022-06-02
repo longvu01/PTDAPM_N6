@@ -26,6 +26,7 @@ $resultLast = select_one($sql);
 </head>
 
 <body>
+    <div id="toast"></div>
     <?php require_once('../root/header.php') ?>
 
     <!-- CART -->
@@ -139,10 +140,12 @@ $resultLast = select_one($sql);
     <script type="module" defer src="../assets/js/cart.js"></script>
     <!--  -->
     <script src="../assets/js/all.js"></script>
+    <script src="../assets/js/toast_msg.js"></script>
     <script src="../assets/js/ajax_fetch_showroom.js"></script>
     <script src="../assets/js/mail.js"></script>
     <!--  -->
 
+    <?php require_once('../root/show_toast.php'); ?>
 </body>
 
 </html>

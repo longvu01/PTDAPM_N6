@@ -126,17 +126,18 @@ document.onscroll = function () {
 const mess = document.querySelector.bind(document)('#mess');
 const chatContent = document.querySelector.bind(document)('.chat__content');
 let isReply = false;
-mess.addEventListener('keydown', (e) => {
-  if (e.key === 'Enter') {
-    const val = mess.value;
-    if (!val.trim()) return;
-    const now = new Date();
-    const time = Intl.DateTimeFormat('vi-VN', {
-      hour: 'numeric',
-      minute: 'numeric',
-    }).format(now);
-    // console.log(time);
-    const html = `
+if (mess) {
+  mess.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') {
+      const val = mess.value;
+      if (!val.trim()) return;
+      const now = new Date();
+      const time = Intl.DateTimeFormat('vi-VN', {
+        hour: 'numeric',
+        minute: 'numeric',
+      }).format(now);
+      // console.log(time);
+      const html = `
                     <div class="mess__content">
                         <span>Hôm nay document.querySelector.bind(document){time}</span>
                         <p>
@@ -144,32 +145,34 @@ mess.addEventListener('keydown', (e) => {
                         </p>
                     </div>
                     `;
-    // console.log(chatContent.length);
-    chatContent.insertAdjacentHTML('afterbegin', html);
-    if (!isReply) {
-      setTimeout(function () {
-        chatContent.insertAdjacentHTML(
-          'afterbegin',
-          `<p class = "reply">Cảm ơn anh, chị đã liên hệ tới MANGOES. Thời gian hỗ trợ, tư vấn, trả lời từ 8h30-24h hàng ngày. Hãy gửi cho chúng tôi mọi câu hỏi của quý anh,chị. Trân trọng!</p>`
-        );
-        isReply = true;
-      }, 1000);
+      // console.log(chatContent.length);
+      chatContent.insertAdjacentHTML('afterbegin', html);
+      if (!isReply) {
+        setTimeout(function () {
+          chatContent.insertAdjacentHTML(
+            'afterbegin',
+            `<p class = "reply">Cảm ơn anh, chị đã liên hệ tới MANGOES. Thời gian hỗ trợ, tư vấn, trả lời từ 8h30-24h hàng ngày. Hãy gửi cho chúng tôi mọi câu hỏi của quý anh,chị. Trân trọng!</p>`
+          );
+          isReply = true;
+        }, 1000);
+      }
+      mess.value = null;
+      mess.focus();
     }
-    mess.value = null;
-    mess.focus();
-  }
-});
+  });
+}
 
 const chat = document.querySelector.bind(document)('.chat');
 const btnChat = document.querySelector.bind(document)('.exec__btn--chat');
-
-btnChat.addEventListener('click', (e) => {
-  // console.log(e.target.classList);
-  if (
-    e.target.classList.contains('exec__btn--chat') ||
-    e.target.classList.contains('fa-facebook-messenger')
-  ) {
-    chat.classList.toggle('chat--show');
-    mess.focus();
-  }
-});
+if (btnChat) {
+  btnChat.addEventListener('click', (e) => {
+    // console.log(e.target.classList);
+    if (
+      e.target.classList.contains('exec__btn--chat') ||
+      e.target.classList.contains('fa-facebook-messenger')
+    ) {
+      chat.classList.toggle('chat--show');
+      mess.focus();
+    }
+  });
+}
