@@ -63,57 +63,12 @@ $resultLast = select_one($sql);
                 <h2 class="category__title" id="textChange"><?php echo $result["name"] ?> <span>(Tổng <?php echo $total ?> sản phẩm)</span></h2>
             </div>
 
-            <div class="category__slider">
-                <div class="category__slider-item">
-                    <a href="#"></a>
-                    <img src="images/slider/21_Oct0468af6801f667e65b977404965133ce.png" class="d-block w-100" alt="">
-                </div>
-                <div class="category__slider-item">
-                    <a href="#"></a>
-                    <img src="images/slider/09_Sep30f9cb2011418ee4304d9939723c94fb.jpg" class="d-block w-100" alt="">
-                </div>
-                <div class="category__slider-item">
-                    <a href="#"></a>
-                    <img src="images/slider/16_Sepcc01c685f8d18a12de9426960a76cbd8.png" class="d-block w-100" alt="">
-                </div>
-                <div class="category__slider-item">
-                    <a href="#"></a>
-                    <img src="images/slider/17_Aug64b3660eb57428b518472ecbf1d89651.jpg" class="d-block w-100" alt="">
-                </div>
-                <div class="category__slider-item">
-                    <a href="#"></a>
-                    <img src="images/slider/20_Jula0d037d74f1f932f062ec28ba166e18b.jpg" class="d-block w-100" alt="">
-                </div>
-                <div class="category__slider-item">
-                    <a href="#"></a>
-                    <img src="images/slider/21_Sepa0f67c51cb5b23015c7983183a9df4c9.png" class="d-block w-100" alt="">
-                </div>
-                <div class="category__slider-item">
-                    <a href="#"></a>
-                    <img src="images/slider/23_Sep0bb263ab134125ab780683af11dddf9e.png" class="d-block w-100" alt="">
-                </div>
-                <div class="category__slider-item">
-                    <a href="#"></a>
-                    <img src="images/slider/26_Julca8e600d08b85456c41a0a04c861ea9c.png" class="d-block w-100" alt="">
-                </div>
-                <div class="category__slider-item">
-                    <a href="#"></a>
-                    <img src="images/slider/29_Seped75375d994936c22bbe17181f9c0292.jpg" class="d-block w-100" alt="">
-                </div>
-                <div class="category__slider-item">
-                    <a href="#"></a>
-                    <img src="images/slider/28_Oct3fc5db4a3766ae57f05a7871bbf3161d.jpg" class="d-block w-100" alt="">
-                </div>
-                <div class="category__slider-item">
-                    <a href="#"></a>
-                    <img src="images/slider/29_Oct393561cce627c5ced42a0735598efec0.jpg" class="d-block w-100" alt="">
-                </div>
-            </div>
-
             <div class="category__content">
                 <!-- left -->
                 <div class="category__content-left">
                     <h3 class="filter-text">LỌC SẢN PHẨM</h3>
+
+                    <input type="hidden" id="cid" value="<?php echo $result['id'] ?>">
 
                     <div class="accordion accordion--category" id="accordionExample">
                         <?php foreach ($sub_cate as $item) { ?>
@@ -472,7 +427,7 @@ $resultLast = select_one($sql);
     <script src="../assets/js/ajax_fetch_showroom.js"></script>
     <script src="../assets/js/mail.js"></script>
     <!--  -->
-    <script src="../assets/js/action.js"></script>
+    <script src="../assets/js/actions/action.js"></script>
 
     <?php require_once('../root/show_toast.php'); ?>
 </body>

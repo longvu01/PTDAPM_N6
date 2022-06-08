@@ -5,6 +5,7 @@ require_once("../libs/lib_db.php");
 // $user = checkLoggedUser();
 $q = isset($_REQUEST["q"]) ? $_REQUEST["q"] : "";
 $q = trim($q);
+// page
 $p = isset($_REQUEST["p"]) ? $_REQUEST["p"] * 1 : 0;
 if ($p < 1) $p = 1;
 $cond = "";
@@ -31,11 +32,6 @@ $nop = 12;
 $offset = $nop * ($p - 1);
 $num = ceil($total / $nop);
 
-// $sql = "select * from sub_cate where content like '%{$q}%'";
-// $sub_cate = select_list($sql);
-// print_r($sub_cate);exit();
-// if(!($sub_cate)) {
-// $sql = "select distinct * from sub_cate";
 $sql = "select * from sub_cate where name in (SELECT DISTINCT name from sub_cate)";
 // }
 // echo $sql;
@@ -77,45 +73,6 @@ $flagDM = 1;
                 <h2 class="category__title">TÌM KIẾM : <?php echo $q ?> <span>(Tổng <?php echo $total ?> sản phẩm)</span></h2>
             </div>
 
-            <div class="category__slider">
-                <div class="category__slider-item">
-                    <a href="#"></a>
-                    <img src="images/slider/21_Oct0468af6801f667e65b977404965133ce.png" class="d-block w-100" alt="">
-                </div>
-                <div class="category__slider-item">
-                    <a href="#"></a>
-                    <img src="images/slider/09_Sep30f9cb2011418ee4304d9939723c94fb.jpg" class="d-block w-100" alt="">
-                </div>
-                <div class="category__slider-item">
-                    <a href="#"></a>
-                    <img src="images/slider/16_Sepcc01c685f8d18a12de9426960a76cbd8.png" class="d-block w-100" alt="">
-                </div>
-                <div class="category__slider-item">
-                    <a href="#"></a>
-                    <img src="images/slider/17_Aug64b3660eb57428b518472ecbf1d89651.jpg" class="d-block w-100" alt="">
-                </div>
-                <div class="category__slider-item">
-                    <a href="#"></a>
-                    <img src="images/slider/20_Jula0d037d74f1f932f062ec28ba166e18b.jpg" class="d-block w-100" alt="">
-                </div>
-                <div class="category__slider-item">
-                    <a href="#"></a>
-                    <img src="images/slider/21_Sepa0f67c51cb5b23015c7983183a9df4c9.png" class="d-block w-100" alt="">
-                </div>
-                <div class="category__slider-item">
-                    <a href="#"></a>
-                    <img src="images/slider/23_Sep0bb263ab134125ab780683af11dddf9e.png" class="d-block w-100" alt="">
-                </div>
-                <div class="category__slider-item">
-                    <a href="#"></a>
-                    <img src="images/slider/26_Julca8e600d08b85456c41a0a04c861ea9c.png" class="d-block w-100" alt="">
-                </div>
-                <div class="category__slider-item">
-                    <a href="#"></a>
-                    <img src="images/slider/29_Seped75375d994936c22bbe17181f9c0292.jpg" class="d-block w-100" alt="">
-                </div>
-            </div>
-
             <div class="category__content">
                 <!-- left -->
                 <div class="category__content-left">
@@ -132,7 +89,7 @@ $flagDM = 1;
                                 </h2>
                                 <div id="collapse<?php echo ($item['id']); ?>" class="accordion-collapse collapse show" aria-labelledby="heading<?php echo ($item['id']); ?>" data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
-                                        <input type="hidden" id="sql_search">
+                                        <input type="hidden" id="q" value="<?php echo $q ?>">
                                         <ul>
                                             <?php switch ($item['name']):
                                                 case ('DANH MỤC'): ?>
