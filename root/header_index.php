@@ -125,7 +125,7 @@
                             <?php if ($user) { ?>
                                 <div>
                                     <p class="mb-3">Xin chào</p>
-                                    <a href="login.php"><?php echo $user['username'] ?></a fs-3>
+                                    <a href="account.php"><?php echo $user['username'] ?></a fs-3>
                                 </div>
                                 <ul class="sub__info--login">
                                     <li class="sub__info--login-item">

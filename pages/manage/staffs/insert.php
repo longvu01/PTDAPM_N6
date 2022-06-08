@@ -2,11 +2,19 @@
 session_start();
 require_once("../../../libs/lib_db.php");
 
+$sql = "select * from categories";
+$cates = select_list($sql);
+
+$sql = "select * from categories";
+$result_parents = select_list($sql);
+$sql = 'SELECT * FROM products ORDER BY id DESC LIMIT 1';
+$resultLast = select_one($sql);
+
 if (isset($_SESSION['account'])) {
     $user = $_SESSION['account'];
 }
 if ($user['role'] == 0) {
-    header("location:index.php");
+    header("location:../../");
 }
 ?>
 
@@ -40,7 +48,7 @@ if ($user['role'] == 0) {
 
 
             <label>Mật khẩu <span class="text-red">*</span></label>
-            <input class = "form-control" name="password" value="" placeholder="" required />
+            <input class = "form-control" type = "password" name="password" value="" placeholder="" required />
 
             <label>Số điện thoại <span class="text-red">*</span></label>
             <input class = "form-control" name="phone" value="" placeholder="" required />

@@ -49,7 +49,7 @@ if ($user['role'] == 0) {
 
 
             <label>Mật khẩu <span class="text-red">*</span></label>
-            <input class = "form-control" name="password" value="<?php echo $result["password"] ?>" placeholder="Title" required />
+            <input type = "password" class = "form-control" name="password" value="<?php echo $result["password"] ?>" placeholder="Title" required />
 
             <label>Số điện thoại <span class="text-red">*</span></label>
             <input class = "form-control" name="phone" value="<?php echo $result["phone"] ?>" placeholder="Title" required />
