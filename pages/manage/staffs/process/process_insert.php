@@ -28,3 +28,4 @@ if (isset($_SESSION['account'])) {
 }
 $sql = 'SELECT * FROM products ORDER BY id DESC LIMIT 1';
 $resultLast = select_one($sql);
+header("location:http://localhost/PTDAPM_N6/pages/account.php");

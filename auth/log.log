@@ -29,3 +29,7 @@
 01.06.2022 11:05:33 sql=[select * from user_table where username='admin'] 
 01.06.2022 11:05:49 sql=[select * from user_table where username='admin'] 
 >>>>>>> 108b24dffdd3ae31adf5f856b96e927ed23bcc72
+02.06.2022 02:57:25 sql=[select * from user_table where username = 'admin'] 
+02.06.2022 02:57:25 <!-- sql=[INSERT INTO user_table (username, password, phone) VALUES ('admin', '21232f297a57a5a743894a0e4a801fc3', '01231231231')] --> 
+02.06.2022 02:57:35 sql=[select * from user_table where username='admin'] 
+02.06.2022 03:21:43 sql=[select * from user_table where username='tung'] 

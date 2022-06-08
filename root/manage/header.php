@@ -83,47 +83,6 @@
     <div class="wrapper">
         <!-- HEADER__TOP -->
 
-        <div class="header__top">
-            <div class="header__top-item">
-                <div class="header__info">
-                    <i class="me-1 fas fa-map-marker-alt"></i>
-                    TÌM CỬA HÀNG GẦN NHẤT
-                </div>
-
-            </div>
-            <div class="header__top-item">
-                <div class="header__info header__info--call">
-                    <i class="me-1 fas fa-phone"></i>
-                    Khách Cá Nhân
-                </div>
-
-            </div>
-            <div class="header__top-item">
-                <div class="header__info header__info--call">
-                    <i class="me-1 fas fa-phone"></i>
-                    Bán hàng - TP HCM
-                </div>
-
-            </div>
-            <a href="#" class="header__top-item">
-                <a href="#" class="header__info">
-                    <i class="me-1 fas fa-shield-alt"></i>
-                    Tra cứu bảo hành
-                </a>
-            </a>
-            <a href="#" class="header__top-item">
-                <a href="#" class="header__info">
-                    <i class="me-1 fas fa-file-invoice-dollar"></i>
-                    In hóa đơn điện tử
-                </a>
-            </a>
-            <a href="#" class="header__top-item">
-                <a href="#" class="header__info">
-                    <i class="me-1 fas fa-bullhorn"></i>
-                    Tuyển dụng
-                </a>
-            </a>
-        </div>
 
 
         <!-- HEADER__MAIN -->

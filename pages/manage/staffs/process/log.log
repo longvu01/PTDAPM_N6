@@ -1,0 +1,12 @@
+02.06.2022 02:50:16 <!-- sql=[insert into user_table 
+	(username,password,phone,email,address)
+	values 
+	('123','123','123','123','123')] --> 
+02.06.2022 02:50:16 sql=[select * from user_table] 
+02.06.2022 02:50:16 sql=[SELECT * FROM products ORDER BY id DESC LIMIT 1] 
+02.06.2022 02:53:31 <!-- sql=[insert into user_table 
+	(username,password,phone,email,address)
+	values 
+	('123','123','123','123','123')] --> 
+02.06.2022 02:53:31 sql=[select * from user_table] 
+02.06.2022 02:53:31 sql=[SELECT * FROM products ORDER BY id DESC LIMIT 1] 
