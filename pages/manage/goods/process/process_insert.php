@@ -50,7 +50,7 @@ if ($number_rows == 1) {
 $sql = "insert into products 
 		(cid,img,title,product_code,product_info,start_price,price,sale,insurance,gift,description)
     values 
-    ('$cid','$file_name','$title','$product_code','$product_info','$start_price','$price','$sale','$insurance','$gift','$description')";
+    ('$cid','$file_path','$title','$product_code','$product_info','$start_price','$price','$sale','$insurance','$gift','$description')";
 // die($sql);
 mysqli_query($conn, $sql);
 

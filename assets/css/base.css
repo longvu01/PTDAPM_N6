@@ -1,81 +1,81 @@
 :root {
-    --dark-blue: #243a76;
-    --midnightblue: #1f3164;
-    --red-color: #ed1b24;
-    --red-text: #d82a29;
-    --green-text: #2cc067;
-    --blue-text: #0074da;
-    --zalo-text: #0573ff;
-    --orange-color: #fa9f2c;
-    --gray-color: #f1f1f1;
+  --dark-purple: #360052;
+  --midnightblue: #1f3164;
+  --red-color: #ed1b24;
+  --red-text: #d82a29;
+  --green-text: #2cc067;
+  --blue-text: #0074da;
+  --zalo-text: #0573ff;
+  --orange-color: #f7ec5e;
+  --gray-color: #f1f1f1;
 }
 
 body {
-    background-color: #f4f4f4;
+  background-color: #f4f4f4;
 }
 
 a:hover {
-    color: unset;
+  color: unset;
 }
 
 .wrapper {
-    width: 100%;
-    max-width: 1630px;
-    margin: 0 auto;
-    position: relative;
-    padding: 0 15px;
+  width: 100%;
+  max-width: 1630px;
+  margin: 0 auto;
+  position: relative;
+  padding: 0 15px;
 }
 
 .status-open {
-    text-transform: uppercase;
-    color: #fff !important;
-    background: #ff0000 !important;
-    font-size: 1.1rem !important;
-    font-weight: 800 !important;
-    font-style: italic;
-    display: inline-block !important;
-    padding: 4px 8px !important;
-    transform: skew(-15deg, 0deg);
+  text-transform: uppercase;
+  color: #fff !important;
+  background: #ff0000 !important;
+  font-size: 1.1rem !important;
+  font-weight: 800 !important;
+  font-style: italic;
+  display: inline-block !important;
+  padding: 4px 8px !important;
+  transform: skew(-15deg, 0deg);
 }
 
 .status-open i {
-    color: #ff0;
+  color: #ff0;
 }
 
 .hot {
-    clip-path: polygon(15% 0%, 100% 0, 90% 50%, 100% 100%, 15% 100%, 0% 50%);
-    background-color: #ff0000;
-    color: #fff;
-    width: 50px;
-    padding: 0 12px;
-    margin-left: 4px;
+  clip-path: polygon(15% 0%, 100% 0, 90% 50%, 100% 100%, 15% 100%, 0% 50%);
+  background-color: #ff0000;
+  color: #fff;
+  width: 50px;
+  padding: 0 12px;
+  margin-left: 4px;
 }
 /*  */
 .text-bold {
-    font-weight: 700;
+  font-weight: 700;
 }
 .text-upc {
-    text-transform: uppercase;
+  text-transform: uppercase;
 }
 .text-red {
-    color: var(--red-text) !important;
+  color: var(--red-text) !important;
 }
 .text-italic {
-    font-style: italic;
+  font-style: italic;
 }
 span {
-    line-height: 1.4;
+  line-height: 1.4;
 }
 .tau {
-    text-align: unset !important;
+  text-align: unset !important;
 }
 .red-shadow {
-    box-shadow: 0 0 5px red;
+  box-shadow: 0 0 5px red;
 }
 /*  */
 .hide {
-    display: none !important;
+  display: none !important;
 }
 .show {
-    display: block !important;
+  display: block !important;
 }

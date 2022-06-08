@@ -11,7 +11,7 @@
                     <?php if ($user) { ?>
                         <div>
                             <p class="fs-3">Xin chào</p>
-                            <a href="account.php" class="fs-2"><?php echo $user['username'] ?></a fs-3>
+                            <a href="../../account.php" class="fs-2"><?php echo $user['username'] ?></a fs-3>
                         </div>
                     <?php } else { ?>
                         <a href="../../../auth/signup.php">Đăng ký</a>/
@@ -81,19 +81,15 @@
         </div>
     </div>
     <div class="wrapper">
-        <!-- HEADER__TOP -->
-
-
-
         <!-- HEADER__MAIN -->
         <div class="header__main my-2">
             <div class="wrapper d-flex justify-content-between align-items-center">
                 <a href="../../" class="header-logo">
-                <img width = "100" height = "100" src="https://scontent.xx.fbcdn.net/v/t1.15752-9/284301176_2041196589397438_1476376638624587644_n.png?stp=dst-png_p228x119&_nc_cat=111&ccb=1-7&_nc_sid=aee45a&_nc_ohc=p9uWFi_J_boAX-FlU6t&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AVIScRv5BYp2Aqbd_j_iZtL0FHpwH6sH6CRtMKyz_atR8g&oe=62BDC652" alt="">
+                    <img width="100" height="100" src="https://scontent.xx.fbcdn.net/v/t1.15752-9/284301176_2041196589397438_1476376638624587644_n.png?stp=dst-png_p228x119&_nc_cat=111&ccb=1-7&_nc_sid=aee45a&_nc_ohc=p9uWFi_J_boAX-FlU6t&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AVIScRv5BYp2Aqbd_j_iZtL0FHpwH6sH6CRtMKyz_atR8g&oe=62BDC652" alt="">
                 </a>
 
                 <div class="header__main-content d-flex align-items-center">
-                    
+
 
                     <ul class="user-action-list d-flex">
                         <li class="user-action-item user-action-item--first d-flex align-items-center fs-5 fw-light pe-4">
@@ -126,11 +122,11 @@
                             <?php if ($user) { ?>
                                 <div>
                                     <p class="mb-3">Xin chào</p>
-                                    <a href="account.php"><?php echo $user['username'] ?></a fs-3>
+                                    <a href="../../account.php"><?php echo $user['username'] ?></a fs-3>
                                 </div>
                                 <ul class="sub__info--login">
                                     <li class="sub__info--login-item">
-                                        <a href="account.php" class="tau">Tài khoản của tôi</a>
+                                        <a href="../../account.php" class="tau">Tài khoản của tôi</a>
                                     </li>
                                     <li class="sub__info--login-item tau">
                                         <a href="cart" class="tau">Đơn hàng của tôi</a>
@@ -368,7 +364,7 @@
                     </div>
                     <button class="btn" type="submit"><i class="fas fa-search"></i></button>
                 </form>
-                
+
             </div>
         </div>
     </div>
