@@ -10,3 +10,9 @@
 	('123','123','123','123','123')] --> 
 02.06.2022 02:53:31 sql=[select * from user_table] 
 02.06.2022 02:53:31 sql=[SELECT * FROM products ORDER BY id DESC LIMIT 1] 
+09.06.2022 02:46:56 <!-- sql=[update user_table set username=n'admin',password=n'21232f297a57a5a743894a0e4a801fc3',phone=n'0902345934',email=n'@gmail.com',address=n'Hà Nội'  where id=17] --> 
+09.06.2022 02:46:56 sql=[SELECT * FROM products ORDER BY id DESC LIMIT 1] 
+09.06.2022 02:47:05 <!-- sql=[update user_table set username=n'admin1',password=n'21232f297a57a5a743894a0e4a801fc3',phone=n'0902345934',email=n'@gmail.com',address=n'Hà Nội'  where id=17] --> 
+09.06.2022 02:47:05 sql=[SELECT * FROM products ORDER BY id DESC LIMIT 1] 
+09.06.2022 03:01:26 <!-- sql=[update user_table set username=n'admin10',password=n'21232f297a57a5a743894a0e4a801fc3',phone=n'0902345934',email=n'@gmail.com',address=n'Hà Nội'  where id=17] --> 
+09.06.2022 03:01:26 sql=[SELECT * FROM products ORDER BY id DESC LIMIT 1] 

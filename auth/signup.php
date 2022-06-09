@@ -78,7 +78,7 @@ if (isset($_POST['create'])) {
 
 			<div class="form_img">
 				<img src="images/logos/bg-pop-login-phone.png" alt="">
-				<h2 class="fs-3 pt-4 fw-bold">Mua sắm tại Hanoicomputer</h2>
+				<h2 class="fs-3 pt-4 fw-bold">Mua sắm tại MANGOES</h2>
 				<p class="fs-4 pt-4">Siêu ưu đãi mỗi ngày</p>
 			</div>
 		</form>

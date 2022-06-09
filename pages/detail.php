@@ -132,7 +132,7 @@ $user_reviews = select_list($sql);
                     </div>
                 </div>
 
-                
+
             </div>
             <!--  -->
         </div>
@@ -244,6 +244,8 @@ $user_reviews = select_list($sql);
                     </div>
                 </div>
             </div>
+
+
 
             <!-- OTHER -->
             <div class="wrapper">

@@ -130,7 +130,7 @@ jQuery(document).ready(function ($) {
             html +=
               '<div class="card-header fs-1 text-primary"><span>' +
               data.review_data[count].user_name +
-              '</span></div>';
+              '</span ></div>';
 
             html += '<div class="card-body fs-4">';
 

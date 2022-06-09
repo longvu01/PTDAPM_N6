@@ -7,13 +7,12 @@
     <title>Document</title>
   </head>
   <body>
-    <div id="toast"></div>
     <script>
       'use strict';
 
-      const getRandomNumber = () => Math.ceil(Math.random() * 500) + 5000;
+      const getRandomNumber = () => Math.ceil(Math.random() * 500) + 500;
 
-      const patchRandomQuantity = (view_qnt, id) => {
+      const patchRandomQuantity = (qty_sold, id) => {
         const url = './patch.php';
         const options = {
           method: 'post',
@@ -21,7 +20,7 @@
             'Content-Type': 'application/json',
           },
           body: JSON.stringify({
-            view_qnt,
+            qty_sold,
             id,
           }),
         };
@@ -38,6 +37,5 @@
         if (i === 82) clearInterval(a);
       }, 100);
     </script>
-    <?php require_once('../root/show_toast.php'); ?>
   </body>
 </html>
