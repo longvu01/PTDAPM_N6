@@ -17,4 +17,5 @@ $user = "";
 if (isset($_SESSION['account'])) {
 	$user = $_SESSION['account'];
 }
+
 header("location:http://localhost/PTDAPM_N6/pages/account.php");
