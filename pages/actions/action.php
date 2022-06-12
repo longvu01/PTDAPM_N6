@@ -125,9 +125,9 @@ if (isset($_POST['action'])) {
             $output .= '
                     <div class="product">
                         <div class="aspect-ratio">
-                        <a href="../detail.php?id=' . $row["id"] . '" class="product__img"><img src="' . $img[0] . '"></a>
+                        <a href="detail.php?id=' . $row["id"] . '" class="product__img"><img src="' . $img[0] . '"></a>
                         <div class="product__item--info">
-                            <a href="../detail.php?id=' . $row["id"] . '" class="product__item--info-title">' . $row["title"] . '</a>
+                            <a href="detail.php?id=' . $row["id"] . '" class="product__item--info-title">' . $row["title"] . '</a>
                             <p class="product__item--info-text">- Giá bán:&emsp;&emsp;&emsp;' . $row["price"] . 'đ [Đã bao gồm VAT]</p>
                             <p class="product__item--info-text">- Giá thấp nhất:<span class="text-bold">' . number_format($row['price'], 0, '.', '.') . 'đ</span></p>
                             <p class="product__item--info-text">- Bảo hành:&emsp;&emsp;' . $row["insurance"] . '</p>
@@ -151,7 +151,7 @@ if (isset($_POST['action'])) {
                                 <div class="product__code"><span>mã: ' . $row["product_code"] . '</span></div>
                             </div>
                         <div class="product__info">
-                            <a href="../detail.php?id=' . $row["id"] . '" class="product__name">' . $row["title"] . '</a>
+                            <a href="detail.php?id=' . $row["id"] . '" class="product__name">' . $row["title"] . '</a>
                             <div class="product__info--main">
                                 <ul class="product__info-list">
                                     <?php

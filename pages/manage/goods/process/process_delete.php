@@ -9,11 +9,4 @@ $sql = "delete from products  ";
 $sql .= " WHERE id =$id";
 //echo $sql;exit();
 $ret = exec_update($sql);
-// header("Location:search.php");
-//print_r($ret);exit();
-$sql = 'SELECT * FROM products ORDER BY id DESC LIMIT 1';
-$resultLast = select_one($sql);
-$user = "";
-if (isset($_SESSION['account'])) {
-	$user = $_SESSION['account'];
-}
+header("Location: ../");

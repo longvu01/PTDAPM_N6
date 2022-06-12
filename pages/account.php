@@ -13,7 +13,6 @@ $user = "";
 if (isset($_SESSION['account'])) {
     $user = $_SESSION['account'];
 }
-// print_r($user);exit();
 
 $data = array();
 $id = isset($_REQUEST["id"]) ? $_REQUEST["id"] * 1 : 0;
@@ -70,7 +69,7 @@ if ($id) {
 
             <div class="col"><a href="./manage/staffs/insert.php" class="account__item">Add<i class="fas fa-plus"></i></a></div>
             <div class="col"><a href="./manage/staffs/delete.php?id=<?php echo $resultLast1['id'] ?>" class="account__item">Delete<i class="far fa-trash-alt"></i></a></div>
-            <div class="col"><a href="./manage/staffs/update.php?id=<?php echo $resultLast1['id'] ?>" class="account__item">Edit<i class="far fa-edit"></i></i></a></div>
+            <div class="col"><a href="./manage/staffs/update.php" class="account__item">Edit<i class="far fa-edit"></i></i></a></div>
         </div>
     <?php } else { ?>
 

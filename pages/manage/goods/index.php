@@ -64,7 +64,7 @@ if ($user['role'] == 0) {
             <textarea placeholder="Thông tin sản phẩm" name="product_info"></textarea>
 
             <label>Giá ban đầu</label>
-            <input name="start_price" value="" placeholder="00.000.000đ" />
+            <input name="start_price" value="" />
 
             <label>Giá hiện tại <span class="text-red">*</span></label>
             <input name="price" value="" placeholder="Nhập giá tiền" />

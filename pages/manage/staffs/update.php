@@ -1,19 +1,13 @@
 <?php
 session_start();
 require_once("../../../libs/lib_db.php");
-
-$id = isset($_REQUEST["id"]) ? $_REQUEST["id"] : 0;
-if ($id <  1) return;
 //tao sql
-$sql = "select * from user_table 
-	where id={$id}";
-//echo $sql;exit();
-//thuc thi cau lenh sql
-$result = select_one($sql);
-//print_r($result);exit();
+
+$user = "";
 if (isset($_SESSION['account'])) {
     $user = $_SESSION['account'];
 }
+
 if ($user['role'] == 0) {
     header("location:index.php");
 }
@@ -41,24 +35,24 @@ if ($user['role'] == 0) {
         <br />
 
         <form class="form" action="./process/process_update.php" method="POST" enctype="multipart/form-data">
-            <input type="hidden" name="id" value="<?php echo $result["id"] ?>" />
+            <input type="hidden" name="id" value="<?php echo $user["id"] ?>" />
 
 
             <label>Tên người dùng </label>
-            <input class="form-control" name="username" value="<?php echo $result["username"] ?>" placeholder="Tên người dùng mới" style="width: 815px;" />
+            <input class="form-control" name="username" value="<?php echo $user["username"] ?>" placeholder="Tên người dùng mới" style="width: 815px;" />
 
 
             <label>Mật khẩu mới</label>
             <input class="form-control" type="text" name="new_password" placeholder="Mật khẩu mới" />
 
             <label>Số điện thoại </label>
-            <input class="form-control" name="phone" value="<?php echo $result["phone"] ?>" placeholder="Số điện thoại mới" />
+            <input class="form-control" name="phone" value="<?php echo $user["phone"] ?>" placeholder="Số điện thoại mới" />
 
             <label>Email </label>
-            <input class="form-control" name="email" value="<?php echo $result["email"] ?>" placeholder="Email mới" />
+            <input class="form-control" name="email" value="<?php echo $user["email"] ?>" placeholder="Email mới" />
 
             <label>Địa chỉ </label>
-            <input class="form-control" name="address" value="<?php echo $result["address"] ?>" placeholder="Địa chỉ mới" />
+            <input class="form-control" name="address" value="<?php echo $user["address"] ?>" placeholder="Địa chỉ mới" />
 
 
             <div class="exec_bottom">

@@ -25,3 +25,31 @@
 02.06.2022 12:46:57 <!-- sql=[update products set img=n'../uploads/no-image-20220601-113520-20220602-124657.png',cid=n'17',title=n'k',product_code=n'abcd1233',product_info=n'',start_price=n'',price=n'11.111',sale=n'',insurance=n'',gift=n'',description=n''  where id=92] --> 
 09.06.2022 12:38:08 <!-- sql=[delete from review_table   WHERE review_id =13] --> 
 12.06.2022 01:03:00 <!-- sql=[update products set img=n'',cid=n'18',title=n'TBM',product_code=n'TBM1234',product_info=n'',start_price=n'123123123',price=n'234.234.234',sale=n'',insurance=n'',gift=n'',description=n''  where id=83] --> 
+12.06.2022 01:38:04 <!-- sql=[update products set img=n'../uploads/g (2)-20220612-013804.jpg',cid=n'1',title=n'Laptop2',product_code=n'LT1',product_info=n'',start_price=n'123123',price=n'12.341.234',sale=n'',insurance=n'',gift=n'',description=n''  where id=84] --> 
+12.06.2022 01:39:11 <!-- sql=[delete from products   WHERE id =84] --> 
+12.06.2022 01:39:11 sql=[SELECT * FROM products ORDER BY id DESC LIMIT 1] 
+12.06.2022 01:39:52 <!-- sql=[delete from products   WHERE id =83] --> 
+12.06.2022 01:40:06 <!-- sql=[delete from products   WHERE id =82] --> 
+12.06.2022 01:50:56 <!-- sql=[update products set img=n'../uploads/g (5)-20220612-015056.jpg',cid=n'1',title=n'Laptop 123',product_code=n'abcd123',product_info=n'',start_price=n'',price=n'1.2333',sale=n'',insurance=n'',gift=n'',description=n''  where id=86] --> 
+12.06.2022 01:51:03 <!-- sql=[delete from products   WHERE id =86] --> 
+12.06.2022 02:08:53 <!-- sql=[update products set img=n'../uploads/g (4)-20220612-020853.jpg',cid=n'1',title=n'Laptop Asus ZenBook UX325EA-KG363T (i5 1135G7/8GB RAM/512GB SSD/13.3 FHD/Win10/Cáp USB to LAN,USB C-Audio/Xám)',product_code=n'LTAU561',product_info=n'',start_price=n'24.299.000₫',price=n'23.999.000',sale=n'(Tiết kiệm: 300.000₫)',insurance=n'32 Tháng',gift=n'Bộ quà tặng trị giá <span></span> 1.458.000đ</span>:</h4>
+                        <ul>
+                            <li>Chuột không dây Logitech trị giá <span>249.000đ</span> (MELO055)</li>
+                            <li>Tai nghe Gaming GoldTech LD80 trị giá <span>339.000đ</span> (TNGD005)</li>
+                            <li>Tặng phiếu vệ sinh bảo dưỡng Laptop, PC miễn phí trọn đời trị giá <span>999.000đ</span> (THEK417)
+                            </li>
+                            <li><span>MIỄN PHÍ GIAO HÀNG TOÀN QUỐC</span> (trừ ghế, bàn, màn chiếu) đến hết 31/12/2021. Chi tiết xem tại đây.</li>
+                        </ul>">',description=n''  where id=1] --> 
+12.06.2022 02:09:55 <!-- sql=[delete from review_table   WHERE review_id =19] --> 
+12.06.2022 02:39:16 <!-- sql=[update products set img=n'../uploads/g (3)-20220612-023916.jpg',cid=n'1',title=n'Laptop Dell Latitude 3520 (70251603) (i3 1115G4 4GB RAM/256GB SSD/15.6 inch HD/Fedora/Đen) (2021)',product_code=n'LTDL2252',product_info=n'',start_price=n'15.699.000₫',price=n'15.289.000',sale=n'(Tiết kiệm: 410.000₫)',insurance=n'12 Tháng – Bảo hành tận nơi',gift=n'Bộ quà tặng trị giá <span></span> 1.458.000đ</span>:</h4>
+<ul>
+<li>Chuột không dây Logitech trị giá <span>249.000đ</span> (MELO055)</li>
+<li>Tai nghe Gaming GoldTech LD80 trị giá <span>339.000đ</span> (TNGD005)</li>
+<li>Tặng phiếu vệ sinh bảo dưỡng Laptop, PC miễn phí trọn đời trị giá <span>999.000đ</span> (THEK417)
+</li>
+<li><span>MIỄN PHÍ GIAO HÀNG TOÀN QUỐC</span> (trừ ghế, bàn, màn chiếu) đến hết 31/12/2021. Chi tiết xem tại đây.</li>
+</ul>">',description=n''  where id=3] --> 
+12.06.2022 02:39:51 <!-- sql=[delete from review_table   WHERE review_id =22] --> 
+12.06.2022 02:39:54 <!-- sql=[delete from review_table   WHERE review_id =25] --> 
+12.06.2022 02:54:16 <!-- sql=[update products set img=n'../uploads/g (3)-20220612-025416.jpg',cid=n'1',title=n'Laptop Asus ZenBook UX325EA-KG363T (i5 1135G7/8GB RAM/512GB SSD/13.3 FHD/Win10/Cáp USB to LAN,USB C-Audio/Xám)',product_code=n'LTAU561',product_info=n'',start_price=n'24.299.000₫',price=n'23.9999',sale=n'(Tiết kiệm: 300.000₫)',insurance=n'32 Tháng',gift=n'">',description=n''  where id=1] --> 
+12.06.2022 02:54:53 <!-- sql=[delete from review_table   WHERE review_id =27] --> 

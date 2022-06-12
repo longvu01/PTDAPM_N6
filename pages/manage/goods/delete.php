@@ -47,7 +47,7 @@ if ($user['role'] == 0) {
             </div>
         </div>
         <br />
-        <form class="form" action="delete_exec.php" method="post" enctype="multipart/form-data">
+        <form class="form" action="./process/process_delete.php" method="post" enctype="multipart/form-data">
             <input type="hidden" name="id" value="<?php echo $result["id"] ?>" />
 
             <label>Category</label>

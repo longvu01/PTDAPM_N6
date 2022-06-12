@@ -115,7 +115,7 @@ if ($user['role'] == 0) {
             <textarea placeholder="" name="product_info" value="<?php echo $result["product_info"] ?>"></textarea>
 
             <label>Start Price</label>
-            <input name="start_price" value="<?php echo $result["start_price"] ?>" placeholder="00.000.000đ" />
+            <input name="start_price" value="<?php echo $result["start_price"] ?>" />
 
             <label>Price <span class="text-red">*</span></label>
             <input name="price" value="<?php echo number_format($result['price'], 0, '.', '.') ?>" placeholder="xxxxxxxx" required />
@@ -128,10 +128,10 @@ if ($user['role'] == 0) {
             <input name="insurance" value="<?php echo $result["insurance"] ?>" placeholder="x Tháng" />
 
             <label>Gifts</label>
-            <textarea placeholder="Remember to use HTML tag <>" name="gift" value="<?php echo $result["gift"] ?>"></textarea>
+            <textarea placeholder="Gift" name="gift" value="<?php echo $result["gift"] ?>"></textarea>
 
             <label>Description</label>
-            <textarea placeholder="Remember to use h2 <hr> h3 and p tag <>" name="description" value="<?php echo $result["description"] ?>"></textarea>
+            <textarea placeholder="Description" name="description" value="<?php echo $result["description"] ?>"></textarea>
 
             <div class="exec_bottom">
                 <button name="submit" type="submit" value="submit">Edit</button>
