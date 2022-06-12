@@ -23,3 +23,4 @@
 	values 
 	('','1654125455.','','','','','','','','','')] --> 
 02.06.2022 12:46:57 <!-- sql=[update products set img=n'../uploads/no-image-20220601-113520-20220602-124657.png',cid=n'17',title=n'k',product_code=n'abcd1233',product_info=n'',start_price=n'',price=n'11.111',sale=n'',insurance=n'',gift=n'',description=n''  where id=92] --> 
+09.06.2022 12:38:08 <!-- sql=[delete from review_table   WHERE review_id =13] --> 
