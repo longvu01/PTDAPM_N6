@@ -18,12 +18,14 @@ if (isset($_SESSION['account'])) {
 $data = array();
 $id = isset($_REQUEST["id"]) ? $_REQUEST["id"] * 1 : 0;
 $username = isset($_REQUEST["username"]) ? $_REQUEST["username"] : "";
+$new_password = isset($_REQUEST["new_password"]) ? md5($_REQUEST["new_password"]) : "";
 $phone = isset($_REQUEST["phone"]) ? $_REQUEST["phone"] : "";
 $email = isset($_REQUEST["email"]) ? $_REQUEST["email"] : "";
 $gender = isset($_REQUEST["gender"]) ? $_REQUEST["gender"] * 1 : 0;
 $address = isset($_REQUEST["address"]) ? $_REQUEST["address"] : "";
 
 $data["username"] = $username;
+$data["password"] = $new_password;
 $data["phone"] = $phone;
 $data["email"] = $email;
 $data["gender"] = $gender;
@@ -36,7 +38,6 @@ if ($id) {
     echo '<script>alert("Bạn đã cập nhật thông tin thành công!")</script>';
     header('Refresh: 1; url=account.php');
 }
-
 
 ?>
 
@@ -78,7 +79,12 @@ if ($id) {
 
             <div class="form-group">
                 <p>Họ tên</p>
-                <input name="username" value="<?php echo $user["username"] ?>" placeholder="Tên tài khoản" required />
+                <input name="username" value="<?php echo $user["username"] ?>" placeholder="Tên tài khoản" />
+            </div>
+
+            <div class="form-group">
+                <p>Mật khẩu mới</p>
+                <input name="new_password" placeholder="Mật khẩu mới" />
             </div>
 
             <div class="form-group">
@@ -88,7 +94,7 @@ if ($id) {
 
             <div class="form-group">
                 <p>Email</p>
-                <input name="email" value="<?php echo $user["email"] ?>" placeholder="Email" required />
+                <input name="email" value="<?php echo $user["email"] ?>" placeholder="Email" />
             </div>
 
 
@@ -119,14 +125,8 @@ if ($id) {
     <?php require_once('../root/bottom.php') ?>
 
     <!--  -->
-    <script src="../assets/js/ajax/ajax_add.js"></script>
     <script src="../assets/js/all.js"></script>
     <script src="../assets/js/toast_msg.js"></script>
-
-    <script src="../assets/js/ajax/ajax_fetch_showroom.js"></script>
-
-    <script src="../assets/js/mail.js"></script>
-
 
     <?php require_once('../root/show_toast.php'); ?>
 </body>

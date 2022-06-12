@@ -16,3 +16,17 @@
 09.06.2022 02:47:05 sql=[SELECT * FROM products ORDER BY id DESC LIMIT 1] 
 09.06.2022 03:01:26 <!-- sql=[update user_table set username=n'admin10',password=n'21232f297a57a5a743894a0e4a801fc3',phone=n'0902345934',email=n'@gmail.com',address=n'Hà Nội'  where id=17] --> 
 09.06.2022 03:01:26 sql=[SELECT * FROM products ORDER BY id DESC LIMIT 1] 
+12.06.2022 01:03:20 <!-- sql=[update user_table set username=n'admin1',password=n'21232f297a57a5a743894a0e4a801fc3',phone=n'0902345934',email=n'@gmail.com',address=n'Hà Nội'  where id=17] --> 
+12.06.2022 01:03:20 sql=[SELECT * FROM products ORDER BY id DESC LIMIT 1] 
+12.06.2022 01:05:48 <!-- sql=[update user_table set username=n'admin1',password=n'c3284d0f94606de1fd2af172aba15bf3',phone=n'0902345934',email=n'@gmail.com',address=n'Hà Nội'  where id=17] --> 
+12.06.2022 01:05:48 sql=[SELECT * FROM products ORDER BY id DESC LIMIT 1] 
+12.06.2022 01:08:15 <!-- sql=[update user_table set username=n'admin1',password=n'',phone=n'0902345934',email=n'@gmail.com',address=n'Hà Nội'  where id=17] --> 
+12.06.2022 01:08:15 sql=[SELECT * FROM products ORDER BY id DESC LIMIT 1] 
+12.06.2022 01:10:18 <!-- sql=[update user_table set username=n'admin',password=n'',phone=n'123123123',email=n'@gmail.com',address=n'Hà Nội'  where id=18] --> 
+12.06.2022 01:10:18 sql=[SELECT * FROM products ORDER BY id DESC LIMIT 1] 
+12.06.2022 01:11:39 <!-- sql=[update user_table set username=n'admin',password=n'NULL',phone=n'123123',email=n'@gmail.com',address=n'Hà Nội'  where id=19] --> 
+12.06.2022 01:11:39 sql=[SELECT * FROM products ORDER BY id DESC LIMIT 1] 
+12.06.2022 01:13:09 <!-- sql=[update user_table set username=n'admin',password=n'NULL',phone=n'1213',email=n'@gmail.com',address=n'Hà Nội'  where id=20] --> 
+12.06.2022 01:13:09 sql=[SELECT * FROM products ORDER BY id DESC LIMIT 1] 
+12.06.2022 01:14:05 <!-- sql=[update user_table set username=n'admin',password=n'098f6bcd4621d373cade4e832627b4f6',phone=n'1',email=n'@gmail.com',address=n'Hà Nội'  where id=21] --> 
+12.06.2022 01:14:05 sql=[SELECT * FROM products ORDER BY id DESC LIMIT 1] 

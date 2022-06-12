@@ -44,21 +44,21 @@ if ($user['role'] == 0) {
             <input type="hidden" name="id" value="<?php echo $result["id"] ?>" />
 
 
-            <label>Tên người dùng <span class="text-red">*</span></label>
-            <input class = "form-control" name="username" value="<?php echo $result["username"] ?>" placeholder="Title" required style="width: 815px;" />
+            <label>Tên người dùng </label>
+            <input class="form-control" name="username" value="<?php echo $result["username"] ?>" placeholder="Tên người dùng mới" style="width: 815px;" />
 
 
-            <label>Mật khẩu <span class="text-red">*</span></label>
-            <input class = "form-control" type = "password" name="password" value="<?php echo $result["password"] ?>" placeholder="Title" required />
+            <label>Mật khẩu mới</label>
+            <input class="form-control" type="text" name="new_password" placeholder="Mật khẩu mới" />
 
-            <label>Số điện thoại <span class="text-red">*</span></label>
-            <input class = "form-control" name="phone" value="<?php echo $result["phone"] ?>" placeholder="Title" required />
+            <label>Số điện thoại </label>
+            <input class="form-control" name="phone" value="<?php echo $result["phone"] ?>" placeholder="Số điện thoại mới" />
 
-            <label>Email <span class="text-red">*</span></label>
-            <input class = "form-control" name="email" value="<?php echo $result["email"] ?>" placeholder="Title" required />
+            <label>Email </label>
+            <input class="form-control" name="email" value="<?php echo $result["email"] ?>" placeholder="Email mới" />
 
-            <label>Địa chỉ <span class="text-red">*</span></label>
-            <input class = "form-control" name="address" value="<?php echo $result["address"] ?>" placeholder="Title" required  />
+            <label>Địa chỉ </label>
+            <input class="form-control" name="address" value="<?php echo $result["address"] ?>" placeholder="Địa chỉ mới" />
 
 
             <div class="exec_bottom">
