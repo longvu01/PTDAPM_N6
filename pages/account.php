@@ -58,7 +58,7 @@ if ($id) {
             <div class="col"><a href="./" class="account__item">Home<i class="fas fa-home"></i></a></div>
             <div class="col"><a href="./manage/goods/" class="account__item">Add<i class="fas fa-plus"></i></a></div>
             <div class="col"><a href="./manage/goods/delete.php?id=<?php echo $resultLast['id'] ?>" class="account__item">Delete<i class="far fa-trash-alt"></i></a></div>
-            <div class="col"><a href="./manage/goods/edit.php?id=<?php echo $resultLast['id'] ?>" class="account__item">Edit<i class="far fa-edit"></i></i></a></div>
+            <div class="col"><a href="./manage/goods/update.php?id=<?php echo $resultLast['id'] ?>" class="account__item">Edit<i class="far fa-edit"></i></i></a></div>
             <div class="col"><a href="./manage/goods/search.php" class="account__item">Search<i class="fas fa-search"></i></a></div>
             <div class="col"><a href="../auth/logout.php" class="account__item">Logout<i class="fas fa-sign-out-alt"></i></a></div>
         </div>
